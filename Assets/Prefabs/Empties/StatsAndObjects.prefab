@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1855162282895948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4425565244103494}
+  - component: {fileID: 114342237842640962}
+  m_Layer: 0
+  m_Name: StatsAndObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4425565244103494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855162282895948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114342237842640962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855162282895948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086f104a092ae744b8066d0c094258e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inputs:
+  - mouseInput: 1
+    xMoveAxis: Horizontal
+    yMoveAxis: Vertical
+    xSwordAxis: HorizontalSword
+    ySwordAxis: 
+    thrustInput: Thrust
+    dashInput: Dash
+    emoteOne: EmoteOne
+  - mouseInput: 0
+    xMoveAxis: jHorizontal1
+    yMoveAxis: jVertical1
+    xSwordAxis: jHorizontalSword1
+    ySwordAxis: jVerticalSword1
+    thrustInput: jThrust1
+    dashInput: jDash1
+    emoteOne: jEmoteOne1
+  - mouseInput: 0
+    xMoveAxis: jHorizontal2
+    yMoveAxis: jVertical2
+    xSwordAxis: jHorizontalSword2
+    ySwordAxis: jVerticalSword2
+    thrustInput: jThrust2
+    dashInput: jDash2
+    emoteOne: jEmoteOne2
+  - mouseInput: 0
+    xMoveAxis: jHorizontal3
+    yMoveAxis: jVertical3
+    xSwordAxis: jHorizontalSword3
+    ySwordAxis: jVerticalSword3
+    thrustInput: jThrust3
+    dashInput: jDash3
+    emoteOne: jEmoteOne3
+  - mouseInput: 0
+    xMoveAxis: jHorizontal4
+    yMoveAxis: jVertical4
+    xSwordAxis: jHorizontalSword4
+    ySwordAxis: jVerticalSword4
+    thrustInput: jThrust4
+    dashInput: jDash4
+    emoteOne: jEmoteOne4
+  amountOfPlayers: 1
+  health: 1
+  slimes:
+  - {fileID: 1963935372720986, guid: 8eb94bc0e71a58544b88ac8056410f92, type: 3}
+  - {fileID: 1528545377225840, guid: 295039444e53de2488c579c1f5e51449, type: 3}
+  - {fileID: 1344299255004228, guid: 083fdac6d8b96474ea00a9531d9afb60, type: 3}
+  hats: []
+  swords: []
+  colours: []

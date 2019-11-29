@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="204800b8-f0ea-4cf5-bbf3-41c8f214e3ac" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/CameraController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="614">
+              <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+              <folding>
+                <marker date="1570742407286" expanded="false" signature="6:78" ph="..." />
+                <marker date="1570742407286" expanded="true" signature="126:2318" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="445:571" ph="/* private List&lt;Transform&gt; unSeenPlayers = new List&lt;Transform&gt;(); ... */" />
+                <marker date="1570742407286" expanded="true" signature="789:843" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="875:1256" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="1294:1555" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="1331:1549" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="1585:1645" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="1690:2090" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="1728:1863" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="1980:2055" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="2148:2199" ph="{...}" />
+                <marker date="1570742407286" expanded="true" signature="2262:2316" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/SlimeMovementController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding>
+                <marker date="1570742458662" expanded="true" signature="6:126" ph="..." />
+                <marker date="1570742458662" expanded="true" signature="158:1480" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="275:1478" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="462:562" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="605:703" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="739:1104" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="808:972" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="869:958" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="989:1094" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="1132:1268" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="1329:1374" ph="{...}" />
+                <marker date="1570742458662" expanded="true" signature="1427:1472" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/GameObjectListener.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding>
+                <marker date="1570131188191" expanded="false" signature="6:123" ph="..." />
+                <marker date="1570131188191" expanded="true" signature="168:287" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Movement</find>
+      <find>ReadValue</find>
+      <find>horizontal</find>
+    </findStrings>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/BaseGameEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityTriggerEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/VoidEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterMovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/AbilityUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/SlimeMovementController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/GameObjectEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterCollideable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/Ability.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/TriggerListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/GameObjectListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityPackage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/CooldownData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityGameObjectEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/SlimeControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/AbilityEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/TimedAbilityEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/DashAbilityEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/SwordScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.common@2.0.2/Runtime/InternalBridge/InternalEngineBridge.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterTriggerable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/SlimeAbilities/DashAbility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Movement/RbRotatable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/SlimeAbilities/VoidAbility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/BlockScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@0.9.6-preview/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/CollisionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/IGameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/BaseGameEventListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/VoidListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityVoidEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/TriggerEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/CollisionListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@0.9.6-preview/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityCollisionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/TestEvents.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/SlimeAbilities/DashAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/ICollideable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/VoidEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/IGameEventListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/VoidListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityVoidEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/ColliderEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityColliderEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/TriggerEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/CollisionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityCollisionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterTriggerable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/TestEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterCollideable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/CollisionListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/InputManager/Keybindings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/InputManager/InputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/CooldownData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/Ability.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/SlimeAbilities/DashAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/AbilityUser.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/HVEnum.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/HvEnum.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/HvType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Rotatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/TimedAbilityEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/SlowdownDragEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/AbilityEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Movement/Rotatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/DashAbilityEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Movement/RbRotatable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/VisiblePlayerEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityVisiblePlayerEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Player/VisiblePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/VisablePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/VisiblePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/GameObjectEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/GameObjectListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/PlayerSpawnedEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/PlayerSpawnedListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityVisiblePlayerSpawnedEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/VisiblePlayerSpawnedEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/VisiblePlayerSpawnedListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterMovementController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityGameObjectEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/BaseGameEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/BaseGameEventListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/SlimeMovementController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="101" />
+    <option name="y" value="84" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="204800b8-f0ea-4cf5-bbf3-41c8f214e3ac" name="Default Changelist" comment="" />
+      <created>1568669812345</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568669812345</updated>
+      <workItem from="1568669841083" duration="17523000" />
+      <workItem from="1568755633583" duration="17323000" />
+      <workItem from="1568922963364" duration="2070000" />
+      <workItem from="1568935320676" duration="37301000" />
+      <workItem from="1569879380356" duration="10655000" />
+      <workItem from="1570107332943" duration="181000" />
+      <workItem from="1570130344254" duration="4130000" />
+      <workItem from="1570466552027" duration="930000" />
+      <workItem from="1570490666163" duration="2425000" />
+      <workItem from="1570740661462" duration="2128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="94666000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20298348" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32958034" />
+      <window_info anchor="bottom" id="Unit Tests" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="15" />
+      <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
+      <window_info anchor="bottom" id="Change Signature" order="17" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/SlimeAbilities/VoidAbility.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/CooldownData.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/SlimeAbilities/DashAbility.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/AbilityEffects/DashAbilityEffect.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Ability.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/ICollideable.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityTriggerEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding>
+            <marker date="1568682359865" expanded="false" signature="6:68" ph="..." />
+            <marker date="1568682359865" expanded="true" signature="115:203" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputManager/Keybindings.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputManager/InputManager.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/BlockScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1547855639779" expanded="false" signature="6:78" ph="..." />
+            <marker date="1547855639779" expanded="true" signature="121:2078" ph="{...}" />
+            <marker date="1547855639779" expanded="true" signature="459:796" ph="{...}" />
+            <marker date="1547855639779" expanded="true" signature="847:1900" ph="{...}" />
+            <marker date="1547855639779" expanded="true" signature="1178:1706" ph="{...}" />
+            <marker date="1547855639779" expanded="true" signature="1719:1894" ph="{...}" />
+            <marker date="1547855639779" expanded="true" signature="1951:2075" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/SwordScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1241">
+          <folding>
+            <marker date="1548218402296" expanded="false" signature="6:78" ph="..." />
+            <marker date="1548218402296" expanded="true" signature="121:13217" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="2790:3501" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="3556:3932" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="3741:3925" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="3843:3915" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="3963:4876" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="4285:4330" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="4354:4388" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="4642:4870" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="4801:4860" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="4906:7024" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="4953:5727" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="5243:5434" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="5741:6883" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="6184:6872" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="6308:6381" ph="/* Debug.Log(targetPoint); ... */" />
+            <marker date="1548218402296" expanded="true" signature="6452:6560" ph="/* set the height to static variable ... */" />
+            <marker date="1548218402296" expanded="true" signature="7069:7351" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="7235:7281" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="7383:8771" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="7515:7604" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="8601:8765" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="8823:9064" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="9113:12221" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="9304:9653" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="9819:11432" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="10460:10986" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="10530:10648" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="11003:11409" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="11073:11192" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="11607:12215" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="11669:11768" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="12269:12574" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="12430:12568" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="12625:13027" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="13061:13104" ph="{...}" />
+            <marker date="1548218402296" expanded="true" signature="13132:13215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/CooldownData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <marker date="1568761707714" expanded="true" signature="6:59" ph="..." />
+            <marker date="1568761707714" expanded="true" signature="109:998" ph="{...}" />
+            <marker date="1568761707714" expanded="true" signature="205:278" ph="/* COPY PASTED CODE FROM TIMEDABILITYEFFECT ... */" />
+            <marker date="1568761707714" expanded="true" signature="494:572" ph="{...}" />
+            <marker date="1568761707714" expanded="true" signature="646:764" ph="{...}" />
+            <marker date="1568761707714" expanded="true" signature="854:929" ph="{...}" />
+            <marker date="1568761707714" expanded="true" signature="960:996" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@0.9.6-preview/InputSystem/Actions/InputActionState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="849">
+          <caret line="1908" selection-start-line="1908" selection-end-line="1908" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/HvType.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/SlimeAbilities/DashAbility.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <marker date="1569021064122" expanded="true" signature="6:87" ph="..." />
+            <marker date="1569021064122" expanded="true" signature="118:952" ph="{...}" />
+            <marker date="1569021064122" expanded="true" signature="243:950" ph="{...}" />
+            <marker date="1569021064122" expanded="true" signature="593:709" ph="{...}" />
+            <marker date="1569021064122" expanded="true" signature="762:944" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/AbilityUser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+          <folding>
+            <marker date="1569021064152" expanded="false" signature="6:161" ph="..." />
+            <marker date="1569021064152" expanded="true" signature="192:4616" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="366:4614" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="862:1390" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="964:1380" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1048:1366" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1119:1217" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1242:1348" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1421:1552" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1621:1987" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1740:1977" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="1869:1963" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="2036:2382" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="2122:2372" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="2262:2358" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="2431:2846" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="2596:2836" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="2733:2822" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="3015:3533" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="3085:3389" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="3116:3299" ph="/* Make a void factory that dishes out void objects/ classes and stuff ... */" />
+            <marker date="1569021064152" expanded="true" signature="3436:3510" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="3674:3791" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="3858:3970" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="4039:4110" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="4159:4608" ph="{...}" />
+            <marker date="1569021064152" expanded="true" signature="4225:4439" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/TimedAbilityEffect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <marker date="1569022064620" expanded="true" signature="64:748" ph="{...}" />
+            <marker date="1569022064620" expanded="true" signature="111:746" ph="{...}" />
+            <marker date="1569022064620" expanded="true" signature="350:472" ph="{...}" />
+            <marker date="1569022064620" expanded="true" signature="511:662" ph="{...}" />
+            <marker date="1569022064620" expanded="true" signature="584:635" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/AbilityEffect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <marker date="1569022673235" expanded="true" signature="64:647" ph="{...}" />
+            <marker date="1569022673235" expanded="true" signature="106:645" ph="{...}" />
+            <marker date="1569022673235" expanded="true" signature="339:423" ph="{...}" />
+            <marker date="1569022673235" expanded="true" signature="467:511" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/SlimeControls.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="235" column="76" selection-start-line="235" selection-start-column="76" selection-end-line="235" selection-end-column="76" />
+          <folding>
+            <marker date="1569014208402" expanded="false" signature="105:230" ph="..." />
+            <marker date="1569014208402" expanded="true" signature="263:10779" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="321:10777" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="398:7216" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="7242:7309" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="7351:7455" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="7507:7603" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="7743:7806" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="7863:7925" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="7974:8030" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="8060:8108" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="8139:8188" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="8500:10496" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="9201:10486" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="9291:9939" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="10052:10472" ph="{...}" />
+            <marker date="1569014208402" expanded="true" signature="10617:10771" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/SlowdownDragEffect.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/SlimeAbilities/VoidAbility.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <marker date="1568670905554" expanded="false" signature="6:45" ph="..." />
+            <marker date="1568670905554" expanded="true" signature="76:412" ph="{...}" />
+            <marker date="1568670905554" expanded="true" signature="117:410" ph="{...}" />
+            <marker date="1568670905554" expanded="true" signature="182:348" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/Ability.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <marker date="1568761935935" expanded="true" signature="6:59" ph="..." />
+            <marker date="1568761935935" expanded="true" signature="90:2344" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="164:2342" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="562:658" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="896:1376" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="1005:1366" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="1441:1542" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="1599:2336" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="1785:2008" ph="{...}" />
+            <marker date="1568761935935" expanded="true" signature="2149:2281" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityEffects/DashAbilityEffect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+          <folding>
+            <marker date="1569034248410" expanded="true" signature="6:45" ph="..." />
+            <marker date="1569034248410" expanded="true" signature="91:1201" ph="{...}" />
+            <marker date="1569034248410" expanded="true" signature="149:1199" ph="{...}" />
+            <marker date="1569034248410" expanded="true" signature="428:617" ph="{...}" />
+            <marker date="1569034248410" expanded="true" signature="658:1073" ph="{...}" />
+            <marker date="1569034248410" expanded="true" signature="798:978" ph="{...}" />
+            <marker date="1569034248410" expanded="true" signature="1108:1193" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/InputSystem/PlayerInput.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <marker date="1569011052154" expanded="true" signature="6:90" ph="..." />
+            <marker date="1569011052154" expanded="true" signature="123:1204" ph="{...}" />
+            <marker date="1569011052154" expanded="true" signature="264:1202" ph="{...}" />
+            <marker date="1569011052154" expanded="true" signature="445:660" ph="{...}" />
+            <marker date="1569011052154" expanded="true" signature="701:758" ph="{...}" />
+            <marker date="1569011052154" expanded="true" signature="792:850" ph="{...}" />
+            <marker date="1569011052154" expanded="true" signature="921:1024" ph="{...}" />
+            <marker date="1569011052154" expanded="true" signature="1093:1196" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Movement/RbRotatable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <marker date="1569035849497" expanded="false" signature="6:32" ph="..." />
+            <marker date="1569035849497" expanded="true" signature="79:2381" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="168:2379" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="532:652" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="711:1676" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="889:1157" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="939:1018" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="1735:2086" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="2129:2223" ph="{...}" />
+            <marker date="1569035849497" expanded="true" signature="2266:2368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/VoidEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <folding>
+            <marker date="1568681849626" expanded="false" signature="6:42" ph="..." />
+            <marker date="1568681849626" expanded="true" signature="84:317" ph="{...}" />
+            <marker date="1568681849626" expanded="true" signature="224:315" ph="{...}" />
+            <marker date="1568681849626" expanded="true" signature="258:309" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/TriggerEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <marker date="1568685687033" expanded="false" signature="6:42" ph="..." />
+            <marker date="1568685687033" expanded="true" signature="84:243" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityCollisionEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+          <folding>
+            <marker date="1568686116750" expanded="false" signature="6:68" ph="..." />
+            <marker date="1568686116750" expanded="true" signature="115:206" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SimpleComponents/Player/VisiblePlayer.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterTriggerable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+          <folding>
+            <marker date="1568688520231" expanded="true" signature="6:70" ph="..." />
+            <marker date="1568688520231" expanded="true" signature="102:636" ph="{...}" />
+            <marker date="1568688520231" expanded="true" signature="158:634" ph="{...}" />
+            <marker date="1568688520231" expanded="true" signature="311:512" ph="{...}" />
+            <marker date="1568688520231" expanded="true" signature="363:502" ph="{...}" />
+            <marker date="1568688520231" expanded="true" signature="522:628" ph="/* private void OnTriggerExit(Collider other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/CollisionListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1568690951599" expanded="false" signature="6:123" ph="..." />
+            <marker date="1568690951599" expanded="true" signature="168:283" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Abilities/AbilityPackage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="25" />
+          <folding>
+            <marker date="1568671254725" expanded="true" signature="57:535" ph="{...}" />
+            <marker date="1568671254725" expanded="true" signature="116:533" ph="{...}" />
+            <marker date="1568671254725" expanded="true" signature="273:329" ph="{...}" />
+            <marker date="1568671254725" expanded="true" signature="380:527" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1785">
+          <folding>
+            <marker date="1568153910926" expanded="true" signature="6:78" ph="..." />
+            <marker date="1568153910926" expanded="true" signature="194:11624" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="2807:3448" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="3476:5014" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="3965:4188" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="4387:4714" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="4596:4704" ph="/* charge += 0.5f; ... */" />
+            <marker date="1568153910926" expanded="true" signature="4804:4940" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="5119:5710" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="5174:5261" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="5777:6454" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="5861:5923" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="5970:6032" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="6201:6308" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="6532:7217" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="6616:6678" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="6725:6787" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="6956:7071" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="7249:7436" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="7291:7430" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="7572:7670" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="7802:7930" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="7980:8064" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="8201:8324" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="8370:8538" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="8654:9477" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="8714:8824" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="8908:9046" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="9136:9210" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="9220:9470" ph="/* if ((Input.GetKey(&quot;w&quot;) || Input.GetKey(&quot;d&quot;) || Input.GetKey(&quot;s&quot;) || Input.GetKey(&quot;a&quot;)) &amp;&amp; timer &gt;= 0.1) //If a ... */" />
+            <marker date="1568153910926" expanded="true" signature="9526:9953" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="9572:9947" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="9808:9937" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10001:10453" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10047:10447" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10284:10424" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10533:10816" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10632:10779" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10692:10769" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10850:10899" ph="{...}" />
+            <marker date="1568153910926" expanded="true" signature="10937:11622" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/VisiblePlayer.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/TestEvents.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1568689046693" expanded="true" signature="53:228" ph="{...}" />
+            <marker date="1568689046693" expanded="true" signature="99:226" ph="{...}" />
+            <marker date="1568689046693" expanded="true" signature="153:220" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@0.9.6-preview/InputSystem/Plugins/PlayerInput/PlayerInput.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="660" selection-start-line="660" selection-end-line="660" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterCollideable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+          <folding>
+            <marker date="1568689518280" expanded="true" signature="6:70" ph="..." />
+            <marker date="1568689518280" expanded="true" signature="102:702" ph="{...}" />
+            <marker date="1568689518280" expanded="true" signature="158:700" ph="{...}" />
+            <marker date="1568689518280" expanded="true" signature="317:566" ph="{...}" />
+            <marker date="1568689518280" expanded="true" signature="416:556" ph="{...}" />
+            <marker date="1568689518280" expanded="true" signature="576:694" ph="/* private void OnCollisionExit(Collision other) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.common@2.0.2/Runtime/InternalBridge/InternalEngineBridge.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/CollisionEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="98" />
+          <folding>
+            <marker date="1568685707640" expanded="false" signature="6:42" ph="..." />
+            <marker date="1568685707640" expanded="true" signature="84:250" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/CharacterMovementController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <marker date="1570132355989" expanded="true" signature="49:1031" ph="{...}" />
+            <marker date="1570132355989" expanded="true" signature="163:1029" ph="{...}" />
+            <marker date="1570132355989" expanded="true" signature="391:481" ph="{...}" />
+            <marker date="1570132355989" expanded="true" signature="696:791" ph="{...}" />
+            <marker date="1570132355989" expanded="true" signature="826:886" ph="{...}" />
+            <marker date="1570132355989" expanded="true" signature="931:1023" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/IGameEventListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <marker date="1568681900908" expanded="true" signature="43:139" ph="{...}" />
+            <marker date="1568681900908" expanded="true" signature="88:137" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityVoidEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="45" />
+          <folding>
+            <marker date="1568681917722" expanded="true" signature="6:49" ph="..." />
+            <marker date="1568681917722" expanded="true" signature="96:177" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/TriggerListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="103" selection-start-line="7" selection-start-column="103" selection-end-line="7" selection-end-column="103" />
+          <folding>
+            <marker date="1568682356762" expanded="false" signature="6:123" ph="..." />
+            <marker date="1568682356762" expanded="true" signature="168:276" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/VoidListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <marker date="1568681954041" expanded="true" signature="6:104" ph="..." />
+            <marker date="1568681954041" expanded="true" signature="149:244" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/UnityEvents/UnityGameObjectEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="83" selection-start-line="6" selection-start-column="83" selection-end-line="6" selection-end-column="83" />
+          <folding>
+            <marker date="1570131274061" expanded="true" signature="6:68" ph="..." />
+            <marker date="1570131274061" expanded="true" signature="115:208" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/GameObjectEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1570131274001" expanded="true" signature="6:42" ph="..." />
+            <marker date="1570131274001" expanded="true" signature="84:252" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Events/BaseGameEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <marker date="1570133113808" expanded="true" signature="6:117" ph="..." />
+            <marker date="1570133113808" expanded="true" signature="223:980" ph="{...}" />
+            <marker date="1570133113808" expanded="true" signature="370:538" ph="{...}" />
+            <marker date="1570133113808" expanded="true" signature="444:528" ph="{...}" />
+            <marker date="1570133113808" expanded="true" signature="608:754" ph="{...}" />
+            <marker date="1570133113808" expanded="true" signature="670:744" ph="{...}" />
+            <marker date="1570133113808" expanded="true" signature="825:974" ph="{...}" />
+            <marker date="1570133113808" expanded="true" signature="886:963" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/BaseGameEventListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <marker date="1570490953070" expanded="true" signature="312:1028" ph="{...}" />
+            <marker date="1570490953070" expanded="true" signature="537:690" ph="{...}" />
+            <marker date="1570490953070" expanded="true" signature="724:881" ph="{...}" />
+            <marker date="1570490953070" expanded="true" signature="925:1022" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/MainScripts/CameraController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="80" column="38" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+          <folding>
+            <marker date="1570742407286" expanded="false" signature="6:78" ph="..." />
+            <marker date="1570742407286" expanded="true" signature="126:2318" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="445:571" ph="/* private List&lt;Transform&gt; unSeenPlayers = new List&lt;Transform&gt;(); ... */" />
+            <marker date="1570742407286" expanded="true" signature="789:843" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="875:1256" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="1294:1555" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="1331:1549" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="1585:1645" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="1690:2090" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="1728:1863" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="1980:2055" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="2148:2199" ph="{...}" />
+            <marker date="1570742407286" expanded="true" signature="2262:2316" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/Characters/SlimeMovementController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <marker date="1570742458662" expanded="true" signature="6:126" ph="..." />
+            <marker date="1570742458662" expanded="true" signature="158:1480" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="275:1478" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="462:562" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="605:703" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="739:1104" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="808:972" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="869:958" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="989:1094" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="1132:1268" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="1329:1374" ph="{...}" />
+            <marker date="1570742458662" expanded="true" signature="1427:1472" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Slimecing/SOEventSystem/Listeners/GameObjectListener.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <marker date="1570131188191" expanded="false" signature="6:123" ph="..." />
+            <marker date="1570131188191" expanded="true" signature="168:287" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
