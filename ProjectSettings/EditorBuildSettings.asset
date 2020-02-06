@@ -23,4 +23,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Island Rock.unity
     guid: 6e6f37bdf8daaad44b018f096e8551dd
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: ce1ba5e1a303b424ab184a808a473b43,
+      type: 2}

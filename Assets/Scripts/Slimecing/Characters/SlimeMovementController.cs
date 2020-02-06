@@ -21,7 +21,8 @@ namespace Slimecing.Character
             {
                 if (!_rotatable.StoppedAngVel)
                 {
-                   _rotatable.StopAngularVelocity();
+                   //_rotatable.StopAngularVelocity();
+                   //Debug.Log("Stopping angular vel");
                 }
             }
             else

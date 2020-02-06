@@ -10,7 +10,7 @@ namespace Slimecing.InputSystem
 {
     public class @SlimeControls : IInputActionCollection, IDisposable
     {
-        private InputActionAsset asset;
+        public InputActionAsset asset { get; }
         public @SlimeControls()
         {
             asset = InputActionAsset.FromJson(@"{

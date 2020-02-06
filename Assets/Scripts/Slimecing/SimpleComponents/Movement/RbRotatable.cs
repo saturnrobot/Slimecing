@@ -44,7 +44,8 @@ namespace Slimecing.SimpleComponents.Movement
             Quaternion deltaRotation = Quaternion.Inverse(transform.rotation) * targetRotation;
             Vector3 deltaAngles = GetRelativeAngles(deltaRotation.eulerAngles);
             Vector3 spaceDeltaAngles = transform.TransformDirection(deltaAngles);
-            rb.AddTorque(rotSpeed * spaceDeltaAngles - alignmentDamping * rb.angularVelocity);
+            Vector3 rotationVelocity = spaceDeltaAngles * rotSpeed * Time.deltaTime;
+            rb.AddTorque(rotationVelocity - rb.angularVelocity, ForceMode.Impulse);
         }
 
         private Vector3 GetRelativeAngles(Vector3 angles)
