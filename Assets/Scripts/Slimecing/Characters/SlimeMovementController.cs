@@ -1,7 +1,8 @@
-﻿using Slimecing.SimpleComponents.Movement;
+﻿using Slimecing.Character;
+using Slimecing.SimpleComponents.Movement;
 using UnityEngine;
 
-namespace Slimecing.Character
+namespace Slimecing.Characters
 {
     [RequireComponent(typeof(RbRotatable))]
     public class SlimeMovementController : CharacterMovementController
@@ -17,15 +18,7 @@ namespace Slimecing.Character
         {
             Move();
             
-            if (_move == Vector2.zero)
-            {
-                if (!_rotatable.StoppedAngVel)
-                {
-                   //_rotatable.StopAngularVelocity();
-                   //Debug.Log("Stopping angular vel");
-                }
-            }
-            else
+            if (_move != Vector2.zero)
             {
                 _rotatable.RotateToVector(new Vector3(_move.x, 0, _move.y));
             }
