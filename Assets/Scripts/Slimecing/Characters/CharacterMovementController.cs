@@ -8,9 +8,9 @@ namespace Slimecing.Character
         [SerializeField] protected float movementSpeed;
 
         protected Rigidbody rb;
-        protected Vector2 _move;
+        protected Vector2 move;
         
-        public Vector2 MoveInput => _move;
+        public Vector2 MoveInput => move;
         
         protected virtual void Awake()
         {
@@ -32,7 +32,7 @@ namespace Slimecing.Character
 
         public void SetBackToNormalForces()
         {
-            rb.velocity = new Vector3(_move.x, rb.velocity.y, _move.y);
+            rb.velocity = new Vector3(move.x, rb.velocity.y, move.y);
         }
     }
 }

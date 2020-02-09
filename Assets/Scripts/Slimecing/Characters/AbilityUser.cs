@@ -12,7 +12,7 @@ namespace Slimecing.Character
     {
         [SerializeField] private List<AbilityPackage> useableAbilities = new List<AbilityPackage>();
 
-        private List<TimedAbilityEffect> currentTimedAbilityEffects = new List<TimedAbilityEffect>();
+        List<TimedAbilityEffect> currentTimedAbilityEffects = new List<TimedAbilityEffect>();
         private List<CooldownData> abilitiesOnCooldown = new List<CooldownData>();
         private List<AbilityEffect> currentAbilityEffects = new List<AbilityEffect>();
 
@@ -44,6 +44,11 @@ namespace Slimecing.Character
             CheckTimedAbilityEffects();
         }
 
+        public bool CheckForEffects()
+        {
+            return currentAbilityEffects.Count != 0 || currentTimedAbilityEffects.Count != 0;
+        }
+
 
         //USE INPUT MANAGER
         private void GetAbilityInput()
@@ -66,7 +71,7 @@ namespace Slimecing.Character
                 currentTimedAbilityEffects[i].Tick(Time.deltaTime);
                 if (currentTimedAbilityEffects[i].IsDone)
                 {
-                    currentTimedAbilityEffects.RemoveAt(i);
+                    RemoveTimedAbilityEffect(currentTimedAbilityEffects[i]);
                 }
             }
         }
@@ -104,13 +109,24 @@ namespace Slimecing.Character
         public void AddTimedAbilityEffect(TimedAbilityEffect abilityEffect)
         {
             currentTimedAbilityEffects.Add(abilityEffect);
+            Debug.Log(currentTimedAbilityEffects.Count);
             abilityEffect.Activate();
+        }
+
+        public void RemoveTimedAbilityEffect(TimedAbilityEffect abilityEffect)
+        {
+            currentTimedAbilityEffects.Remove(abilityEffect);
         }
 
         public void AddAbilityEffect(AbilityEffect abilityEffect)
         {
             currentAbilityEffects.Add(abilityEffect);
             abilityEffect.Activate();
+        }
+        
+        public void RemoveAbilityEffect(AbilityEffect abilityEffect)
+        {
+            currentAbilityEffects.Remove(abilityEffect);
         }
 
         public void AddAbilityOnCooldown(CooldownData cooldownData)

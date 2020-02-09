@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Slimecing.StateMachine
 {
+    [Serializable]
     public class StateChanger
     {
         [SerializeField] private State nextState = null;

@@ -4,7 +4,8 @@ namespace Slimecing.StateMachine
 {
     public class StateMachineComponent : MonoBehaviour
     {
-        [SerializeField] private State startingState = null;
+        [SerializeField] private State startingState;
+        [SerializeField] private GameObject stateMachineTarget;
 
         private StateMachine _stateMachine;
 

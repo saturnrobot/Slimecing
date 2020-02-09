@@ -19,7 +19,6 @@ namespace Slimecing.StateMachine
 
             return null;
         }
-
         public void Enter() => gameObject.SetActive(true);
 
         public void Exit() => gameObject.SetActive(false);

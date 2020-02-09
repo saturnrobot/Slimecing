@@ -1,10 +1,14 @@
-﻿namespace Slimecing.StateMachine
+﻿using UnityEngine;
+
+namespace Slimecing.StateMachine
 {
     public class StateMachine
     {
         public StateMachine(IState startingState) => ChangeState(startingState);
         
         public IState CurrState { get; private set; }
+
+        private GameObject _stateMachineTarget;
 
         public void ChangeState(IState state)
         {

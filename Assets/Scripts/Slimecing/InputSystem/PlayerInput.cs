@@ -10,13 +10,13 @@ namespace Slimecing.InputSystem
     {
         [SerializeField] private SlimeControls playerControls;
 
-        private CharacterMovementController characterMovementController;
+        private CharacterMovementController _characterMovementController;
         
         private void Awake()
         {
             playerControls = new SlimeControls();
             playerControls.VSGameplay.SetCallbacks(this);
-            characterMovementController = GetComponent<CharacterMovementController>();
+            _characterMovementController = GetComponent<CharacterMovementController>();
         }
         
         private void OnEnable()
@@ -31,12 +31,12 @@ namespace Slimecing.InputSystem
 
         public void OnHorizontal(InputAction.CallbackContext context)
         {
-            characterMovementController.GetMoveInputH(context.ReadValue<float>());
+            _characterMovementController.GetMoveInputH(context.ReadValue<float>());
         }
 
         public void OnVertical(InputAction.CallbackContext context)
         {
-            characterMovementController.GetMoveInputV(context.ReadValue<float>());
+            _characterMovementController.GetMoveInputV(context.ReadValue<float>());
         }
     }
 }

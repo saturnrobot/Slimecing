@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingState: {fileID: 1346574271}
+  stateMachineTarget: {fileID: 1531394410883810673}
 --- !u!1 &1310556697
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcd96337fe06b48a7da473de233ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changes: []
 --- !u!1 &1346574269
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346574270}
   - component: {fileID: 1346574271}
+  - component: {fileID: 1400936338}
   m_Layer: 9
   m_Name: Idle
   m_TagString: Untagged
@@ -134,6 +137,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcd96337fe06b48a7da473de233ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changes:
+  - nextState: {fileID: 2105505491}
+    conditions:
+    - {fileID: 1400936338}
+--- !u!114 &1400936338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346574269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e148d062a4d084c81d1832033e7e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterMovementController: {fileID: 1533019556350475861}
 --- !u!1 &1833990615
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcd96337fe06b48a7da473de233ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changes: []
 --- !u!1 &2105505489
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcd96337fe06b48a7da473de233ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changes: []
 --- !u!1 &449381425311164905
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +896,7 @@ Rigidbody:
   m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!65 &1562335568724729083
@@ -1025,7 +1047,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: e5353b3c2a300ce458b25d1e62215e9c,
+    type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:

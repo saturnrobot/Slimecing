@@ -18,24 +18,24 @@ namespace Slimecing.Characters
         {
             Move();
             
-            if (_move != Vector2.zero)
+            if (move != Vector2.zero)
             {
-                _rotatable.RotateToVector(new Vector3(_move.x, 0, _move.y));
+                _rotatable.RotateToVector(new Vector3(move.x, 0, move.y));
             }
         }
         private void Move()
         {
-            rb.MovePosition(rb.position + movementSpeed * Time.fixedDeltaTime * new Vector3(_move.x, 0f, _move.y));
+            rb.MovePosition(rb.position + movementSpeed * Time.fixedDeltaTime * new Vector3(move.x, 0f, move.y));
         }
         
         public override void GetMoveInputH(float h)
         {
-            _move.x = h;
+            move.x = h;
         }
 
         public override void GetMoveInputV(float v)
         {
-            _move.y = v;
+            move.y = v;
         }
     }
 }
