@@ -1,4 +1,5 @@
 ﻿using Slimecing.Character;
+using Slimecing.Characters;
 using UnityEngine;
 
 namespace Slimecing.Abilities.AbilityEffects

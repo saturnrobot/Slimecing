@@ -10,12 +10,17 @@ namespace Slimecing.SimpleComponents.Movement.Rotatable_Types
         protected bool stoppedAngVel;
 
        public virtual void Initialize(Rigidbody rbody, Transform body)
-        {
+       {
             rb = rbody;
             objectTransform = body;
-        }
+       }
+
+       public virtual void Initialize(Transform body)
+       {
+           objectTransform = body;
+       }
         
-        public abstract void RotateToVector(Vector3 desiredLookAt);
+        public abstract void RotateToVector(Vector3 desiredLookAt, float deltaTime);
         
         public void StopAngularVelocity()
         {

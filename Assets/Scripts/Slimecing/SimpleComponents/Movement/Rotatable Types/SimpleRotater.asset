@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe77af1d41ef89041a3e262d9bbb6fea, type: 3}
   m_Name: SimpleRotater
   m_EditorClassIdentifier: 
-  rotSpeed: 6
+  rotSpeed: 15

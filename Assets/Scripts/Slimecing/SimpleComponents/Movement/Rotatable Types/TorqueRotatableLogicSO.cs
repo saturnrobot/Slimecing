@@ -17,8 +17,9 @@ namespace Slimecing.SimpleComponents.Movement.Rotatable_Types
             rb.maxAngularVelocity = maxAngularVelocity;
         }
         
-        public override void RotateToVector(Vector3 desiredLookAt)
+        public override void RotateToVector(Vector3 desiredLookAt, float deltaTime)
         {
+            if (desiredLookAt == Vector3.zero || !(rotSpeed > 0f)) return;
             Quaternion targetRotation = Quaternion.LookRotation(desiredLookAt);
             
             if (Quaternion.Angle(objectTransform.rotation, targetRotation) < 13)

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/TestScene.unity
+    path: Assets/_Scenes/Testing/TestScene.unity
     guid: 97f768ec7b33bd3459bfe4a6ab6dea4f
   - enabled: 0
     path: Assets/_Scenes/StartMenu.unity
@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Island Rock.unity
     guid: 6e6f37bdf8daaad44b018f096e8551dd
+  - enabled: 0
+    path: Assets/_Scenes/Testing/IslandTest.unity
+    guid: d3cd0c2911592794abea97aefa1d5cee
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ce1ba5e1a303b424ab184a808a473b43,
       type: 2}

@@ -59,6 +59,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1310556698}
   - component: {fileID: 1310556699}
+  - component: {fileID: 954595854}
+  - component: {fileID: 954595855}
   m_Layer: 9
   m_Name: UsingAbility
   m_TagString: Untagged
@@ -92,7 +94,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcd96337fe06b48a7da473de233ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changes: []
+  changes:
+  - nextState: {fileID: 1346574271}
+    conditions:
+    - {fileID: 954595854}
+  - nextState: {fileID: 2105505491}
+    conditions:
+    - {fileID: 954595854}
+    - {fileID: 954595855}
+--- !u!114 &954595854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310556697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb78fb6112ed64b46a6a99ffabc4e964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityUser: {fileID: 8860697156266351435}
+  isUsingAbility: 0
+--- !u!114 &954595855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310556697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e148d062a4d084c81d1832033e7e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterMovementController: {fileID: 1533019556350475861}
+  isTakingInput: 1
 --- !u!1 &1346574269
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +141,7 @@ GameObject:
   - component: {fileID: 1346574270}
   - component: {fileID: 1346574271}
   - component: {fileID: 1400936338}
+  - component: {fileID: 1400936341}
   m_Layer: 9
   m_Name: Idle
   m_TagString: Untagged
@@ -141,6 +179,9 @@ MonoBehaviour:
   - nextState: {fileID: 2105505491}
     conditions:
     - {fileID: 1400936338}
+  - nextState: {fileID: 1310556699}
+    conditions:
+    - {fileID: 1400936341}
 --- !u!114 &1400936338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +195,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterMovementController: {fileID: 1533019556350475861}
+  isTakingInput: 1
+--- !u!114 &1400936341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346574269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb78fb6112ed64b46a6a99ffabc4e964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityUser: {fileID: 8860697156266351435}
+  isUsingAbility: 1
 --- !u!1 &1833990615
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +264,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2105505490}
   - component: {fileID: 2105505491}
+  - component: {fileID: 43592994}
+  - component: {fileID: 43592995}
   m_Layer: 9
   m_Name: Moving
   m_TagString: Untagged
@@ -241,7 +299,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fcd96337fe06b48a7da473de233ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changes: []
+  changes:
+  - nextState: {fileID: 1346574271}
+    conditions:
+    - {fileID: 43592994}
+  - nextState: {fileID: 1310556699}
+    conditions:
+    - {fileID: 43592995}
+--- !u!114 &43592994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105505489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e148d062a4d084c81d1832033e7e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterMovementController: {fileID: 1533019556350475861}
+  isTakingInput: 0
+--- !u!114 &43592995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105505489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb78fb6112ed64b46a6a99ffabc4e964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityUser: {fileID: 8860697156266351435}
+  isUsingAbility: 1
 --- !u!1 &449381425311164905
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,14 +941,13 @@ GameObject:
   - component: {fileID: 1537802816993234539}
   - component: {fileID: 1551138524290547143}
   - component: {fileID: 1562335568724729083}
-  - component: {fileID: 1079583451375536456}
-  - component: {fileID: 4936583700566548586}
   - component: {fileID: 1533019556350475861}
-  - component: {fileID: 1963935554026982}
-  - component: {fileID: 1963935554026983}
-  - component: {fileID: 8860697156266351435}
+  - component: {fileID: 4936583700566548586}
   - component: {fileID: 478784418}
+  - component: {fileID: 8860697156266351435}
   - component: {fileID: 5435084252436152422}
+  - component: {fileID: 1963935554026982}
+  - component: {fileID: 1079583451375536456}
   - component: {fileID: 1450437300}
   m_Layer: 9
   m_Name: Slime
@@ -891,13 +982,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531394410883810673}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 0.9
+  m_Drag: 1
   m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!65 &1562335568724729083
 BoxCollider:
@@ -912,7 +1003,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1079583451375536456
+--- !u!114 &1533019556350475861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -921,9 +1012,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1531394410883810673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af4ee957decc57e4e9323cab1069354f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ccd8232d0c288f46b989ad9148a12bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 16
+  gravityDirection: {x: 0, y: -1, z: 0}
+  gravityForce: 9.81
+  groundDistance: 0.8
+  simulatedMass: 6
+  minVelocityMagnitude: 0.01
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 8193
+  speedOfMovementSmoothing: 20
+  airControl: 0.8
+  groundControl: 1
 --- !u!114 &4936583700566548586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,7 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatableLogic: {fileID: 11400000, guid: 4dcab7b274e6dee409036e488bd1993f, type: 2}
---- !u!114 &1533019556350475861
+--- !u!114 &478784418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -946,52 +1049,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1531394410883810673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ccd8232d0c288f46b989ad9148a12bb, type: 3}
+  m_Script: {fileID: 11500000, guid: e351ec096c9b9e342bdc7b71c8b92e14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 14
---- !u!114 &1963935554026982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531394410883810673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67e988731ff71734e8a8cf645469a831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleToBePlayed: {fileID: 8377438845730142059}
---- !u!114 &1963935554026983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531394410883810673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b311a64b2a5334e44a3c37626adeb013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  durationOfTick: 0.1
-  loopFor: 0
-  loopInfinite: 1
-  onTimerEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963935554026982}
-        m_MethodName: PlayParticles
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  onSlimeColliderEnter: {fileID: 11400000, guid: 4f27798f9855ca943b97fde93e8a1d27,
+    type: 2}
 --- !u!114 &8860697156266351435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,20 +1069,6 @@ MonoBehaviour:
   useableAbilities:
   - ability: {fileID: 11400000, guid: 8fa4341321b16fa4abfca6b429b346f3, type: 2}
     initialized: 0
---- !u!114 &478784418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531394410883810673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e351ec096c9b9e342bdc7b71c8b92e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onSlimeColliderEnter: {fileID: 11400000, guid: 4f27798f9855ca943b97fde93e8a1d27,
-    type: 2}
 --- !u!114 &5435084252436152422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,6 +1083,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onThingAppear: {fileID: 11400000, guid: 08cea5bd86af3294baed5c8f7308ae0f, type: 2}
   onThingDisappear: {fileID: 11400000, guid: 35a079d68f29c7d4f9b18d8f39634803, type: 2}
+--- !u!114 &1963935554026982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531394410883810673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e988731ff71734e8a8cf645469a831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleToBePlayed: {fileID: 8377438845730142059}
+--- !u!114 &1079583451375536456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531394410883810673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4ee957decc57e4e9323cab1069354f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1450437300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,7 +1764,7 @@ GameObject:
   - component: {fileID: 1490573523588267989}
   - component: {fileID: 1500233790119488385}
   m_Layer: 0
-  m_Name: Cube.021
+  m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3237,6 +3310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8729308460022697609}
+  - component: {fileID: 1449647541052925711}
   m_Layer: 9
   m_Name: Effects
   m_TagString: Untagged
@@ -3259,6 +3333,35 @@ Transform:
   m_Father: {fileID: 1537802816993234539}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1449647541052925711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084267140620327289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b311a64b2a5334e44a3c37626adeb013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durationOfTick: 0.1
+  loopFor: 0
+  loopInfinite: 1
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1963935554026982}
+        m_MethodName: PlayParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8540263170632017633
 GameObject:
   m_ObjectHideFlags: 0

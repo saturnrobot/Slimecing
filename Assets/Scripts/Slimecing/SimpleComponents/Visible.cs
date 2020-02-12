@@ -11,7 +11,6 @@ namespace Slimecing.SimpleComponents
 
         private void OnEnable()
         {
-            Debug.Log("gamer");
             StartCoroutine(ShowObject());
         }
 
@@ -21,7 +20,6 @@ namespace Slimecing.SimpleComponents
         }
         private void OnDisable()
         {
-            Debug.Log("ungamer");
             onThingDisappear.Raise(gameObject);
         }
     }

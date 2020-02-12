@@ -17,6 +17,6 @@ MonoBehaviour:
   abilityCooldown: 1
   abilitySound: {fileID: 8300000, guid: c04b2f9ddb776a449abed020a9962595, type: 3}
   abilityButton: Dash
-  dashForce: 30
+  dashForce: 40
   dashLength: 0.3
-  dashUseAmount: 0
+  dashUseAmount: 1

@@ -109,7 +109,6 @@ namespace Slimecing.Character
         public void AddTimedAbilityEffect(TimedAbilityEffect abilityEffect)
         {
             currentTimedAbilityEffects.Add(abilityEffect);
-            Debug.Log(currentTimedAbilityEffects.Count);
             abilityEffect.Activate();
         }
 

@@ -72,12 +72,10 @@ namespace Slimecing.Camera
 
         public void AddToCameraList(GameObject thing)
         {
-            Debug.Log("added");
             visibleThings.Add(thing.transform);
         }
         public void RemoveFromCameraList(GameObject thing)
         {
-            Debug.Log("removed");
             visibleThings.Remove(thing.transform);
         }
     }

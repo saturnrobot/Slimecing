@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -917,6 +918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1969801258, guid: f3382fb9b7ea1904f8a382a15639ff4c, type: 3}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 1328431930}
     - target: {fileID: 3086174206960044756, guid: f3382fb9b7ea1904f8a382a15639ff4c,
         type: 3}
       propertyPath: m_Name
@@ -1027,10 +1032,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1969801258, guid: f3382fb9b7ea1904f8a382a15639ff4c, type: 3}
-      propertyPath: spawnManager
-      value: 
-      objectReference: {fileID: 1328431930}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3382fb9b7ea1904f8a382a15639ff4c, type: 3}
 --- !u!1 &2040327180 stripped
