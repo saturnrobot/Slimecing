@@ -30,10 +30,6 @@ Transform:
   m_LocalPosition: {x: 0.049, y: 1, z: 2.3470001}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1.5}
   m_Children:
-<<<<<<< HEAD
-  - {fileID: 1325930500781930158}
-=======
->>>>>>> Added triggers and lots of backend
   - {fileID: 4432448012688814}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -152,10 +148,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-<<<<<<< HEAD
-=======
   m_RayTracingMode: 2
->>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -167,10 +160,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-<<<<<<< HEAD
-=======
   m_ReceiveGI: 1
->>>>>>> Added triggers and lots of backend
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -214,11 +204,7 @@ Transform:
   m_Children:
   - {fileID: 4574679940970476}
   m_Father: {fileID: 4171109667703892}
-<<<<<<< HEAD
-  m_RootOrder: 1
-=======
   m_RootOrder: 0
->>>>>>> Added triggers and lots of backend
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &64262697665954266
 MeshCollider:
@@ -249,85 +235,3 @@ MonoBehaviour:
   width: 5
   blockSpeed: 50
   blockTime: 0.3
-<<<<<<< HEAD
---- !u!1001 &1326327410174061002
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4171109667703892}
-    m_Modifications:
-    - target: {fileID: 1620881716688270, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_Name
-      value: PaintBrush
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459337213840534, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.11
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 487083cf39c9a654da88403aa0b08cb7, type: 3}
---- !u!4 &1325930500781930158 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4126481982660452, guid: 487083cf39c9a654da88403aa0b08cb7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1326327410174061002}
-  m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Added triggers and lots of backend

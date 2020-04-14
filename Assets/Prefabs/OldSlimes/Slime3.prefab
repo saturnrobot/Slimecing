@@ -864,11 +864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344299255004228}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -20, y: 1, z: -20}
-=======
   m_LocalPosition: {x: 30.021538, y: 1.4849701, z: -22.050644}
->>>>>>> Added triggers and lots of backend
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4252936247035446}
@@ -1266,10 +1262,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-<<<<<<< HEAD
-=======
   m_RayTracingMode: 0
->>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -2053,10 +2046,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-<<<<<<< HEAD
-=======
   m_RayTracingMode: 0
->>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -7324,10 +7314,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
-<<<<<<< HEAD
-=======
   m_RayTracingMode: 0
->>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:

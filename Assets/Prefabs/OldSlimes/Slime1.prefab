@@ -1,7 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
-=======
 --- !u!1 &-33985822593101995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,7 +4690,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
->>>>>>> Added triggers and lots of backend
 --- !u!1 &1000624889398560
 GameObject:
   m_ObjectHideFlags: 0
@@ -5298,10 +5295,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-<<<<<<< HEAD
-=======
   m_RayTracingMode: 0
->>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -6961,10 +6955,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-<<<<<<< HEAD
-=======
   m_RayTracingMode: 0
->>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -7360,20 +7351,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963935372720986}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -13.734823, y: 3.4009705, z: -19.324768}
-=======
   m_LocalPosition: {x: -27.548462, y: 3.314972, z: -15.480652}
->>>>>>> Added triggers and lots of backend
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4656148385489378}
   - {fileID: 4325916953773874}
-<<<<<<< HEAD
-  - {fileID: 4928377106801728}
-=======
   - {fileID: -5191362357236962624}
->>>>>>> Added triggers and lots of backend
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -7537,8 +7520,6 @@ Transform:
   m_Father: {fileID: 4335820929245278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &3509570567496915065
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,7 +7583,6 @@ Transform:
   m_Father: {fileID: -5191362357236962624}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Added triggers and lots of backend
 --- !u!1001 &4009498375011116109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7672,18 +7652,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b274cbf7d29ff8f479bc7acd2b221aee, type: 3}
-<<<<<<< HEAD
---- !u!4 &4928377106801728 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4014145233050533901, guid: b274cbf7d29ff8f479bc7acd2b221aee,
-    type: 3}
-  m_PrefabInstance: {fileID: 4009498375011116109}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &198642331333518900 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3847518439521796729, guid: b274cbf7d29ff8f479bc7acd2b221aee,
-    type: 3}
-  m_PrefabInstance: {fileID: 4009498375011116109}
-  m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Added triggers and lots of backend

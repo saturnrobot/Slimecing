@@ -114,11 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb78fb6112ed64b46a6a99ffabc4e964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  abilityUser: {fileID: 8860697156266351435}
-=======
   abilityUser: {fileID: 6087857262612827194}
->>>>>>> Added triggers and lots of backend
   isUsingAbility: 0
 --- !u!114 &954595855
 MonoBehaviour:
@@ -212,11 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb78fb6112ed64b46a6a99ffabc4e964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  abilityUser: {fileID: 8860697156266351435}
-=======
   abilityUser: {fileID: 6087857262612827194}
->>>>>>> Added triggers and lots of backend
   isUsingAbility: 1
 --- !u!1 &1833990615
 GameObject:
@@ -340,11 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb78fb6112ed64b46a6a99ffabc4e964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  abilityUser: {fileID: 8860697156266351435}
-=======
   abilityUser: {fileID: 6087857262612827194}
->>>>>>> Added triggers and lots of backend
   isUsingAbility: 1
 --- !u!1 &449381425311164905
 GameObject:
@@ -956,13 +944,6 @@ GameObject:
   - component: {fileID: 1533019556350475861}
   - component: {fileID: 4936583700566548586}
   - component: {fileID: 478784418}
-<<<<<<< HEAD
-  - component: {fileID: 8860697156266351435}
-  - component: {fileID: 5435084252436152422}
-  - component: {fileID: 1963935554026982}
-  - component: {fileID: 1079583451375536456}
-  - component: {fileID: 1450437300}
-=======
   - component: {fileID: 6087857262612827194}
   - component: {fileID: 5435084252436152422}
   - component: {fileID: 1963935554026982}
@@ -970,7 +951,6 @@ GameObject:
   - component: {fileID: 1450437300}
   - component: {fileID: 3959615095757466810}
   - component: {fileID: 1545482344972484104}
->>>>>>> Added triggers and lots of backend
   m_Layer: 9
   m_Name: Slime
   m_TagString: Slime
@@ -1007,11 +987,7 @@ Rigidbody:
   m_Mass: 0.9
   m_Drag: 1
   m_AngularDrag: 0.5
-<<<<<<< HEAD
-  m_UseGravity: 1
-=======
   m_UseGravity: 0
->>>>>>> Added triggers and lots of backend
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -1041,17 +1017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccd8232d0c288f46b989ad9148a12bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  movementSpeed: 16
-  gravityDirection: {x: 0, y: -1, z: 0}
-  gravityForce: 9.81
-  groundDistance: 0.8
-  simulatedMass: 6
-  minVelocityMagnitude: 0.01
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 8193
-=======
   rb: {fileID: 1551138524290547143}
   rotatable: {fileID: 4936583700566548586}
   playerCollider: {fileID: 1562335568724729083}
@@ -1072,7 +1037,6 @@ MonoBehaviour:
   hitLayerMask:
     serializedVersion: 2
     m_Bits: 8705
->>>>>>> Added triggers and lots of backend
   speedOfMovementSmoothing: 20
   airControl: 0.8
   groundControl: 1
@@ -1103,11 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onSlimeColliderEnter: {fileID: 11400000, guid: 4f27798f9855ca943b97fde93e8a1d27,
     type: 2}
-<<<<<<< HEAD
---- !u!114 &8860697156266351435
-=======
 --- !u!114 &6087857262612827194
->>>>>>> Added triggers and lots of backend
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1122,11 +1082,8 @@ MonoBehaviour:
   useableAbilities:
   - ability: {fileID: 11400000, guid: 8fa4341321b16fa4abfca6b429b346f3, type: 2}
     initialized: 0
-<<<<<<< HEAD
-=======
   - ability: {fileID: 11400000, guid: c86b13539019469498c09cc41eb4de39, type: 2}
     initialized: 0
->>>>>>> Added triggers and lots of backend
 --- !u!114 &5435084252436152422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1154,11 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleToBePlayed: {fileID: 8377438845730142059}
-<<<<<<< HEAD
---- !u!114 &1079583451375536456
-=======
 --- !u!114 &528797603923251975
->>>>>>> Added triggers and lots of backend
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1167,16 +1120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1531394410883810673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: af4ee957decc57e4e9323cab1069354f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
   m_Script: {fileID: 11500000, guid: 51ebc4d71a10b7344b9879000710a2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _characterMovementController: {fileID: 1533019556350475861}
->>>>>>> Added triggers and lots of backend
 --- !u!114 &1450437300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,20 +1151,6 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-<<<<<<< HEAD
-      m_Calls: []
-    m_ActionId: 550962d9-e533-414f-aa32-f29e5dfa9019
-    m_ActionName: VSGameplay/Horizontal[/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e4869e00-a1d9-457d-98b7-3520944918a3
-    m_ActionName: VSGameplay/Vertical[/Keyboard/s,/Keyboard/w,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/up]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: VSGameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
-=======
       m_Calls:
       - m_Target: {fileID: 528797603923251975}
         m_MethodName: OnHorizontal
@@ -1370,7 +1303,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
->>>>>>> Added triggers and lots of backend
 --- !u!1 &1531415707048473787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,11 +1414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< HEAD
-  m_IsActive: 1
-=======
   m_IsActive: 0
->>>>>>> Added triggers and lots of backend
 --- !u!4 &1533826743992105241
 Transform:
   m_ObjectHideFlags: 0
@@ -3538,10 +3466,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8729308460022697609}
-<<<<<<< HEAD
-  - component: {fileID: 1449647541052925711}
-=======
->>>>>>> Added triggers and lots of backend
   m_Layer: 9
   m_Name: Effects
   m_TagString: Untagged
@@ -3564,38 +3488,6 @@ Transform:
   m_Father: {fileID: 1537802816993234539}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &1449647541052925711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7084267140620327289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b311a64b2a5334e44a3c37626adeb013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  durationOfTick: 0.1
-  loopFor: 0
-  loopInfinite: 1
-  onTimerEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963935554026982}
-        m_MethodName: PlayParticles
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-=======
->>>>>>> Added triggers and lots of backend
 --- !u!1 &8540263170632017633
 GameObject:
   m_ObjectHideFlags: 0

@@ -598,7 +598,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 1
+    Collab: 1
+    ErrorHub: 0
+    Hub: 0
+    UNet: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -611,10 +616,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 9065f837-ea6c-4b59-a7b6-7cff282ce513
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Slimecing
+  organizationId: plutotank
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 1
   disableOldInputManagerSupport: 0

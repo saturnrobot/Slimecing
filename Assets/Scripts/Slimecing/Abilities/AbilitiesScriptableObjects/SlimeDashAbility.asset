@@ -16,11 +16,7 @@ MonoBehaviour:
   abilityDescription: move forward faster
   abilityCooldown: 1
   abilitySound: {fileID: 8300000, guid: c04b2f9ddb776a449abed020a9962595, type: 3}
-<<<<<<< HEAD
-  abilityButton: Dash
-=======
   abilityTrigger: {fileID: 11400000, guid: 79fb25d73d9e39c42a008d2e98e7e1d4, type: 2}
->>>>>>> Added triggers and lots of backend
   dashForce: 40
   dashLength: 0.3
   dashUseAmount: 1
