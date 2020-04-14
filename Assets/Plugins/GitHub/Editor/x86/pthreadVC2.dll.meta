@@ -1,31 +1,6 @@
 fileFormatVersion: 2
-guid: fe5abeadcbe591e4fa9107fbc02f3998
-<<<<<<< HEAD
-PluginImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  iconMap: {}
-  executionOrder: {}
-  defineConstraints: []
-  isPreloaded: 0
-  isOverridable: 0
-  isExplicitlyReferenced: 0
-  validateReferences: 1
-  platformData:
-  - first:
-      Any: 
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      Editor: Editor
-    second:
-      enabled: 1
-      settings:
-        CPU: x86_64
-        DefaultValueInitialized: true
-=======
-timeCreated: 1493304330
+guid: 151a1d946b98deb4b98445400983ba92
+timeCreated: 1493300307
 licenseType: Store
 PluginImporter:
   serializedVersion: 2
@@ -55,7 +30,7 @@ PluginImporter:
       second:
         enabled: 0
         settings:
-          CPU: AnyCPU
+          CPU: x86
           OS: Windows
     data:
       first:
@@ -92,7 +67,7 @@ PluginImporter:
       second:
         enabled: 1
         settings:
-          CPU: x86_64
+          CPU: x86
           DefaultValueInitialized: true
           OS: Windows
     data:
@@ -185,7 +160,6 @@ PluginImporter:
         settings:
           CompileFlags: 
           FrameworkDependencies: 
->>>>>>> Added Github to Unity
   userData: 
   assetBundleName: 
   assetBundleVariant: 
