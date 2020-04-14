@@ -149,6 +149,7 @@ public class SwordScript : MonoBehaviour {
         else {
             //Generate a plane horizontally from the player position to get raycast hits
             Plane playerPlane = new Plane(Vector3.up, center);
+<<<<<<< HEAD
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ray from camera angle diraction from mouse position
             float hitdist = 0.0f; //hit distance
             //when ray hits generated plane
@@ -167,6 +168,28 @@ public class SwordScript : MonoBehaviour {
 
             }
 
+=======
+            if (Camera.main != null)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ray from camera angle diraction from mouse position
+                float hitdist = 0.0f; //hit distance
+                //when ray hits generated plane
+                if (playerPlane.Raycast(ray, out hitdist)) {
+                    //location where raycast hit
+                    Vector3 targetPoint = ray.GetPoint(hitdist);
+                    //Debug.Log(targetPoint);
+                    //set offset (basically radius)
+                    offset = transform.position - center;
+                    //set the height to static variable 
+                    //Rotate sword towards ray hit position based on speed 
+                    Vector3 swordTarget = Vector3.RotateTowards(offset, (targetPoint - center), swordMouseSpeed, 0f);
+                    swordTarget.y = center.y + theY;
+                    //Set position to that rotated towards
+                    transform.position = center + swordTarget.normalized * Radius;
+
+                }
+            }
+>>>>>>> Added triggers and lots of backend
         }
         //Keep static height 
         transform.position = new Vector3(transform.position.x, (theY + center.y), transform.position.z);

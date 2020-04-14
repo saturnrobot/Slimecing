@@ -9,8 +9,11 @@ public class CooldownData
     private float cooldown;
     private int useAmount = 0;
 
+<<<<<<< HEAD
     //COPY PASTED CODE FROM TIMEDABILITYEFFECT
     //SINGLE RESPONSIBILITY!!!
+=======
+>>>>>>> Added triggers and lots of backend
     public Ability GetAbility => ability;
     public int UseAmount => useAmount;
     public bool IsCoolin => cooldown > 0 || useAmount > 0; //? true : false;
@@ -28,7 +31,10 @@ public class CooldownData
         this.useAmount = useAmount - 1;
     }
 
+<<<<<<< HEAD
     //COPY PASTED CODE FROM TIMEDABILITYEFFECT
+=======
+>>>>>>> Added triggers and lots of backend
     public void TickCooldown(float delta)
     {
         if (useAmount > 0) return;

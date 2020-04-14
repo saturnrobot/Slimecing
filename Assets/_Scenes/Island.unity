@@ -719,6 +719,15 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 33435459477494288, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: bee1831172d9b214184e170a53067201,
+        type: 3}
+>>>>>>> Added triggers and lots of backend
     - target: {fileID: 64798188750627332, guid: e4764bc8dc4bc084ba030777f6e827ed,
         type: 3}
       propertyPath: m_Convex
@@ -729,6 +738,15 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 64798188750627332, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: bee1831172d9b214184e170a53067201,
+        type: 3}
+>>>>>>> Added triggers and lots of backend
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
 --- !u!1001 &1460476397

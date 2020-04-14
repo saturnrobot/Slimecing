@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 97f768ec7b33bd3459bfe4a6ab6dea4f
+=======
+guid: 64a342a7f5102db4091185f55e9b2b9e
+>>>>>>> Added triggers and lots of backend
 DefaultImporter:
   externalObjects: {}
   userData: 

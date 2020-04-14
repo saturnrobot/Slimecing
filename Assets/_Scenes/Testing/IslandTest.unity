@@ -20,11 +20,19 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
+<<<<<<< HEAD
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
+=======
+  m_AmbientSkyColor: {r: 0, g: 0.3333335, b: 1, a: 1}
+  m_AmbientEquatorColor: {r: 0.40744036, g: 0.6384478, b: 0.7924528, a: 1}
+  m_AmbientGroundColor: {r: 0.1509804, g: 0.08529412, b: 0.04117647, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 1
+>>>>>>> Added triggers and lots of backend
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
@@ -37,7 +45,11 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
+<<<<<<< HEAD
   m_Sun: {fileID: 0}
+=======
+  m_Sun: {fileID: 30463929}
+>>>>>>> Added triggers and lots of backend
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -128,10 +140,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+=======
+    - target: {fileID: 1375321746913346, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> Added triggers and lots of backend
     - target: {fileID: 1906961828348350, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
       propertyPath: m_Name
       value: Arena1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 4057692429258678, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057692429258678, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057692429258678, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.662
+      objectReference: {fileID: 0}
+>>>>>>> Added triggers and lots of backend
     - target: {fileID: 4081836540506092, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -162,7 +196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4081836540506092, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 2
+=======
+      value: 1
+>>>>>>> Added triggers and lots of backend
       objectReference: {fileID: 0}
     - target: {fileID: 4081836540506092, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -176,8 +214,78 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
+=======
+    - target: {fileID: 23551904357897884, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23551904357897884, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33435459477494288, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: 51a995ced244dce45a4d7b2e8f5847e4,
+        type: 3}
+    - target: {fileID: 33435459477494288, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: bee1831172d9b214184e170a53067201,
+        type: 3}
+    - target: {fileID: 64798188750627332, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: 51a995ced244dce45a4d7b2e8f5847e4,
+        type: 3}
+    - target: {fileID: 64798188750627332, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4493585093827132993, guid: bee1831172d9b214184e170a53067201,
+        type: 3}
+    - target: {fileID: 108067513892684158, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Shadows.m_Bias
+      value: 0.095
+      objectReference: {fileID: 0}
+    - target: {fileID: 108067513892684158, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Shadows.m_NormalBias
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 108067513892684158, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 108067513892684158, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 108067513892684158, guid: e4764bc8dc4bc084ba030777f6e827ed,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4764bc8dc4bc084ba030777f6e827ed, type: 3}
+--- !u!108 &30463929 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 108067513892684158, guid: e4764bc8dc4bc084ba030777f6e827ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 30463928}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Added triggers and lots of backend
 --- !u!1 &75235981
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,9 +334,24 @@ MonoBehaviour:
       m_Id: 2bd17937-1c8f-47b5-8742-d69c3a84a283
       m_Processors: 
       m_Interactions: 
+<<<<<<< HEAD
       m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 999108078}
+=======
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: dbb1d94d-0ff2-434b-9d3b-e8d75eeb2fb1
+        m_Path: <Keyboard>/enter
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Action
+        m_Flags: 0
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 1531394410883810673, guid: e4b1cb76851c2d54eaa71187b01811dd,
+    type: 3}
+>>>>>>> Added triggers and lots of backend
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -246,18 +369,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75235981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.066248775, y: 10.39, z: -7.6067266}
+=======
+  m_LocalPosition: {x: -0.066248775, y: 17.72, z: -7.6067266}
+>>>>>>> Added triggers and lots of backend
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &999108078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1531394410883810673, guid: e4b1cb76851c2d54eaa71187b01811dd,
     type: 3}
   m_PrefabInstance: {fileID: 1224779015}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Added triggers and lots of backend
 --- !u!1 &1093785807
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +496,7 @@ Transform:
   m_LocalScale: {x: 5.2918277, y: 5.2918277, z: 5.2918277}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1224779015
@@ -437,6 +568,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4b1cb76851c2d54eaa71187b01811dd, type: 3}
+=======
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Added triggers and lots of backend
 --- !u!1001 &1472157835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,7 +613,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234973402822312, guid: 527f194984da0eb4082c0dca4748d5aa, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 3
+=======
+      value: 2
+>>>>>>> Added triggers and lots of backend
       objectReference: {fileID: 0}
     - target: {fileID: 4234973402822312, guid: 527f194984da0eb4082c0dca4748d5aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -492,6 +631,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 114368316905943310, guid: 527f194984da0eb4082c0dca4748d5aa,
+        type: 3}
+      propertyPath: offset.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 114368316905943310, guid: 527f194984da0eb4082c0dca4748d5aa,
+        type: 3}
+      propertyPath: offset.z
+      value: -50
+      objectReference: {fileID: 0}
+>>>>>>> Added triggers and lots of backend
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 527f194984da0eb4082c0dca4748d5aa, type: 3}
 --- !u!1 &1571852150
@@ -602,5 +754,9 @@ Transform:
   m_LocalScale: {x: 1.6235589, y: 1.6235589, z: 1.6235589}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 3
+>>>>>>> Added triggers and lots of backend
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

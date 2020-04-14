@@ -103,6 +103,10 @@ PlayerSettings:
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
+<<<<<<< HEAD
+=======
+  xboxOneEnableTypeOptimization: 0
+>>>>>>> Added triggers and lots of backend
   xboxOnePresentImmediateThreshold: 0
   switchQueueCommandMemory: 1048576
   switchQueueControlMemory: 16384
@@ -628,7 +632,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+<<<<<<< HEAD
     Collab: 1
+=======
+    Build: 1
+    Collab: 1
+    UNet: 1
+>>>>>>> Added triggers and lots of backend
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 

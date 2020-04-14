@@ -9,6 +9,7 @@ namespace Slimecing.SimpleComponents.Movement.Rotatable_Types
         [SerializeField] private float maxAngularVelocity;
         
         private bool _slowedAngVel;
+<<<<<<< HEAD
 
         public override void Initialize(Rigidbody rbody, Transform body)
         {
@@ -20,13 +21,24 @@ namespace Slimecing.SimpleComponents.Movement.Rotatable_Types
         public override void RotateToVector(Vector3 desiredLookAt, float deltaTime)
         {
             if (desiredLookAt == Vector3.zero || !(rotSpeed > 0f)) return;
+=======
+        public override void RotateToVector(Transform objectTransform, Vector3 desiredLookAt, float deltaTime)
+        {
+            if (desiredLookAt == Vector3.zero || !(rotSpeed > 0f)) return;
+
+            Rigidbody rb = objectTransform.gameObject.GetComponent<Rigidbody>();
+>>>>>>> Added triggers and lots of backend
             Quaternion targetRotation = Quaternion.LookRotation(desiredLookAt);
             
             if (Quaternion.Angle(objectTransform.rotation, targetRotation) < 13)
             {
                 if (!_slowedAngVel)
                 {
+<<<<<<< HEAD
                     SlowAngularVelocity();
+=======
+                    SlowAngularVelocity(rb);
+>>>>>>> Added triggers and lots of backend
                 }
                 objectTransform.rotation = Quaternion.Slerp(objectTransform.rotation, targetRotation, rotSpeed);
                 return;
@@ -57,7 +69,11 @@ namespace Slimecing.SimpleComponents.Movement.Rotatable_Types
             return relativeAngles;
         }
 
+<<<<<<< HEAD
         private void SlowAngularVelocity()
+=======
+        private void SlowAngularVelocity(Rigidbody rb)
+>>>>>>> Added triggers and lots of backend
         {
             rb.angularVelocity *= 0.5f;
             _slowedAngVel = true;

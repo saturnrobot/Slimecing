@@ -10,10 +10,17 @@ GameObject:
   m_Component:
   - component: {fileID: 2314149755559057351}
   - component: {fileID: 2375074089273406019}
+<<<<<<< HEAD
   - component: {fileID: 2416835633995077279}
   - component: {fileID: 2364959692505286347}
   - component: {fileID: 7899141307266342912}
   - component: {fileID: 1642684556973010571}
+=======
+  - component: {fileID: 2364959692505286347}
+  - component: {fileID: 7899141307266342912}
+  - component: {fileID: 1642684556973010571}
+  - component: {fileID: 457903427708918534}
+>>>>>>> Added triggers and lots of backend
   m_Layer: 10
   m_Name: TesterSword1
   m_TagString: Sword
@@ -28,9 +35,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2311679785310360297}
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1.5}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 1.8}
+>>>>>>> Added triggers and lots of backend
   m_Children:
   - {fileID: 2306485253108203537}
   m_Father: {fileID: 0}
@@ -49,6 +62,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &2416835633995077279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +94,8 @@ MonoBehaviour:
   blockedOffset: {x: 0, y: 0, z: 0}
   Owner: {fileID: 0}
   thrustHit: 0
+=======
+>>>>>>> Added triggers and lots of backend
 --- !u!54 &2364959692505286347
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -92,7 +108,11 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
+<<<<<<< HEAD
   m_IsKinematic: 0
+=======
+  m_IsKinematic: 1
+>>>>>>> Added triggers and lots of backend
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -118,6 +138,10 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+<<<<<<< HEAD
+=======
+  m_RayTracingMode: 2
+>>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -142,6 +166,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &457903427708918534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2311679785310360297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a7b5a849928064d9d98e0ddef187ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyCollider: {fileID: 2375074089273406019}
+  stats: {fileID: 11400000, guid: 44e3e2a9360e3f245b69bd99ec898212, type: 2}
+>>>>>>> Added triggers and lots of backend
 --- !u!1 &2311745251963663901
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +193,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2306485253108203537}
   - component: {fileID: 2375548456093002017}
+<<<<<<< HEAD
   - component: {fileID: 2416144094420853923}
+=======
+>>>>>>> Added triggers and lots of backend
   m_Layer: 11
   m_Name: Block Hitbox
   m_TagString: BlockArea
@@ -189,6 +233,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8d27435e73833654db7504d72c3ee2d4, type: 3}
+<<<<<<< HEAD
 --- !u!114 &2416144094420853923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +249,8 @@ MonoBehaviour:
   width: 5
   blockSpeed: 50
   blockTime: 0.3
+=======
+>>>>>>> Added triggers and lots of backend
 --- !u!1 &2312406836008797191
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +305,10 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+<<<<<<< HEAD
+=======
+  m_RayTracingMode: 2
+>>>>>>> Added triggers and lots of backend
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:

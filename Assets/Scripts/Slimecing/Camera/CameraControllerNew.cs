@@ -9,6 +9,7 @@ namespace Slimecing.Camera
         public float zoomLimit = 50f;
         public float minZoom = 40f;
         public float maxZoom = 10f;
+<<<<<<< HEAD
         
         public float maxDistanceFromOtherPlayers = 70;
         [HideInInspector] public List<Transform> visibleThings = new List<Transform>();
@@ -21,6 +22,20 @@ namespace Slimecing.Camera
         private int _numberPlayers;
 
         public Vector3 offset;
+=======
+        public float maxDistanceFromOtherPlayers = 70;
+
+        private List<Transform> visibleThings = new List<Transform>();
+        //private List<Transform> unSeenPlayers = new List<Transform>();
+        //private List<float> localDistances = new List<float>();
+        private UnityEngine.Camera _cCamera;                
+        private Vector3 _cameraVelocity;
+        private int _numberPlayers;
+        public Vector3 offset;
+
+        public List<Transform> VisibleThings { get => visibleThings; set => visibleThings = value; }
+
+>>>>>>> Added triggers and lots of backend
         private void Awake()
         {
             _cCamera = GetComponent<UnityEngine.Camera>();
@@ -38,12 +53,20 @@ namespace Slimecing.Camera
 
         private Vector3 GetCenterPoint()
         {
+<<<<<<< HEAD
             switch (visibleThings.Count)
+=======
+            switch (VisibleThings.Count)
+>>>>>>> Added triggers and lots of backend
             {
                 case 0:
                     return Vector3.zero;
                 case 1:
+<<<<<<< HEAD
                     return visibleThings[0].position;
+=======
+                    return VisibleThings[0].position;
+>>>>>>> Added triggers and lots of backend
                 default:
                     return FindBoundsAndSetBounds().center;
             }
@@ -56,14 +79,23 @@ namespace Slimecing.Camera
 
         private Bounds FindBoundsAndSetBounds()
         {
+<<<<<<< HEAD
             if (visibleThings.Count == 0)
+=======
+            if (VisibleThings.Count == 0)
+>>>>>>> Added triggers and lots of backend
             {
                 Bounds zeroBounds = new Bounds(Vector3.zero, Vector3.zero);
                 return zeroBounds;
            
             }
+<<<<<<< HEAD
             Bounds playerBounds = new Bounds(visibleThings[0].position, Vector3.zero);
             foreach (var thing in visibleThings)
+=======
+            Bounds playerBounds = new Bounds(VisibleThings[0].position, Vector3.zero);
+            foreach (var thing in VisibleThings)
+>>>>>>> Added triggers and lots of backend
             {
                 playerBounds.Encapsulate(thing.position);
             }
@@ -72,11 +104,19 @@ namespace Slimecing.Camera
 
         public void AddToCameraList(GameObject thing)
         {
+<<<<<<< HEAD
             visibleThings.Add(thing.transform);
         }
         public void RemoveFromCameraList(GameObject thing)
         {
             visibleThings.Remove(thing.transform);
+=======
+            VisibleThings.Add(thing.transform);
+        }
+        public void RemoveFromCameraList(GameObject thing)
+        {
+            VisibleThings.Remove(thing.transform);
+>>>>>>> Added triggers and lots of backend
         }
     }
 }

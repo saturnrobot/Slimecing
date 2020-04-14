@@ -63,7 +63,11 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0.664
     - _GlossyReflections: 1
+<<<<<<< HEAD
     - _Metallic: 0.115
+=======
+    - _Metallic: 0.209
+>>>>>>> Added triggers and lots of backend
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02

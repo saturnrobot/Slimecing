@@ -9,6 +9,7 @@ namespace Slimecing.SimpleComponents.Movement
     {
 
         [SerializeField] private RotatableLogic rotatableLogic;
+<<<<<<< HEAD
         private RotatableLogic _currentRotatableLogic;
 
         private void Awake()
@@ -36,6 +37,13 @@ namespace Slimecing.SimpleComponents.Movement
             if (rotatableLogic == null) return;
             if (rotatableLogic != _currentRotatableLogic) InitializeRotatableLogic();
             rotatableLogic.RotateToVector(desiredLookAt, deltaTime);
+=======
+
+        public void RotateToVector(Transform objectTransform, Vector3 desiredLookAt, float deltaTime)
+        {
+            if (rotatableLogic == null) return;
+            rotatableLogic.RotateToVector(objectTransform, desiredLookAt, deltaTime);
+>>>>>>> Added triggers and lots of backend
         }
     }
 }

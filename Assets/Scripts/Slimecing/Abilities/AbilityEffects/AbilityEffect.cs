@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 ﻿using UnityEngine;
+=======
+﻿using Slimecing.Characters;
+using UnityEngine;
+>>>>>>> Added triggers and lots of backend
 
 namespace Slimecing.Abilities.AbilityEffects
 {
     public abstract class AbilityEffect
     {
+<<<<<<< HEAD
         protected bool doesUpdate;
 
         private GameObject obj;
@@ -20,6 +26,17 @@ namespace Slimecing.Abilities.AbilityEffects
         public void UpdateEffect()
         {
             DoUpdate();
+=======
+        public abstract bool DoesUpdate();
+
+        private AbilityUser aUser;
+        private Ability ability;
+        
+        public AbilityEffect(Ability ability, AbilityUser aUser)
+        {
+            this.ability = ability;
+            this.aUser = aUser;
+>>>>>>> Added triggers and lots of backend
         }
         
         public abstract void Activate();

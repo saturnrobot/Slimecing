@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2a2319ddb1561004c92be706f4f3a813
+=======
+guid: 3272d967fe5ac1e43b3c2bb5fac3d137
+>>>>>>> Added triggers and lots of backend
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -236,11 +236,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1533019556350475861, guid: e4b1cb76851c2d54eaa71187b01811dd,
         type: 3}
       propertyPath: slopeDistance
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> Added triggers and lots of backend
     - target: {fileID: 1537802816993234539, guid: e4b1cb76851c2d54eaa71187b01811dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -439,7 +442,11 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 697181799}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 5
+>>>>>>> Added triggers and lots of backend
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &472638077
 BoxCollider:
@@ -680,6 +687,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613119393}
+<<<<<<< HEAD
   m_LocalRotation: {x: -0.21294422, y: -0, z: -0, w: 0.9770644}
   m_LocalPosition: {x: 12.93, y: 5.33, z: -6.21}
   m_LocalScale: {x: 9.0905, y: 0.3, z: 25}
@@ -687,6 +695,15 @@ Transform:
   m_Father: {fileID: 697181799}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -24.590002, y: 0, z: 0}
+=======
+  m_LocalRotation: {x: -0.32101423, y: -0, z: -0, w: 0.94707435}
+  m_LocalPosition: {x: 12.93, y: 5.06, z: -6.079999}
+  m_LocalScale: {x: 9.0905, y: 0.3, z: 25}
+  m_Children: []
+  m_Father: {fileID: 697181799}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -37.449, y: 0, z: 0}
+>>>>>>> Added triggers and lots of backend
 --- !u!20 &619456896 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20959982129881372, guid: 527f194984da0eb4082c0dca4748d5aa,
@@ -909,8 +926,13 @@ Transform:
   - {fileID: 1313295119}
   - {fileID: 364079740}
   - {fileID: 1633152653}
+<<<<<<< HEAD
   - {fileID: 472638076}
   - {fileID: 613119397}
+=======
+  - {fileID: 613119397}
+  - {fileID: 472638076}
+>>>>>>> Added triggers and lots of backend
   - {fileID: 1420198634}
   - {fileID: 479781848}
   - {fileID: 733502430}
@@ -1641,7 +1663,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 1
+=======
+  m_IsActive: 0
+>>>>>>> Added triggers and lots of backend
 --- !u!114 &1963414393
 MonoBehaviour:
   m_ObjectHideFlags: 0
