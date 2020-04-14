@@ -1,7 +1,5 @@
-﻿using System;
-using Slimecing.SimpleComponents.Movement.Rotatable_Types;
+﻿using Slimecing.SimpleComponents.Movement.Rotatable_Types;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Slimecing.SimpleComponents.Movement
 {
@@ -9,41 +7,11 @@ namespace Slimecing.SimpleComponents.Movement
     {
 
         [SerializeField] private RotatableLogic rotatableLogic;
-<<<<<<< HEAD
-        private RotatableLogic _currentRotatableLogic;
-
-        private void Awake()
-        {
-            InitializeRotatableLogic();
-        }
-
-        private void InitializeRotatableLogic()
-        {
-            if (rotatableLogic == null) return;
-            _currentRotatableLogic = rotatableLogic;
-            
-            if (GetComponent<Rigidbody>() != null)
-            {
-                rotatableLogic.Initialize(GetComponent<Rigidbody>(), transform);
-            }
-            else
-            {
-                rotatableLogic.Initialize(transform);
-            }
-        }
-
-        public void RotateToVector(Vector3 desiredLookAt, float deltaTime)
-        {
-            if (rotatableLogic == null) return;
-            if (rotatableLogic != _currentRotatableLogic) InitializeRotatableLogic();
-            rotatableLogic.RotateToVector(desiredLookAt, deltaTime);
-=======
 
         public void RotateToVector(Transform objectTransform, Vector3 desiredLookAt, float deltaTime)
         {
             if (rotatableLogic == null) return;
             rotatableLogic.RotateToVector(objectTransform, desiredLookAt, deltaTime);
->>>>>>> Added triggers and lots of backend
         }
     }
 }

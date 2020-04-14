@@ -2,7 +2,7 @@
 using Slimecing.Characters;
 using UnityEngine;
 
-namespace Slimecing.Abilities
+namespace Slimecing.Abilities.UseAbilities
 {
     [CreateAssetMenu(fileName = "DashAbility", menuName = "Abilities/DashAbility")]
     public class DashAbility : Ability

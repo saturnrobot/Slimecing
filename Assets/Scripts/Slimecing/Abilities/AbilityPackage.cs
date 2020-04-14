@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿using Slimecing.Character;
-=======
-﻿using Slimecing.Characters;
->>>>>>> Added triggers and lots of backend
+using Slimecing.Characters;
+
 namespace Slimecing.Abilities {
     [System.Serializable]
     public class AbilityPackage

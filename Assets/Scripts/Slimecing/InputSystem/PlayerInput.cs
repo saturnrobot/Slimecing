@@ -1,13 +1,11 @@
-﻿using System;
-using Slimecing.Character;
-using Slimecing.Characters;
+﻿using Slimecing.Characters;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Slimecing.InputSystem
 {
     [RequireComponent(typeof(CharacterMovementController))]
-    public class PlayerInput : MonoBehaviour, SlimeControls.IVSGameplayActions
+    public class PlayerInput : MonoBehaviour, SlimeControls.IVsGameplayActions
     {
         [SerializeField] private SlimeControls playerControls;
 
@@ -16,7 +14,7 @@ namespace Slimecing.InputSystem
         private void Awake()
         {
             playerControls = new SlimeControls();
-            playerControls.VSGameplay.SetCallbacks(this);
+            playerControls.VsGameplay.SetCallbacks(this);
             _characterMovementController = GetComponent<CharacterMovementController>();
         }
         

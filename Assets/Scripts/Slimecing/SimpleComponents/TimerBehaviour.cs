@@ -22,7 +22,7 @@ namespace Slimecing.SimpleComponents
                 {
                     return _timer;
                 }
-                _timer = new Timer(durationOfTick, loopFor, loopInfinite);
+                //_timer = new Timer(durationOfTick, loopFor, loopInfinite);
                 return _timer;
             }
         }

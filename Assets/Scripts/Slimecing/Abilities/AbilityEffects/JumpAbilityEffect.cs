@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Slimecing.Abilities.UseAbilities;
 using UnityEngine;
 
 namespace Slimecing.Abilities.AbilityEffects

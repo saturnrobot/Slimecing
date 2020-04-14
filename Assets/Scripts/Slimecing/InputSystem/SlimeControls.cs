@@ -17,22 +17,13 @@ namespace Slimecing.InputSystem
     ""name"": ""SlimeControls"",
     ""maps"": [
         {
-<<<<<<< HEAD
-            ""name"": ""VSGameplay"",
-            ""id"": ""24f634ee-5f8f-4707-89a7-23e8b1ecbcf4"",
-=======
             ""name"": ""VsGameplay"",
             ""id"": ""a0766e30-e847-4bfe-b5bc-cde1c9883be5"",
->>>>>>> Added triggers and lots of backend
             ""actions"": [
                 {
                     ""name"": ""Horizontal"",
                     ""type"": ""Button"",
-<<<<<<< HEAD
-                    ""id"": ""550962d9-e533-414f-aa32-f29e5dfa9019"",
-=======
                     ""id"": ""8abfc885-0de5-41b1-8abb-45b2ff94793e"",
->>>>>>> Added triggers and lots of backend
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -40,11 +31,7 @@ namespace Slimecing.InputSystem
                 {
                     ""name"": ""Vertical"",
                     ""type"": ""Button"",
-<<<<<<< HEAD
-                    ""id"": ""e4869e00-a1d9-457d-98b7-3520944918a3"",
-=======
                     ""id"": ""795a2a8f-8cdf-4247-8e61-45697d87c257"",
->>>>>>> Added triggers and lots of backend
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -53,11 +40,7 @@ namespace Slimecing.InputSystem
             ""bindings"": [
                 {
                     ""name"": ""1D Axis"",
-<<<<<<< HEAD
-                    ""id"": ""8e69cdda-7fed-470f-acaa-8a3ab63a63c2"",
-=======
                     ""id"": ""24e32e59-8146-430e-84f2-a1b70931ae4d"",
->>>>>>> Added triggers and lots of backend
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -68,167 +51,95 @@ namespace Slimecing.InputSystem
                 },
                 {
                     ""name"": ""negative"",
-<<<<<<< HEAD
-                    ""id"": ""dff2a34d-d502-4dfe-8227-94a0f5ac22aa"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-=======
                     ""id"": ""704f98c2-def6-4d1f-919a-f55afc789a69"",
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
->>>>>>> Added triggers and lots of backend
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""positive"",
-<<<<<<< HEAD
-                    ""id"": ""7bf42d99-f48b-4b91-ad01-155c5eeebb07"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-=======
                     ""id"": ""7930672c-a277-4b7d-abd4-36e6dc8a2f60"",
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
->>>>>>> Added triggers and lots of backend
                     ""action"": ""Horizontal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""1D Axis"",
-<<<<<<< HEAD
-                    ""id"": ""faa9dfee-c3af-4ef1-a36f-7ae201db94d2"",
-=======
                     ""id"": ""1795ec87-9b67-4d39-9dc3-1340cb616993"",
->>>>>>> Added triggers and lots of backend
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-<<<<<<< HEAD
-                    ""action"": ""Horizontal"",
-=======
                     ""action"": ""Vertical"",
->>>>>>> Added triggers and lots of backend
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""negative"",
-<<<<<<< HEAD
-                    ""id"": ""f69a983c-d4f8-4dbe-bdce-ee54ee4e8fe7"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-=======
                     ""id"": ""0935a6f8-0eef-416b-a799-3bd4bf1a7427"",
                     ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Vertical"",
->>>>>>> Added triggers and lots of backend
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""positive"",
-<<<<<<< HEAD
-                    ""id"": ""492c4265-7d82-4a79-b795-e5117a26d1ff"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Horizontal"",
-=======
                     ""id"": ""5b09c630-5af5-43d1-9aa5-53f006f852db"",
                     ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Vertical"",
->>>>>>> Added triggers and lots of backend
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""1D Axis"",
-<<<<<<< HEAD
-                    ""id"": ""ef047899-ff11-4d90-9e60-7ce7683a25a9"",
-=======
                     ""id"": ""81786b8d-0478-4026-822f-27bbb95d6069"",
->>>>>>> Added triggers and lots of backend
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-<<<<<<< HEAD
-                    ""action"": ""Vertical"",
-=======
                     ""action"": ""Horizontal"",
->>>>>>> Added triggers and lots of backend
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""negative"",
-<<<<<<< HEAD
-                    ""id"": ""f3cd3157-c5b2-440e-88ea-46fedd54b294"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
-=======
                     ""id"": ""c7c2af17-1134-4d80-894b-b672947e3154"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Horizontal"",
->>>>>>> Added triggers and lots of backend
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""positive"",
-<<<<<<< HEAD
-                    ""id"": ""5ea49ba6-e713-4cc1-8260-d0459a6f549b"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Vertical"",
-=======
                     ""id"": ""45d948f8-6196-4d84-b6d2-910feb90be8d"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""Horizontal"",
->>>>>>> Added triggers and lots of backend
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""1D Axis"",
-<<<<<<< HEAD
-                    ""id"": ""82cb051e-4445-4323-be39-c955e64a53ca"",
-=======
                     ""id"": ""f63e4496-f181-4d11-b089-95ea60655e50"",
->>>>>>> Added triggers and lots of backend
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -239,53 +150,27 @@ namespace Slimecing.InputSystem
                 },
                 {
                     ""name"": ""negative"",
-<<<<<<< HEAD
-                    ""id"": ""8385a5f7-d192-4142-a50c-7bf9c4d408f0"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-=======
                     ""id"": ""043fe824-d52a-42b9-82c3-12aec1a16dd5"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
->>>>>>> Added triggers and lots of backend
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""positive"",
-<<<<<<< HEAD
-                    ""id"": ""1abd2da0-6ed5-446b-88ba-1d1c22fcb787"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-=======
                     ""id"": ""7898eedc-f9ff-4760-b4f4-e701c57d1998"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
->>>>>>> Added triggers and lots of backend
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
             ]
-<<<<<<< HEAD
-        }
-    ],
-    ""controlSchemes"": []
-}");
-            // VSGameplay
-            m_VSGameplay = asset.FindActionMap("VSGameplay", throwIfNotFound: true);
-            m_VSGameplay_Horizontal = m_VSGameplay.FindAction("Horizontal", throwIfNotFound: true);
-            m_VSGameplay_Vertical = m_VSGameplay.FindAction("Vertical", throwIfNotFound: true);
-=======
         },
         {
             ""name"": ""AbilityButtons"",
@@ -399,7 +284,6 @@ namespace Slimecing.InputSystem
             m_AbilityButtons = asset.FindActionMap("AbilityButtons", throwIfNotFound: true);
             m_AbilityButtons_DashAbility = m_AbilityButtons.FindAction("DashAbility", throwIfNotFound: true);
             m_AbilityButtons_JumpAbility = m_AbilityButtons.FindAction("JumpAbility", throwIfNotFound: true);
->>>>>>> Added triggers and lots of backend
         }
 
         public void Dispose()
@@ -445,37 +329,7 @@ namespace Slimecing.InputSystem
         {
             asset.Disable();
         }
-
-<<<<<<< HEAD
-        // VSGameplay
-        private readonly InputActionMap m_VSGameplay;
-        private IVSGameplayActions m_VSGameplayActionsCallbackInterface;
-        private readonly InputAction m_VSGameplay_Horizontal;
-        private readonly InputAction m_VSGameplay_Vertical;
-        public struct VSGameplayActions
-        {
-            private @SlimeControls m_Wrapper;
-            public VSGameplayActions(@SlimeControls wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Horizontal => m_Wrapper.m_VSGameplay_Horizontal;
-            public InputAction @Vertical => m_Wrapper.m_VSGameplay_Vertical;
-            public InputActionMap Get() { return m_Wrapper.m_VSGameplay; }
-            public void Enable() { Get().Enable(); }
-            public void Disable() { Get().Disable(); }
-            public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(VSGameplayActions set) { return set.Get(); }
-            public void SetCallbacks(IVSGameplayActions instance)
-            {
-                if (m_Wrapper.m_VSGameplayActionsCallbackInterface != null)
-                {
-                    @Horizontal.started -= m_Wrapper.m_VSGameplayActionsCallbackInterface.OnHorizontal;
-                    @Horizontal.performed -= m_Wrapper.m_VSGameplayActionsCallbackInterface.OnHorizontal;
-                    @Horizontal.canceled -= m_Wrapper.m_VSGameplayActionsCallbackInterface.OnHorizontal;
-                    @Vertical.started -= m_Wrapper.m_VSGameplayActionsCallbackInterface.OnVertical;
-                    @Vertical.performed -= m_Wrapper.m_VSGameplayActionsCallbackInterface.OnVertical;
-                    @Vertical.canceled -= m_Wrapper.m_VSGameplayActionsCallbackInterface.OnVertical;
-                }
-                m_Wrapper.m_VSGameplayActionsCallbackInterface = instance;
-=======
+        
         // VsGameplay
         private readonly InputActionMap m_VsGameplay;
         private IVsGameplayActions m_VsGameplayActionsCallbackInterface;
@@ -504,7 +358,6 @@ namespace Slimecing.InputSystem
                     @Vertical.canceled -= m_Wrapper.m_VsGameplayActionsCallbackInterface.OnVertical;
                 }
                 m_Wrapper.m_VsGameplayActionsCallbackInterface = instance;
->>>>>>> Added triggers and lots of backend
                 if (instance != null)
                 {
                     @Horizontal.started += instance.OnHorizontal;
@@ -516,10 +369,6 @@ namespace Slimecing.InputSystem
                 }
             }
         }
-<<<<<<< HEAD
-        public VSGameplayActions @VSGameplay => new VSGameplayActions(this);
-        public interface IVSGameplayActions
-=======
         public VsGameplayActions @VsGameplay => new VsGameplayActions(this);
 
         // AbilityButtons
@@ -590,18 +439,15 @@ namespace Slimecing.InputSystem
             }
         }
         public interface IVsGameplayActions
->>>>>>> Added triggers and lots of backend
         {
             void OnHorizontal(InputAction.CallbackContext context);
             void OnVertical(InputAction.CallbackContext context);
         }
-<<<<<<< HEAD
-=======
+
         public interface IAbilityButtonsActions
         {
             void OnDashAbility(InputAction.CallbackContext context);
             void OnJumpAbility(InputAction.CallbackContext context);
         }
->>>>>>> Added triggers and lots of backend
     }
 }

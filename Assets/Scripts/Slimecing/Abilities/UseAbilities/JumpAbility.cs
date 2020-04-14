@@ -1,11 +1,10 @@
 ﻿using System;
 using Slimecing.Abilities.AbilityEffects;
 using Slimecing.Characters;
-using Slimecing.SOEventSystem.Events;
 using Slimecing.Triggers;
 using UnityEngine;
 
-namespace Slimecing.Abilities
+namespace Slimecing.Abilities.UseAbilities
 {
     [CreateAssetMenu(fileName = "JumpAbility", menuName = "Abilities/JumpAbility")]
     public class JumpAbility : Ability

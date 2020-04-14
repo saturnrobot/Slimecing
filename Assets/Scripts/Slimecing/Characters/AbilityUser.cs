@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Slimecing.Abilities;
-using System;
-using Slimecing.Abilities.AbilityEffects;
-
-namespace Slimecing.Character
-=======
-﻿using System.Collections.Generic;
 using System.Linq;
 using Slimecing.Abilities;
 using Slimecing.Abilities.AbilityEffects;
-using Slimecing.SOEventSystem.Events;
+using Slimecing.Abilities.UseAbilities;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Slimecing.Characters
->>>>>>> Added triggers and lots of backend
 {
     //LOOKING LIKE THERE IS TOO MANY FUNCTIONS LOOK INTO SPLITTING UP. Maybe needs interface ICooldownUser, IAbilityEffectUser
     public class AbilityUser : MonoBehaviour
     {
-<<<<<<< HEAD
-        [SerializeField] private List<AbilityPackage> useableAbilities = new List<AbilityPackage>();
-
-        List<TimedAbilityEffect> currentTimedAbilityEffects = new List<TimedAbilityEffect>();
-        private List<CooldownData> abilitiesOnCooldown = new List<CooldownData>();
-        private List<AbilityEffect> currentAbilityEffects = new List<AbilityEffect>();
-
-        public IEnumerable<CooldownData> AbilitiesOnCooldown => abilitiesOnCooldown;
-
-        private void Awake()
-        {
-=======
         //[SerializeField] private CharacterMovementController controller;
 
         //public CharacterMovementController Controller { get { return controller; } }
@@ -50,7 +26,6 @@ namespace Slimecing.Characters
         private void Awake()
         {
             Audio = GetComponent<AudioSource>();
->>>>>>> Added triggers and lots of backend
             //Repeated code needs to be fixed!
             if (useableAbilities.Count != 0)
             {
@@ -67,18 +42,10 @@ namespace Slimecing.Characters
                 }
             }
         }
-<<<<<<< HEAD
-
-        private void Update()
-        {
-            GetAbilityInput();
-            CheckAbilitiesOnCooldown();
-=======
         private void Update()
         {
             CheckAbilitiesOnCooldown();
             CheckAbilityEffects();
->>>>>>> Added triggers and lots of backend
             CheckTimedAbilityEffects();
         }
 
@@ -86,29 +53,7 @@ namespace Slimecing.Characters
         {
             return currentAbilityEffects.Count != 0 || currentTimedAbilityEffects.Count != 0;
         }
-<<<<<<< HEAD
-
-
-        //USE INPUT MANAGER
-        private void GetAbilityInput()
-        {
-            if (useableAbilities.Count == 0) return;
-            foreach (var abilities in useableAbilities)
-            {
-                CheckAbility(abilities);
-                if (Input.GetButtonDown(abilities.ability.AbilityButton))
-                {
-                    abilities.ability.StartAbility(this);
-                }
-            }
-        }
-
-=======
-        private void DoAbilityAction(Ability ability)
-        {
-            ability.StartAbility(this);
-        }
->>>>>>> Added triggers and lots of backend
+        
         private void CheckTimedAbilityEffects()
         {
             for (int i = currentTimedAbilityEffects.Count - 1; i >= 0; i--)
@@ -120,9 +65,7 @@ namespace Slimecing.Characters
                 }
             }
         }
-
-<<<<<<< HEAD
-=======
+        
         private void CheckAbilityEffects()
         {
             for (int i = currentAbilityEffects.Count - 1; i >= 0; i--)
@@ -133,8 +76,7 @@ namespace Slimecing.Characters
                 }
             }
         }
-
->>>>>>> Added triggers and lots of backend
+        
         private void CheckAbilitiesOnCooldown()
         {
             //COPY PASTED CODE FROM CHECKTIMEDABILITY EFFECTS! SINGLE RESPONSIBLILITY
@@ -151,12 +93,8 @@ namespace Slimecing.Characters
         //Something feels wrong about this there might be a better way. Put in ability processor (struct)
         private void CheckAbility(AbilityPackage abilityPack)
         {
-<<<<<<< HEAD
-            if (ReferenceEquals(abilityPack.ability, null))
-=======
             Ability ability = abilityPack.ability;
             if (ReferenceEquals(ability, null))
->>>>>>> Added triggers and lots of backend
             {
                 //Make a void factory that dishes out void objects/ classes and stuff
                 //it is slow to create an instance of an object ~13ms maybe make an IAbility and make a void that
@@ -166,10 +104,6 @@ namespace Slimecing.Characters
             {
                 abilityPack.Initialize(this);
             }
-<<<<<<< HEAD
-            
-=======
->>>>>>> Added triggers and lots of backend
         }
 
         //CHANGE THESE THREE METHODS TO SCRIPTIBLEOBJECT EVENTS
@@ -199,9 +133,7 @@ namespace Slimecing.Characters
         {
             abilitiesOnCooldown.Add(cooldownData);
         }
-
-<<<<<<< HEAD
-=======
+        
         public AbilityEffect GetAbilityEffect(AbilityEffect abilityEffect)
         {
             return currentAbilityEffects.FirstOrDefault(effect => effect.Equals(abilityEffect));
@@ -211,8 +143,7 @@ namespace Slimecing.Characters
         {
             return currentTimedAbilityEffects.FirstOrDefault(effect => effect.Equals(timedAbilityEffect));
         }
-
->>>>>>> Added triggers and lots of backend
+        
         public void AddAbility(Ability ability)
         {
             foreach (var abilities in useableAbilities)

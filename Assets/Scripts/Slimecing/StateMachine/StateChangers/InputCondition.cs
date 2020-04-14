@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-﻿using Slimecing.Character;
 using Slimecing.Characters;
-=======
-﻿using Slimecing.Characters;
->>>>>>> Added triggers and lots of backend
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Slimecing.StateMachine.StateChangers
 {

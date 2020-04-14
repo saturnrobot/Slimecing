@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-﻿using Slimecing.SimpleComponents.Movement;
-=======
-﻿using System;
+using System;
 using Slimecing.SimpleComponents.Movement;
->>>>>>> Added triggers and lots of backend
 using UnityEngine;
 
 namespace Slimecing.Characters
@@ -13,32 +9,6 @@ namespace Slimecing.Characters
     [RequireComponent(typeof(Collider))]
     public abstract class CharacterMovementController : MonoBehaviour
     {
-<<<<<<< HEAD
-        [SerializeField] protected float movementSpeed;
-        [SerializeField] protected Vector3 gravityDirection = Vector3.down;
-        [SerializeField] protected float gravityForce;
-        [SerializeField] protected float simulatedMass;
-        [SerializeField] protected float groundDistance;
-        [SerializeField] protected float slopeDistance;
-        [SerializeField] protected float maxAngle;
-        [SerializeField] protected float minVelocityMagnitude;
-
-        protected Rigidbody rb;
-        protected Rotatable rotatable;
-        protected Vector2 move;
-        protected Vector3 calculatedGravity;
-        protected bool isGrounded;
-
-        private Collider _collider;
-        [SerializeField] private LayerMask groundLayerMask;
-
-        public Vector2 MoveInput => move;
-        protected void Awake()
-        {
-            _collider = GetComponent<Collider>();
-            rb = GetComponent<Rigidbody>();
-            rotatable = GetComponent<Rotatable>();
-=======
         [Header("Components")]
         [SerializeField] protected Rigidbody rb;
         public Rigidbody PlayerRigidbody => rb;
@@ -101,7 +71,6 @@ namespace Slimecing.Characters
 
         protected void Awake()
         {
->>>>>>> Added triggers and lots of backend
             calculatedGravity = gravityDirection * gravityForce;
         }
 
@@ -112,14 +81,7 @@ namespace Slimecing.Characters
         {
             rb.AddForce(direction.normalized * amount, ForceMode.Impulse);
         }
-
-<<<<<<< HEAD
-        private void Update()
-        {
-            isGrounded = Grounded(gravityDirection, groundDistance);
-            var position = transform.position;
-            Debug.DrawLine(position, position + slopeDistance * 2 * Forward(), Color.magenta);
-=======
+        
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.cyan;
@@ -135,37 +97,25 @@ namespace Slimecing.Characters
 
             Debug.DrawLine(transform.position, transform.position + PlayerUpVector() * 2, Color.cyan);
             Debug.DrawLine(transform.position, transform.position + Forward() * 2, Color.yellow);
->>>>>>> Added triggers and lots of backend
         }
 
         protected virtual void FixedUpdate()
         {
-<<<<<<< HEAD
-=======
             GroundCheck(groundProbingDistance, groundingSphereCastRadius);
-
->>>>>>> Added triggers and lots of backend
+            
             float deltaTime = Time.deltaTime;
             
             Rotate(deltaTime);
             Move(deltaTime);
-<<<<<<< HEAD
-            
-            if (!isGrounded) rb.AddForce(simulatedMass * calculatedGravity);
-=======
 
             if (!_isGrounded && useGravity) rb.AddForce(simulatedFallingMass * calculatedGravity);
->>>>>>> Added triggers and lots of backend
 
             if (rb.velocity.magnitude < minVelocityMagnitude)
             {
                 rb.velocity = Vector3.zero;
             }
-<<<<<<< HEAD
-=======
 
             _isGrounded = false;
->>>>>>> Added triggers and lots of backend
         }
 
         protected abstract void Move(float deltaTime);
@@ -174,16 +124,6 @@ namespace Slimecing.Characters
 
         public float GetGroundAngle()
         {
-<<<<<<< HEAD
-            if (!isGrounded) return 90f;
-            return Vector3.Angle(SlopeCheck(gravityDirection, slopeDistance).normal, transform.forward);
-        }
-
-        protected Vector3 Forward()
-        {
-            if (!isGrounded) return transform.forward;
-            return Vector3.Cross(transform.right, SlopeCheck(gravityDirection, slopeDistance).normal);
-=======
             if (!_isGrounded) return 90f;
             return Vector3.Angle(_internalGroundHit.normal, transform.forward);
         }
@@ -204,29 +144,12 @@ namespace Slimecing.Characters
             if (!_isGrounded) return transform.forward;
             if (_internalSlopeHit.transform == null) return transform.forward;
             return Vector3.Cross(transform.right, _internalSlopeHit.normal);
->>>>>>> Added triggers and lots of backend
         }
         public void SetBackToNormalForces()
         {
             rb.velocity = new Vector3(move.x * movementSpeed, rb.velocity.y, move.y * movementSpeed);
         }
-<<<<<<< HEAD
-        public bool Grounded(Vector3 direction, float length)
-        {
-            return Physics.CheckSphere(transform.position, length, groundLayerMask, QueryTriggerInteraction.Ignore);
-        }
-
-        public RaycastHit SlopeCheck(Vector3 direction, float length)
-        {
-            RaycastHit hit;
-            Physics.Raycast(transform.position, direction, out hit, length, groundLayerMask,
-                QueryTriggerInteraction.Ignore);
-            return hit;
-        }
-        private bool ValidateColliderForCollisions(Collider coll)
-        {
-            return coll != null && coll != _collider;
-=======
+        
         public void GroundCheck(float length, float radius)
         {
             var ray =
@@ -382,7 +305,6 @@ namespace Slimecing.Characters
             }
 
             return false;
->>>>>>> Added triggers and lots of backend
         }
 
     }

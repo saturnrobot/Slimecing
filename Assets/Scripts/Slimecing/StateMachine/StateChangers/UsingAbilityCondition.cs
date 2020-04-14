@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿using Slimecing.Character;
-=======
-﻿using Slimecing.Characters;
->>>>>>> Added triggers and lots of backend
+using Slimecing.Characters;
 using UnityEngine;
 
 namespace Slimecing.StateMachine.StateChangers
@@ -14,10 +10,7 @@ namespace Slimecing.StateMachine.StateChangers
         
         public override bool IsMet()
         {
-<<<<<<< HEAD
-=======
             if (abilityUser == null) return false;
->>>>>>> Added triggers and lots of backend
             return abilityUser.CheckForEffects() == isUsingAbility;
         }
     }

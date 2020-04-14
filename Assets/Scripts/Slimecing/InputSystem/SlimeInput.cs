@@ -1,5 +1,4 @@
-﻿using System;
-using Slimecing.Characters;
+﻿using Slimecing.Characters;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

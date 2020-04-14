@@ -1,7 +1,7 @@
 ﻿using Slimecing.Characters;
 using UnityEngine;
 
-namespace Slimecing.Abilities
+namespace Slimecing.Abilities.UseAbilities
 {
     public class VoidAbility : Ability
     {

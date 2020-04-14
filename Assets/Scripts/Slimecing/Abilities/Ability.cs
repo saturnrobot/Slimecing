@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-﻿using Slimecing.Character;
 using System;
-=======
-﻿using System;
 using Slimecing.Characters;
 using Slimecing.Triggers;
->>>>>>> Added triggers and lots of backend
 using UnityEngine;
 
 namespace Slimecing.Abilities
@@ -16,24 +11,6 @@ namespace Slimecing.Abilities
         [SerializeField] protected string abilityName = "REPLACE ABILITY NAME";
         [SerializeField] private string abilityDescription = "REPLACE ABILITY DESCRIPTION";
         [SerializeField] protected float abilityCooldown = 1f;
-<<<<<<< HEAD
-        [SerializeField] private AudioClip abilitySound;
-        [SerializeField] private string abilityButton = "Void";
-
-        private enum CooldownState
-        {
-            FirstTimeUse,
-            HasAnotherUse,
-            OnCooldown
-        }
-        
-        public string AbilityButton => abilityButton;
-        public abstract void Use(AbilityUser aUser);
-        public virtual void Initialize(AbilityUser aUser) { }
-        public virtual void StartAbility(AbilityUser aUser)
-        {
-            //Debug.Log(User.name + " started " + abilityName);
-=======
         [SerializeField] protected AudioClip abilitySound;
         [SerializeField] private Trigger abilityTrigger = null;
         public virtual void CheckActivation(AbilityUser aUser, InputTriggerPackage abilityTriggerPackage)
@@ -65,7 +42,6 @@ namespace Slimecing.Abilities
 
         public void StartAbility(AbilityUser aUser)
         {
->>>>>>> Added triggers and lots of backend
             switch (CanUse(aUser))
             {
                 case CooldownState.FirstTimeUse:
@@ -84,21 +60,11 @@ namespace Slimecing.Abilities
         {
             aUser.AddAbilityOnCooldown(new CooldownData(this, abilityCooldown));
         }
-
-<<<<<<< HEAD
-        private CooldownState CanUse(AbilityUser aUser)
-=======
         protected CooldownState CanUse(AbilityUser aUser)
->>>>>>> Added triggers and lots of backend
         {
             Ability coolinAbility = null;
             CooldownData coolinAbilityObject = null;
-            
-<<<<<<< HEAD
-            foreach (var cooldownData in aUser.AbilitiesOnCooldown)
-=======
             foreach (var cooldownData in aUser.abilitiesOnCooldown)
->>>>>>> Added triggers and lots of backend
             {
                 if (cooldownData.GetAbility != this) continue;
                 coolinAbility = cooldownData.GetAbility;
@@ -107,14 +73,6 @@ namespace Slimecing.Abilities
             }
 
             if (ReferenceEquals(coolinAbility, null)) return CooldownState.FirstTimeUse;
-<<<<<<< HEAD
-            if (coolinAbilityObject.UseAmount > 0)
-            {
-                coolinAbilityObject.SubUseAmount();
-                return CooldownState.HasAnotherUse;
-            }
-            return CooldownState.OnCooldown;
-=======
             if (coolinAbilityObject.UseAmount <= 0) return CooldownState.OnCooldown;
             coolinAbilityObject.SubUseAmount();
             return CooldownState.HasAnotherUse;
@@ -123,7 +81,6 @@ namespace Slimecing.Abilities
         private void EndAbility()
         {
             AbilityTrigger.currentTriggerState = TriggerState.Canceled;
->>>>>>> Added triggers and lots of backend
         }
     }
 }

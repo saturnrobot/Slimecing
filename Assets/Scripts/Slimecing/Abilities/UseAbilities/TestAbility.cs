@@ -1,7 +1,7 @@
 ﻿using Slimecing.Characters;
 using UnityEngine;
 
-namespace Slimecing.Abilities
+namespace Slimecing.Abilities.UseAbilities
 {
     [CreateAssetMenu(fileName = "TestAbility", menuName = "Abilities/TestAbility")]
     public class TestAbility : Ability

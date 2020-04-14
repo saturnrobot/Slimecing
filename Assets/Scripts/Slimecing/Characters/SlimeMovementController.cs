@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-﻿using Slimecing.Character;
-using Slimecing.SimpleComponents.Movement;
 using UnityEngine;
-=======
-﻿using UnityEngine;
->>>>>>> Added triggers and lots of backend
 
 namespace Slimecing.Characters
 {
@@ -16,18 +10,12 @@ namespace Slimecing.Characters
         protected override void Move(float deltaTime)
         {
             if (move == Vector2.zero && rb.velocity == Vector3.zero) return;
-           
-<<<<<<< HEAD
-            bool grounded = Grounded(calculatedGravity, groundDistance);
             
-            Vector3 moveInputVector = new Vector3(move.x, 0, move.y).normalized;
-            Vector3 up = transform.up;
-=======
             bool grounded = IsGrounded();
             
             Vector3 moveInputVector = new Vector3(move.x, 0, move.y).normalized;
             Vector3 up = PlayerUpVector();
->>>>>>> Added triggers and lots of backend
+            
             Vector3 velocity = rb.velocity;
             
             Vector3 inputRight = Vector3.Cross(moveInputVector, up);
@@ -45,12 +33,7 @@ namespace Slimecing.Characters
 
         protected override void Rotate(float deltaTime)
         {
-            
-<<<<<<< HEAD
-            rotatable.RotateToVector(new Vector3(move.x, 0 , move.y), deltaTime);
-=======
             rotatable.RotateToVector(transform, new Vector3(move.x, 0 , move.y), deltaTime);
->>>>>>> Added triggers and lots of backend
         }
 
         public override void GetMoveInputH(float h)
