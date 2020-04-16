@@ -4,13 +4,13 @@ using UnityEngine;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
-    [CreateAssetMenu(fileName = "SimpleButtonInputTrigger", menuName = "Abilities/AbilityTriggers/SimpleButtonInputTrigger")]
+    [CreateAssetMenu(fileName = "SimpleButtonInputTrigger", menuName = "Triggers/InputTriggers/SimpleButtonInputTrigger")]
     public class SimpleButtonInputTrigger : TriggerInput
     {
         protected override void TriggerStarted(GameObject player)
         {
             currentTriggerState = TriggerState.Performed;
-            OnTriggerStateChange(new InputTriggerPackage(TriggerState.Performed, player));
+            OnTriggerStateChange(new TriggerPackage(TriggerState.Performed, player));
         }
 
         protected override void TriggerPerformed(GameObject player) { }
@@ -18,7 +18,7 @@ namespace Slimecing.Triggers.TriggerLogic
         protected override void TriggerCanceled(GameObject player)
         {
             currentTriggerState = TriggerState.Canceled;
-            OnTriggerStateChange(new InputTriggerPackage(TriggerState.Canceled, player));
+            OnTriggerStateChange(new TriggerPackage(TriggerState.Canceled, player));
         }
     }
 }

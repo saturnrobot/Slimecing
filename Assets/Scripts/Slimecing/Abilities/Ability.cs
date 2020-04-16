@@ -13,7 +13,7 @@ namespace Slimecing.Abilities
         [SerializeField] protected float abilityCooldown = 1f;
         [SerializeField] protected AudioClip abilitySound;
         [SerializeField] private Trigger abilityTrigger = null;
-        public virtual void CheckActivation(AbilityUser aUser, InputTriggerPackage abilityTriggerPackage)
+        public virtual void CheckActivation(AbilityUser aUser, TriggerPackage abilityTriggerPackage)
         {
             if (!abilityTriggerPackage.user.Equals(aUser.gameObject)) return;
             if (AbilityTrigger == null) return;

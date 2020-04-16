@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2364959692505286347}
   - component: {fileID: 7899141307266342912}
   - component: {fileID: 1642684556973010571}
-  - component: {fileID: 457903427708918534}
   m_Layer: 10
   m_Name: TesterSword1
   m_TagString: Sword
@@ -112,20 +111,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &457903427708918534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2311679785310360297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92a7b5a849928064d9d98e0ddef187ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bodyCollider: {fileID: 2375074089273406019}
-  stats: {fileID: 11400000, guid: 44e3e2a9360e3f245b69bd99ec898212, type: 2}
 --- !u!1 &2311745251963663901
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,9 +153,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8d27435e73833654db7504d72c3ee2d4, type: 3}
 --- !u!1 &2312406836008797191
 GameObject:

@@ -4,25 +4,25 @@ using UnityEngine;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
-    [CreateAssetMenu(fileName = "HoldButtonInputTrigger", menuName = "Abilities/AbilityTriggers/HoldButtonInputTrigger")]
+    [CreateAssetMenu(fileName = "HoldButtonInputTrigger", menuName = "Triggers/InputTriggers/HoldButtonInputTrigger")]
     public class HoldButtonInputTrigger : TriggerInput
     {
         protected override void TriggerStarted(GameObject player)
         {
             currentTriggerState = TriggerState.Started;
-            OnTriggerStateChange(new InputTriggerPackage(TriggerState.Started, player));
+            OnTriggerStateChange(new TriggerPackage(TriggerState.Started, player));
         }
 
         protected override void TriggerPerformed(GameObject player)
         {
             currentTriggerState = TriggerState.Performed;
-            OnTriggerStateChange(new InputTriggerPackage(TriggerState.Performed, player));
+            OnTriggerStateChange(new TriggerPackage(TriggerState.Performed, player));
         }
 
         protected override void TriggerCanceled(GameObject player)
         {
              currentTriggerState = TriggerState.Canceled;
-             OnTriggerStateChange(new InputTriggerPackage(TriggerState.Canceled, player));
+             OnTriggerStateChange(new TriggerPackage(TriggerState.Canceled, player));
         }
     }
 }

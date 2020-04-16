@@ -17,7 +17,7 @@ public class OnStart : MonoBehaviour
         timer = new Timer(duration, loops);
 
         // Listen to events created by Timer
-        timer.OnTimerEnd += HandleTimerEnd;
+        timer.OnTimerEnd += ctx => HandleTimerEnd();
     }
 
     private void HandleTimerEnd()

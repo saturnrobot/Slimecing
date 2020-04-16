@@ -7,9 +7,9 @@ namespace Slimecing.Triggers
     {
         public TriggerState currentTriggerState { get; set; }
         
-        public event Action<InputTriggerPackage> TriggerStateChange;
+        public event Action<TriggerPackage> TriggerStateChange;
 
-        protected virtual void OnTriggerStateChange(InputTriggerPackage itp)
+        protected virtual void OnTriggerStateChange(TriggerPackage itp)
         {
             TriggerStateChange?.Invoke(itp);
         }

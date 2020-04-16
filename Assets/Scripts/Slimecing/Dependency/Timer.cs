@@ -26,7 +26,7 @@ namespace Slimecing.Dependency
             initialRemainingSeconds = remainingSeconds = duration;
         }
 
-        public event Action OnTimerEnd;
+        public event Action<Type> OnTimerEnd;
 
         // Handles update that will happen every gametick
         public void Tick(float deltaTime)
@@ -45,7 +45,7 @@ namespace Slimecing.Dependency
             // Will restart timer if the current 'loops' is 1 or greater
             remainingSeconds = loopCount-- > 0?initialRemainingSeconds:0f;
             
-            OnTimerEnd?.Invoke();
+            OnTimerEnd?.Invoke(null);
         }
     }
 }
