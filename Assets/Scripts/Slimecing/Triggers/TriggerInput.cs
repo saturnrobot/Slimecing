@@ -19,9 +19,9 @@ namespace Slimecing.Triggers
             foreach (var action in currentPlayerInput.actions)
             {
                 if (!currentActionReference.action.name.Equals(action.name)) continue;
-                action.started += ctx => TriggerStarted(player);
-                action.performed += ctx => TriggerPerformed(player);
-                action.canceled += ctx => TriggerCanceled(player);
+                action.started += ctx => TriggerStarted(player, ctx);
+                action.performed += ctx => TriggerPerformed(player, ctx);
+                action.canceled += ctx => TriggerCanceled(player, ctx);
                 action.Enable();
             }
         }
@@ -35,8 +35,8 @@ namespace Slimecing.Triggers
                 action.Disable();
             }
         }
-        protected abstract void TriggerStarted(GameObject player);
-        protected abstract void TriggerPerformed(GameObject player);
-        protected abstract void TriggerCanceled(GameObject player);
+        protected abstract void TriggerStarted(GameObject player, InputAction.CallbackContext ctx);
+        protected abstract void TriggerPerformed(GameObject player, InputAction.CallbackContext ctx);
+        protected abstract void TriggerCanceled(GameObject player,InputAction.CallbackContext ctx);
     }
 }
