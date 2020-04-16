@@ -1,8 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Linq;
-using Slimecing.Swords.Orbitals.OrbitalLogicScripts;
+using Slimecing.Swords.DropBehaviour;
 using UnityEngine;
 
 namespace Slimecing.Swords.Orbitals
@@ -15,7 +12,6 @@ namespace Slimecing.Swords.Orbitals
         private Collider _collider;
         
         private List<GameObject> _spawnedOrbitalObjects = new List<GameObject>();
-        private int _currentListCount = 0;
 
         private void OnEnable()
         {
@@ -50,11 +46,9 @@ namespace Slimecing.Swords.Orbitals
 
         public void InitializeOrbital(OrbitalPackage orbital)
         {
-            Debug.Log("started");
             AddCollisions(orbital.orbitalObject);
             orbital.OrbitalLogic = Instantiate(orbital.OrbitalLogic);
             orbital.OrbitalLogic.Initialize(gameObject, orbital.orbitalObject);
-            _currentListCount = orbitals.Count;
             ResetSpawnedOrbitalObjects();
         }
 
@@ -100,6 +94,7 @@ namespace Slimecing.Swords.Orbitals
 
         private void RemoveOrbital(OrbitalPackage orbital)
         {
+            DropOrbital(orbital);
             orbitals.Remove(orbital);
         }
 
@@ -115,18 +110,48 @@ namespace Slimecing.Swords.Orbitals
 
         private void ValidateOrbitals()
         {
-            for (int i = 0; i < _spawnedOrbitalObjects.Count; i++)
+            float loopCount = _spawnedOrbitalObjects.Count;
+            bool resetLoop = false;
+            
+            if (orbitals.Count != _spawnedOrbitalObjects.Count)
             {
-                if (orbitals[i].orbitalObject != _spawnedOrbitalObjects[i])
+                resetLoop = true;
+                if (orbitals.Count < _spawnedOrbitalObjects.Count)
                 {
-                    InitializeOrbital(orbitals[i]);
+                    loopCount = orbitals.Count;
                 }
             }
             
-            if (orbitals.Count > _currentListCount)
+            for (int i = 0; i < loopCount; i++)
+            {
+                if (orbitals[i].orbitalObject != _spawnedOrbitalObjects[i])
+                {
+                    DropOrbital(orbitals[i]);
+                    InitializeOrbital(orbitals[i]);
+                }
+            }
+
+            if (resetLoop)
             {
                 ResetSpawnedOrbitalObjects();
             }
+        }
+
+        private void DropOrbital(OrbitalPackage orbital)
+        {
+            DropLogic dropLogic = orbital.orbitalObject.GetComponent<DropLogic>();
+            if (dropLogic == null)
+            {
+                if (orbital.orbitalSticky)
+                {
+                    orbital.orbitalObject.SetActive(false);
+                    return;
+                }
+                Destroy(orbital.orbitalObject);
+                return;
+            }
+            
+            dropLogic.Drop();
         }
     }
 }
