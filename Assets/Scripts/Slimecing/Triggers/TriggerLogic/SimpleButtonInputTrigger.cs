@@ -9,6 +9,7 @@ namespace Slimecing.Triggers.TriggerLogic
         protected override void TriggerStarted(GameObject player, InputAction.CallbackContext ctx)
         {
             currentTriggerState = TriggerState.Performed;
+            inputContext = ctx;
             OnTriggerStateChange(new TriggerPackage(TriggerState.Performed, player, ctx));
         }
 
@@ -17,6 +18,7 @@ namespace Slimecing.Triggers.TriggerLogic
         protected override void TriggerCanceled(GameObject player, InputAction.CallbackContext ctx)
         {
             currentTriggerState = TriggerState.Canceled;
+            inputContext = ctx;
             OnTriggerStateChange(new TriggerPackage(TriggerState.Canceled, player, ctx));
         }
     }

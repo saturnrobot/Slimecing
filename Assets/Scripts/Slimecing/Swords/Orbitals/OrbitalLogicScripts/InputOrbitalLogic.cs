@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using Slimecing.Dependency;
 using Slimecing.Triggers;
 using UnityEngine;
@@ -6,40 +6,45 @@ using UnityEngine;
 namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 {
     [CreateAssetMenu(fileName = "InputOrbitalLogic", menuName = "Swords/Orbitals/OrbitalLogic/InputOrbitalLogic")]
-    public class InputOrbitalLogic : OrbitalLogic
+    public class InputOrbitalLogic : OrbitalLogic, IOrbitalTickEveryFrame
     {
         [SerializeField] private Trigger orbitalInputTrigger;
 
-        private Vector2 _pointPos;
-        private Vector3 _center;
-        private Vector3 _finalSwordTarget;
+        private Trigger _operatingOrbitalInputTrigger;
+        private Ellipse _swordEllipse;
+        private Vector2 _finalSwordTarget;
+
+        private void OnEnable()
+        {
+            _swordEllipse = new Ellipse(XAxis, ZAxis);
+            _operatingOrbitalInputTrigger = Instantiate(orbitalInputTrigger);
+        }
 
         private TriggerInput GetInputAbilityActionType()
         {
-            if (orbitalInputTrigger == null) return null;
-            return orbitalInputTrigger as TriggerInput;
+            if (_operatingOrbitalInputTrigger == null) return null;
+            return _operatingOrbitalInputTrigger as TriggerInput;
         }
 
         public override void Initialize(GameObject owner, GameObject orbital)
         {
-            _center = owner.transform.position;
-            GetInput(orbital, Vector2.up);
+            GetInput(owner, orbital, Vector2.up);
             GetInputAbilityActionType()?.ConfigureInput(owner);
-            orbitalInputTrigger.TriggerStateChange += trigger => UpdateOrbitalPos(owner, orbital, trigger);
-        }
-
-        private void UpdateOrbitalPos(GameObject owner, GameObject orbital, TriggerPackage trigger)
-        {
-            if (!trigger.user.Equals(owner)) return;
-
-            GetInput(orbital, trigger.ctx.ReadValue<Vector2>());
         }
 
         public override void Tick(GameObject owner, GameObject orbital)
         {
-            _center = owner.transform.position;
-
-            orbital.transform.position = _finalSwordTarget + _center;
+            Vector3 center = owner.transform.position;
+            
+            float step = Time.fixedDeltaTime * RotSpeed;
+            Vector2 circlePos = _swordEllipse.EvaluateEllipse(_finalSwordTarget.x);
+            Vector3 targetPos = new Vector3(circlePos.x, YOffset, circlePos.y);
+            Vector3 smoothPos = Vector3.RotateTowards(orbital.transform.position - center, targetPos, step, 0f);
+            Vector3 orbitPos = new Vector3(smoothPos.normalized.x * XAxis, YOffset, smoothPos.normalized.z * ZAxis);
+            if (orbitPos != orbital.transform.position)
+            {
+                orbital.transform.position = orbitPos + center;
+            }
 
             SetLook(owner, orbital);
         }
@@ -51,18 +56,26 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
             orbital.transform.LookAt(2 * position - new Vector3(ownerPos.x, position.y, ownerPos.z));
         }
 
-        private void GetInput(GameObject orbital, Vector2 inputDir)
+        private void GetInput(GameObject owner, GameObject orbital, Vector2 inputDir)
         {
-            if (!(Mathf.Abs(inputDir.x) > 0.5) && !(Mathf.Abs(inputDir.y) > 0.5)) return;
-            float pointX = XAxis * inputDir.x;
-            float pointZ = ZAxis * inputDir.y;
-            _pointPos = new Vector2(pointX, pointZ);
-            Vector3 targetPos = new Vector3(_pointPos.x, YOffset, _pointPos.y);
-            /*Vector3 swordTarget = Vector3.RotateTowards(orbital.transform.position - _center,
-                targetPos - _center, Time.deltaTime * RotSpeed, 0f);
-            Vector3 swordTargetNormalized = swordTarget.normalized;*/
-            //_finalSwordTarget = new Vector3(swordTargetNormalized.x * XAxis, YOffset, swordTargetNormalized.z * ZAxis);
-            _finalSwordTarget = targetPos;
+            if (inputDir.Equals(Vector2.zero)) return;
+            if (!(Mathf.Abs(inputDir.x) > 0.05f) && !(Mathf.Abs(inputDir.y) > 0.05f)) return;
+            Vector3 center = owner.transform.position;
+            float pointX = inputDir.x;
+            float pointZ = inputDir.y;
+            float angle = Mathf.Atan2(pointX, pointZ) * Mathf.Rad2Deg;
+            var position = orbital.transform.position;
+            float currentAngle = Mathf.Atan2(position.x - center.x,position.z - center.z) * Mathf.Rad2Deg;
+            _finalSwordTarget = new Vector2(angle / 360f, currentAngle / 360f);
+        }
+
+        public void TickUpdate(GameObject owner, GameObject orbital)
+        {
+            if (!_operatingOrbitalInputTrigger.currentTriggerState.Equals(TriggerState.Performed)) return;
+            if (_operatingOrbitalInputTrigger is TriggerInput orbitalTriggerInput)
+            {
+                GetInput(owner, orbital, orbitalTriggerInput.inputContext.ReadValue<Vector2>());
+            }
         }
     }
 }

@@ -256,11 +256,22 @@ namespace Slimecing.InputSystem
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""399b431c-036d-4e1c-ba97-02388adf41a7"",
+                    ""id"": ""ca69d397-54f1-4ea7-a580-7773a6e6f0a6"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
-                    ""processors"": ""NormalizeVector2,StickDeadzone"",
+                    ""processors"": """",
                     ""groups"": ""Gamepad"",
+                    ""action"": ""SwordMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e69138a-f920-40c8-a4bc-4ff87648ceab"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": ""NormalizeVector2"",
+                    ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""SwordMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

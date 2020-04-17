@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Slimecing.Swords.DropBehaviour;
+using Slimecing.Swords.Orbitals.OrbitalLogicScripts;
+using Slimecing.Triggers;
 using UnityEngine;
 
 namespace Slimecing.Swords.Orbitals
@@ -99,6 +102,17 @@ namespace Slimecing.Swords.Orbitals
         }
 
         public void Update()
+        {
+            foreach (var orbital in orbitals)
+            {
+                if (orbital.OrbitalLogic is IOrbitalTickEveryFrame inputOrbitalLogic)
+                {
+                    inputOrbitalLogic.TickUpdate(gameObject, orbital.orbitalObject);
+                }
+            }
+        }
+
+        public void FixedUpdate()
         {
             ValidateOrbitals();
             

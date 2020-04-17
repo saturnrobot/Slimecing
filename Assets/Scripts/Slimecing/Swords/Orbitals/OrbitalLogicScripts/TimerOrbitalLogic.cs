@@ -52,7 +52,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         private void Rotate(GameObject owner, GameObject orbital)
         {
             float orbitSpeed = 1f / RotSpeed;
-            orbitalProgress += Time.deltaTime * orbitSpeed;
+            orbitalProgress += Time.fixedDeltaTime * orbitSpeed;
             orbitalProgress %= 1f;
             SetOrbitalPos(owner, orbital);
         }

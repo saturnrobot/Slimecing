@@ -7,6 +7,8 @@ namespace Slimecing.Triggers
     {
         [SerializeField] private InputActionReference inputActionReference;
         
+        public InputAction.CallbackContext inputContext { get; set; }
+        
         public InputActionReference currentActionReference { get => inputActionReference; set => inputActionReference = value; }
 
         public PlayerInput currentPlayerInput { get; set; }

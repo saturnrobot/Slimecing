@@ -948,8 +948,8 @@ GameObject:
   - component: {fileID: 5435084252436152422}
   - component: {fileID: 1963935554026982}
   - component: {fileID: 528797603923251975}
-  - component: {fileID: 1450437300}
   - component: {fileID: 3959615095757466810}
+  - component: {fileID: 1450437300}
   - component: {fileID: 1545482344972484104}
   m_Layer: 9
   m_Name: Slime
@@ -1124,6 +1124,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterMovementController: {fileID: 1533019556350475861}
+--- !u!114 &3959615095757466810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531394410883810673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7780a3c04e17841825f68a82642af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultOrbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9,
+    type: 2}
+  orbitals:
+  - orbital: {fileID: 2311679785310360297, guid: 4e346bd7fa8310847b295522d78bb540,
+      type: 3}
+    orbitalLogic: {fileID: 11400000, guid: e77fb33472e993c4fbd1004f42fc4ed2, type: 2}
+    sticky: 0
 --- !u!114 &1450437300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,25 +1216,6 @@ MonoBehaviour:
   m_DefaultActionMap: VsGameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3959615095757466810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531394410883810673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f7780a3c04e17841825f68a82642af4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultOrbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9,
-    type: 2}
-  orbitals:
-  - orbital: {fileID: 2311679785310360297, guid: 4e346bd7fa8310847b295522d78bb540,
-      type: 3}
-    orbitalLogic: {fileID: 11400000, guid: e77fb33472e993c4fbd1004f42fc4ed2, type: 2}
-    sticky: 0
 --- !u!82 &1545482344972484104
 AudioSource:
   m_ObjectHideFlags: 0
