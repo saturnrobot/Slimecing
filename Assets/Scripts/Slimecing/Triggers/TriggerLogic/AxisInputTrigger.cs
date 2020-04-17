@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
-    [CreateAssetMenu(fileName = "TwoDimensionalAxisInputTrigger ", menuName = "Triggers/InputTriggers/TwoDimensionalAxisInputTrigger ")]
-    public class TwoDimensionalAxisInputTrigger : TriggerInput
+    [CreateAssetMenu(fileName = "AxisInputTrigger ", menuName = "Triggers/InputTriggers/AxisInputTrigger ")]
+    public class AxisInputTrigger : TriggerInput
     {
         protected override void TriggerStarted(GameObject player, InputAction.CallbackContext ctx)
         {
