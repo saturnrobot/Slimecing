@@ -13,9 +13,9 @@ namespace Slimecing.Dependency
             _yAxis = yAxis;
         }
 
-        public Vector2 EvaluateEllipse(float pos)
+        public Vector2 EvaluateEllipse(float prog)
         {
-            float angle = Mathf.Deg2Rad * 360f * pos;
+            float angle = Mathf.Deg2Rad * 360f * prog;
             float x = Mathf.Sin(angle) * _xAxis;
             float y = Mathf.Cos(angle) * _yAxis;
             

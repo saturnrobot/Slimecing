@@ -21,11 +21,11 @@ namespace Slimecing.Swords.Orbitals
 
         private void SpawnAllOrbitals()
         {
+            var thisTransform = transform;
             for (int i = 0; i < orbitals.Count; i++)
             {
-                var thisTransform = transform;
                 GameObject spawnedOrbital = Instantiate(orbitals[i].orbitalObject, thisTransform.position,
-                    Quaternion.identity, thisTransform);
+                    Quaternion.identity);
                 orbitals[i] = new OrbitalPackage(spawnedOrbital, orbitals[i].OrbitalLogic);
                 InitializeOrbital(orbitals[i]);
             }

@@ -224,6 +224,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SwordButtons",
+            "id": "10c118b0-623f-4675-b54b-081f6f92f058",
+            "actions": [
+                {
+                    "name": "SwordMovement",
+                    "type": "Value",
+                    "id": "62a768e6-9912-4927-b552-bb7cd666df7c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "399b431c-036d-4e1c-ba97-02388adf41a7",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "NormalizeVector2,StickDeadzone",
+                    "groups": "Gamepad",
+                    "action": "SwordMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

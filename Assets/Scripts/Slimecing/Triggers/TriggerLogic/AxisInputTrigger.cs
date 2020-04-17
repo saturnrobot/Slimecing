@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
+    [CreateAssetMenu(fileName = "TwoDimensionalAxisInputTrigger ", menuName = "Triggers/InputTriggers/TwoDimensionalAxisInputTrigger ")]
     public class TwoDimensionalAxisInputTrigger : TriggerInput
     {
         protected override void TriggerStarted(GameObject player, InputAction.CallbackContext ctx)

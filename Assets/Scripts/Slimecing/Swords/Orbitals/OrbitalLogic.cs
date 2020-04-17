@@ -36,6 +36,6 @@ namespace Slimecing.Swords.Orbitals
 
         public abstract void Initialize(GameObject owner, GameObject orbital);
 
-        public virtual void Tick(GameObject owner, GameObject orbital) { }
+        public abstract void Tick(GameObject owner, GameObject orbital);
     }
 }

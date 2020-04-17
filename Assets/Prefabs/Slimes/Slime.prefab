@@ -1188,6 +1188,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4769900b-900e-4e04-8ca7-4cd6537ca9d8
     m_ActionName: AbilityButtons/JumpAbility[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 62a768e6-9912-4927-b552-bb7cd666df7c
+    m_ActionName: SwordButtons/SwordMovement[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: VsGameplay
@@ -1210,7 +1214,7 @@ MonoBehaviour:
   orbitals:
   - orbital: {fileID: 2311679785310360297, guid: 4e346bd7fa8310847b295522d78bb540,
       type: 3}
-    orbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9, type: 2}
+    orbitalLogic: {fileID: 11400000, guid: e77fb33472e993c4fbd1004f42fc4ed2, type: 2}
     sticky: 0
 --- !u!82 &1545482344972484104
 AudioSource:

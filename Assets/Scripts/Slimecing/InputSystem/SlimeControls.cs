@@ -239,6 +239,33 @@ namespace Slimecing.InputSystem
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""SwordButtons"",
+            ""id"": ""10c118b0-623f-4675-b54b-081f6f92f058"",
+            ""actions"": [
+                {
+                    ""name"": ""SwordMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""62a768e6-9912-4927-b552-bb7cd666df7c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""399b431c-036d-4e1c-ba97-02388adf41a7"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": ""NormalizeVector2,StickDeadzone"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SwordMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -284,6 +311,9 @@ namespace Slimecing.InputSystem
             m_AbilityButtons = asset.FindActionMap("AbilityButtons", throwIfNotFound: true);
             m_AbilityButtons_DashAbility = m_AbilityButtons.FindAction("DashAbility", throwIfNotFound: true);
             m_AbilityButtons_JumpAbility = m_AbilityButtons.FindAction("JumpAbility", throwIfNotFound: true);
+            // SwordButtons
+            m_SwordButtons = asset.FindActionMap("SwordButtons", throwIfNotFound: true);
+            m_SwordButtons_SwordMovement = m_SwordButtons.FindAction("SwordMovement", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -329,7 +359,7 @@ namespace Slimecing.InputSystem
         {
             asset.Disable();
         }
-        
+
         // VsGameplay
         private readonly InputActionMap m_VsGameplay;
         private IVsGameplayActions m_VsGameplayActionsCallbackInterface;
@@ -411,6 +441,39 @@ namespace Slimecing.InputSystem
             }
         }
         public AbilityButtonsActions @AbilityButtons => new AbilityButtonsActions(this);
+
+        // SwordButtons
+        private readonly InputActionMap m_SwordButtons;
+        private ISwordButtonsActions m_SwordButtonsActionsCallbackInterface;
+        private readonly InputAction m_SwordButtons_SwordMovement;
+        public struct SwordButtonsActions
+        {
+            private @SlimeControls m_Wrapper;
+            public SwordButtonsActions(@SlimeControls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @SwordMovement => m_Wrapper.m_SwordButtons_SwordMovement;
+            public InputActionMap Get() { return m_Wrapper.m_SwordButtons; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(SwordButtonsActions set) { return set.Get(); }
+            public void SetCallbacks(ISwordButtonsActions instance)
+            {
+                if (m_Wrapper.m_SwordButtonsActionsCallbackInterface != null)
+                {
+                    @SwordMovement.started -= m_Wrapper.m_SwordButtonsActionsCallbackInterface.OnSwordMovement;
+                    @SwordMovement.performed -= m_Wrapper.m_SwordButtonsActionsCallbackInterface.OnSwordMovement;
+                    @SwordMovement.canceled -= m_Wrapper.m_SwordButtonsActionsCallbackInterface.OnSwordMovement;
+                }
+                m_Wrapper.m_SwordButtonsActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @SwordMovement.started += instance.OnSwordMovement;
+                    @SwordMovement.performed += instance.OnSwordMovement;
+                    @SwordMovement.canceled += instance.OnSwordMovement;
+                }
+            }
+        }
+        public SwordButtonsActions @SwordButtons => new SwordButtonsActions(this);
         private int m_AllControlSchemesSchemeIndex = -1;
         public InputControlScheme AllControlSchemesScheme
         {
@@ -443,11 +506,14 @@ namespace Slimecing.InputSystem
             void OnHorizontal(InputAction.CallbackContext context);
             void OnVertical(InputAction.CallbackContext context);
         }
-
         public interface IAbilityButtonsActions
         {
             void OnDashAbility(InputAction.CallbackContext context);
             void OnJumpAbility(InputAction.CallbackContext context);
+        }
+        public interface ISwordButtonsActions
+        {
+            void OnSwordMovement(InputAction.CallbackContext context);
         }
     }
 }
