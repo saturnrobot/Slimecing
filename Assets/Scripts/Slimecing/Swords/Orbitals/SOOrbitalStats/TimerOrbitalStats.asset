@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7968acda84baa4fa1a7008b6f01265, type: 3}
-  m_Name: InputOrbitalLogic
+  m_Script: {fileID: 11500000, guid: 0a37f7d239ec14245970c23702857274, type: 3}
+  m_Name: TimerOrbitalStats
   m_EditorClassIdentifier: 
-  orbitalStats: {fileID: 11400000, guid: 40ca913627790f546a70a7cc2f14ac69, type: 2}
-  orbitalInputTrigger: {fileID: 11400000, guid: 8e538a3d690d3d446aaf393f3d8319f3,
-    type: 2}
+  orbitalSpeed: 4
+  yOffset: 1
+  xAxis: 2.2
+  yAxis: 2.2

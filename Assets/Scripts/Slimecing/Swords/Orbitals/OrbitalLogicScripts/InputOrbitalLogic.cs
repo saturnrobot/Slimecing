@@ -16,7 +16,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 
         private void OnEnable()
         {
-            _swordEllipse = new Ellipse(XAxis, ZAxis);
+            _swordEllipse = new Ellipse(currentOrbitalStats.radiusX, currentOrbitalStats.radiusY);
             _operatingOrbitalInputTrigger = Instantiate(orbitalInputTrigger);
         }
 
@@ -36,11 +36,13 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         {
             Vector3 center = owner.transform.position;
             
-            float step = Time.fixedDeltaTime * RotSpeed;
+            float step = Time.fixedDeltaTime * currentOrbitalStats.rotationSpeed;
             Vector2 circlePos = _swordEllipse.EvaluateEllipse(_finalSwordTarget.x);
-            Vector3 targetPos = new Vector3(circlePos.x, YOffset, circlePos.y);
-            Vector3 smoothPos = Vector3.RotateTowards(orbital.transform.position - center, targetPos, step, 0f);
-            Vector3 orbitPos = new Vector3(smoothPos.normalized.x * XAxis, YOffset, smoothPos.normalized.z * ZAxis);
+            Vector3 targetPos = new Vector3(circlePos.x, currentOrbitalStats.verticalOffset, circlePos.y);
+            Vector3 smoothPos = Vector3.RotateTowards(orbital.transform.position - center, targetPos, 
+                step, 0f);
+            Vector3 orbitPos = new Vector3(smoothPos.normalized.x * currentOrbitalStats.radiusX, 
+                currentOrbitalStats.verticalOffset, smoothPos.normalized.z * currentOrbitalStats.radiusY);
             if (orbitPos != orbital.transform.position)
             {
                 orbital.transform.position = orbitPos + center;
@@ -49,7 +51,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
             SetLook(owner, orbital);
         }
 
-        private void SetLook(GameObject owner, GameObject orbital)
+        private static void SetLook(GameObject owner, GameObject orbital)
         {
             Vector3 position = orbital.transform.position;
             Vector3 ownerPos = owner.transform.position;

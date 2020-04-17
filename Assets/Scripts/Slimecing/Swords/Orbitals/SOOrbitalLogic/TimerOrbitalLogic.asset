@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01e1cbc5c4e6e7418ba67b90bf0fce4, type: 3}
   m_Name: TimerOrbitalLogic
   m_EditorClassIdentifier: 
-  rotSpeed: 4
-  yOffset: 1
-  xAxis: 2.2
-  zAxis: 2.2
+  orbitalStats: {fileID: 11400000, guid: ca7798574e6d9ea4aaf5df7ed0081254, type: 2}
   randomProgress: 1
   orbitalProgress: 0.83612007
