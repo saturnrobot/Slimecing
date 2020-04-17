@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
-    [CreateAssetMenu(fileName = "AxisInputTrigger ", menuName = "Triggers/InputTriggers/AxisInputTrigger ")]
-    public class AxisInputTrigger : TriggerInput
+    [CreateAssetMenu(fileName = "AxisInputTrigger(Polling)", menuName = "Triggers/InputTriggers/AxisInputTrigger(Polling)")]
+    public class AxisInputTriggerPolling : TriggerInput
     {
         protected override void TriggerStarted(GameObject player, InputAction.CallbackContext ctx)
         {
@@ -15,14 +15,12 @@ namespace Slimecing.Triggers.TriggerLogic
         {
             currentTriggerState = TriggerState.Performed;
             inputContext = ctx;
-            OnTriggerStateChange(new TriggerPackage(TriggerState.Performed, player, ctx));
         }
 
         protected override void TriggerCanceled(GameObject player, InputAction.CallbackContext ctx)
         {
             currentTriggerState = TriggerState.Canceled;
             inputContext = ctx;
-            OnTriggerStateChange(new TriggerPackage(TriggerState.Canceled, player, ctx));
         }
     }
 }
