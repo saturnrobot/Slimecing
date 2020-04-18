@@ -15,6 +15,7 @@ namespace Slimecing.Swords.Orbitals
         private Collider _collider;
         
         private List<GameObject> _spawnedOrbitalObjects = new List<GameObject>();
+        private List<OrbitalLogic> _spawnedOrbitalLogic = new List<OrbitalLogic>();
 
         private void OnEnable()
         {
@@ -58,9 +59,11 @@ namespace Slimecing.Swords.Orbitals
         private void ResetSpawnedOrbitalObjects()
         {
             _spawnedOrbitalObjects = new List<GameObject>();
+            _spawnedOrbitalLogic = new List<OrbitalLogic>();
             foreach (var t in orbitals)
             {
                 _spawnedOrbitalObjects.Add(t.orbitalObject);
+                _spawnedOrbitalLogic.Add(t.currentOrbitalLogic);
             }
         }
 
@@ -142,7 +145,7 @@ namespace Slimecing.Swords.Orbitals
                 {
                     orbitals.Remove(orbitals[i]);
                 }
-                if (orbitals[i].orbitalObject == _spawnedOrbitalObjects[i]) continue;
+                if (orbitals[i].orbitalObject == _spawnedOrbitalObjects[i] && orbitals[i].currentOrbitalLogic == _spawnedOrbitalLogic[i]) continue;
                 //DropOrbital(_spawnedOrbitalObjects[i]);
                 InitializeOrbital(orbitals[i]);
             }

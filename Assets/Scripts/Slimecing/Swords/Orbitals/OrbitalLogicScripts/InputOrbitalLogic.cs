@@ -28,6 +28,8 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 
         public override void Initialize(GameObject owner, GameObject orbital)
         {
+            _swordEllipse = new Ellipse(currentOrbitalStats.radiusX, currentOrbitalStats.radiusY);
+            _operatingOrbitalInputTrigger = Instantiate(orbitalInputTrigger);
             GetInput(owner, orbital, Vector2.up);
             GetInputAbilityActionType()?.ConfigureInput(owner);
         }
