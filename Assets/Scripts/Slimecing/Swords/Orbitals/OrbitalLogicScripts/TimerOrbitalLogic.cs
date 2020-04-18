@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 {
     [CreateAssetMenu(fileName = "TimerOrbitalLogic", menuName = "Swords/Orbitals/OrbitalLogic/TimerOrbitalLogic")]
-    public class TimerOrbitalLogic : OrbitalLogic
+    public class TimerOrbitalLogic : OrbitalLogic, IOrbitalTickEveryFrame
     {
         [SerializeField] private bool randomProgress;
         [SerializeField] private float orbitalProgress;
@@ -25,15 +25,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
             if (randomProgress) orbitalProgress = Random.Range(0.0f, 1.0f);
             SetOrbitalPos(owner, orbital);
         }
-        public override void Tick(GameObject owner, GameObject orbital)
-        {
-            if (Mathf.Abs(currentOrbitalStats.rotationSpeed) < 0.1)
-            {
-                currentOrbitalStats.rotationSpeed = 0.1f;
-            }
-            Rotate(owner, orbital);
-            SetLook(owner, orbital);
-        }
+        public override void Tick(GameObject owner, GameObject orbital) { }
 
         private void SetOrbitalPos(GameObject owner, GameObject orbital)
         {
@@ -52,9 +44,19 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         private void Rotate(GameObject owner, GameObject orbital)
         {
             float orbitSpeed = 1f / currentOrbitalStats.rotationSpeed;
-            orbitalProgress += Time.fixedDeltaTime * orbitSpeed;
+            orbitalProgress += Time.deltaTime * orbitSpeed;
             orbitalProgress %= 1f;
             SetOrbitalPos(owner, orbital);
+        }
+
+        public void TickUpdate(GameObject owner, GameObject orbital)
+        {
+            if (Mathf.Abs(currentOrbitalStats.rotationSpeed) < 0.1)
+            {
+                currentOrbitalStats.rotationSpeed = 0.1f;
+            }
+            Rotate(owner, orbital);
+            SetLook(owner, orbital);
         }
     }
 }

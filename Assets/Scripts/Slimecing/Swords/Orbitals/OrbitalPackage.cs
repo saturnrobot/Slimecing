@@ -10,7 +10,7 @@ namespace Slimecing.Swords.Orbitals
         [SerializeField] private GameObject orbital;
         [SerializeField] private OrbitalLogic orbitalLogic;
         [SerializeField] private bool sticky;
-
+        
         public bool orbitalSticky
         {
             get => sticky;
@@ -37,7 +37,7 @@ namespace Slimecing.Swords.Orbitals
             set => orbital = value;
         }
 
-        public OrbitalLogic OrbitalLogic
+        public OrbitalLogic currentOrbitalLogic
         {
             get => orbitalLogic;
             set => orbitalLogic = value;

@@ -29,7 +29,7 @@ namespace Slimecing.Swords.Orbitals
             {
                 GameObject spawnedOrbital = Instantiate(orbitals[i].orbitalObject, thisTransform.position,
                     Quaternion.identity);
-                orbitals[i] = new OrbitalPackage(spawnedOrbital, orbitals[i].OrbitalLogic);
+                orbitals[i] = new OrbitalPackage(spawnedOrbital, orbitals[i].currentOrbitalLogic);
                 InitializeOrbital(orbitals[i]);
             }
         }
@@ -47,11 +47,11 @@ namespace Slimecing.Swords.Orbitals
             }
         }
 
-        public void InitializeOrbital(OrbitalPackage orbital)
+        private void InitializeOrbital(OrbitalPackage orbital)
         {
             AddCollisions(orbital.orbitalObject);
-            orbital.OrbitalLogic = Instantiate(orbital.OrbitalLogic);
-            orbital.OrbitalLogic.Initialize(gameObject, orbital.orbitalObject);
+            orbital.currentOrbitalLogic = Instantiate(orbital.currentOrbitalLogic);
+            orbital.currentOrbitalLogic.Initialize(gameObject, orbital.orbitalObject);
             ResetSpawnedOrbitalObjects();
         }
 
@@ -97,7 +97,7 @@ namespace Slimecing.Swords.Orbitals
 
         private void RemoveOrbital(OrbitalPackage orbital)
         {
-            DropOrbital(orbital);
+            DropOrbital(orbital.orbitalObject);
             orbitals.Remove(orbital);
         }
 
@@ -105,7 +105,7 @@ namespace Slimecing.Swords.Orbitals
         {
             foreach (var orbital in orbitals)
             {
-                if (orbital.OrbitalLogic is IOrbitalTickEveryFrame inputOrbitalLogic)
+                if (orbital.currentOrbitalLogic is IOrbitalTickEveryFrame inputOrbitalLogic)
                 {
                     inputOrbitalLogic.TickUpdate(gameObject, orbital.orbitalObject);
                 }
@@ -118,7 +118,7 @@ namespace Slimecing.Swords.Orbitals
             
             foreach (var orbital in orbitals)
             {
-                orbital.OrbitalLogic.Tick(gameObject, orbital.orbitalObject);
+                orbital.currentOrbitalLogic.Tick(gameObject, orbital.orbitalObject);
             }
         }
 
@@ -138,11 +138,13 @@ namespace Slimecing.Swords.Orbitals
             
             for (int i = 0; i < loopCount; i++)
             {
-                if (orbitals[i].orbitalObject != _spawnedOrbitalObjects[i])
+                if (orbitals[i] == null)
                 {
-                    DropOrbital(orbitals[i]);
-                    InitializeOrbital(orbitals[i]);
+                    orbitals.Remove(orbitals[i]);
                 }
+                if (orbitals[i].orbitalObject == _spawnedOrbitalObjects[i]) continue;
+                //DropOrbital(_spawnedOrbitalObjects[i]);
+                InitializeOrbital(orbitals[i]);
             }
 
             if (resetLoop)
@@ -151,17 +153,12 @@ namespace Slimecing.Swords.Orbitals
             }
         }
 
-        private void DropOrbital(OrbitalPackage orbital)
+        private void DropOrbital(GameObject orbital)
         {
-            DropLogic dropLogic = orbital.orbitalObject.GetComponent<DropLogic>();
+            DropLogic dropLogic = orbital.GetComponent<DropLogic>();
             if (dropLogic == null)
             {
-                if (orbital.orbitalSticky)
-                {
-                    orbital.orbitalObject.SetActive(false);
-                    return;
-                }
-                Destroy(orbital.orbitalObject);
+                orbital.SetActive(false);
                 return;
             }
             

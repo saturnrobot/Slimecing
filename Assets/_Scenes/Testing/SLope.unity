@@ -1510,6 +1510,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570933862}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &621488908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2311679785310360297, guid: 4e346bd7fa8310847b295522d78bb540,
+    type: 3}
+  m_PrefabInstance: {fileID: 1031493766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &664793195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +2741,7 @@ GameObject:
   - component: {fileID: 1383329375}
   - component: {fileID: 1383329374}
   - component: {fileID: 1383329373}
+  - component: {fileID: 1383329377}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2816,6 +2823,24 @@ Transform:
   m_Father: {fileID: 1651529366}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10}
+--- !u!114 &1383329377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383329372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7780a3c04e17841825f68a82642af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultOrbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9,
+    type: 2}
+  orbitals:
+  - orbital: {fileID: 621488908}
+    orbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9, type: 2}
+    sticky: 0
 --- !u!1 &1384512436
 GameObject:
   m_ObjectHideFlags: 0
