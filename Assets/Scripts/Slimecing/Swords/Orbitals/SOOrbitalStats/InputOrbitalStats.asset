@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a37f7d239ec14245970c23702857274, type: 3}
   m_Name: InputOrbitalStats
   m_EditorClassIdentifier: 
-  orbitalSpeed: 10
+  orbitalSpeed: 20
   yOffset: 1
   xAxis: 2.5
   yAxis: 2.5

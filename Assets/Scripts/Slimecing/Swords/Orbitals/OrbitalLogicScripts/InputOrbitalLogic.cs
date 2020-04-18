@@ -63,9 +63,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
             if (inputDir.Equals(Vector2.zero)) return;
             if (!(Mathf.Abs(inputDir.x) > 0.05f) && !(Mathf.Abs(inputDir.y) > 0.05f)) return;
             Vector3 center = owner.transform.position;
-            float pointX = inputDir.x;
-            float pointZ = inputDir.y;
-            float angle = Mathf.Atan2(pointX, pointZ) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg;
             var position = orbital.transform.position;
             float currentAngle = Mathf.Atan2(position.x - center.x,position.z - center.z) * Mathf.Rad2Deg;
             _finalSwordTarget = new Vector2(angle / 360f, currentAngle / 360f);
@@ -74,10 +72,22 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         public void TickUpdate(GameObject owner, GameObject orbital)
         {
             if (!_operatingOrbitalInputTrigger.currentTriggerState.Equals(TriggerState.Performed)) return;
-            if (_operatingOrbitalInputTrigger is TriggerInput orbitalTriggerInput)
+            if (!(_operatingOrbitalInputTrigger is TriggerInput orbitalTriggerInput)) return;
+            
+            if (orbitalTriggerInput.inputContext.control.device.name.Equals("Mouse"))
             {
-                GetInput(owner, orbital, orbitalTriggerInput.inputContext.ReadValue<Vector2>());
+                if (UnityEngine.Camera.main != null)
+                {
+                    Plane playerPlane = new Plane(Vector3.up, owner.transform.position);
+                    Vector2 readInput = orbitalTriggerInput.inputContext.ReadValue<Vector2>();
+                    Ray ray = UnityEngine.Camera.main.ScreenPointToRay(readInput);
+                    if (!playerPlane.Raycast(ray, out var distance)) return;
+                    Vector3 targetPoint = ray.GetPoint(distance) - owner.transform.position;
+                    GetInput(owner, orbital, new Vector2(targetPoint.x, targetPoint.z));
+                    return;
+                }
             }
+            GetInput(owner, orbital, orbitalTriggerInput.inputContext.ReadValue<Vector2>());
         }
     }
 }
