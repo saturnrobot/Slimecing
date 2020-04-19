@@ -1,26 +1,40 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
     [CreateAssetMenu(fileName = "AxisInputTrigger(Polling)", menuName = "Triggers/InputTriggers/AxisInputTrigger(Polling)")]
-    public class AxisInputTriggerPolling : TriggerInput
+    public class InputTriggerPolling : Trigger
     {
-        protected override void TriggerStarted(GameObject player, InputAction.CallbackContext ctx)
+        [SerializeField] private InputActionReference inputActionReference;
+
+        public InputActionReference currentActionReference
         {
+            get => inputActionReference;
+            set => inputActionReference = value;
+        }
+        
+        public InputAction action { get; set; }
+        public PlayerInput currentPlayerInput { get; set; }
+        public override void EnableTrigger(GameObject target)
+        {
+            currentPlayerInput = target.GetComponent<PlayerInput>();
+            if (currentPlayerInput == null) return;
+
+            foreach (var a in currentPlayerInput.actions)
+            {
+                if (!currentActionReference.action.name.Equals(a.name)) continue;
+                a.Enable();
+                action = a;
+            }
             
         }
 
-        protected override void TriggerPerformed(GameObject player, InputAction.CallbackContext ctx)
+        public override T ReadCurrentValue<T>()
         {
-            currentTriggerState = TriggerState.Performed;
-            inputContext = ctx;
-        }
+            return (T) Convert.ChangeType(action, typeof(T));
+        } 
 
-        protected override void TriggerCanceled(GameObject player, InputAction.CallbackContext ctx)
-        {
-            currentTriggerState = TriggerState.Canceled;
-            inputContext = ctx;
-        }
     }
 }
