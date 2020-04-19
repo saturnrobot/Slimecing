@@ -2835,12 +2835,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7780a3c04e17841825f68a82642af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultOrbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9,
-    type: 2}
   orbitals:
-  - orbital: {fileID: 621488908}
+  - owner: {fileID: 1383329372}
+    orbital: {fileID: 621488908}
     orbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9, type: 2}
+    orbitalSpeed: 10
+    yOffset: 1
+    xAxis: 3
+    yAxis: 3
     sticky: 0
+    dropLayer:
+      serializedVersion: 2
+      m_Bits: 1
 --- !u!1 &1384512436
 GameObject:
   m_ObjectHideFlags: 0

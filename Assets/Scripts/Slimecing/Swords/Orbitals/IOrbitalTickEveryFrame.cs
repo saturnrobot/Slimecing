@@ -4,6 +4,6 @@ namespace Slimecing.Swords.Orbitals
 {
     public interface IOrbitalTickEveryFrame
     {
-        void TickUpdate(GameObject owner, GameObject orbital);
+        void TickUpdate(Orbital orbital);
     }
 }

@@ -18,6 +18,8 @@ namespace Slimecing.Swords.DropBehaviour.DropBehaviours
                 rigidbody.useGravity = true;
             }
 
+            rigidbody.constraints = RigidbodyConstraints.None;
+
             rigidbody.velocity = Vector3.zero;
         }
     }

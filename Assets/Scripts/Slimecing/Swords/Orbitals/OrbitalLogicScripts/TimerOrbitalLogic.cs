@@ -11,27 +11,20 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
     public class TimerOrbitalLogic : OrbitalLogic, IOrbitalTickEveryFrame
     {
         [SerializeField] private bool randomProgress;
-        [SerializeField] private float orbitalProgress;
+        [SerializeField] private float startOrbitalProgress;
         
-        private Ellipse _orbitPath;
-
-        private void OnEnable()
+        public override void Initialize(Orbital orbital)
         {
-            _orbitPath = new Ellipse(currentOrbitalStats.radiusX, currentOrbitalStats.radiusY);
+            orbital.orbitalProgress = randomProgress ? Random.Range(0.0f, 1.0f) : startOrbitalProgress;
+            SetOrbitalPos(orbital);
         }
+        public override void Tick(Orbital orbital) { }
 
-        public override void Initialize(GameObject owner, GameObject orbital)
+        private void SetOrbitalPos(Orbital orbital)
         {
-            if (randomProgress) orbitalProgress = Random.Range(0.0f, 1.0f);
-            SetOrbitalPos(owner, orbital);
-        }
-        public override void Tick(GameObject owner, GameObject orbital) { }
-
-        private void SetOrbitalPos(GameObject owner, GameObject orbital)
-        {
-            Vector2 orbitPos = _orbitPath.EvaluateEllipse(orbitalProgress);
-            Vector3 pos = new Vector3(orbitPos.x, currentOrbitalStats.verticalOffset, orbitPos.y);
-            orbital.transform.position = pos + owner.transform.position;
+            Vector2 orbitPos = orbital.orbitPath.EvaluateEllipse(orbital.orbitalProgress, orbital.radiusX, orbital.radiusY);
+            Vector3 pos = new Vector3(orbitPos.x, orbital.verticalOffset, orbitPos.y);
+            orbital.orbitalObject.transform.position = pos + orbital.ownerObject.transform.position;
         }
 
         private static void SetLook(GameObject owner, GameObject orbital)
@@ -41,22 +34,22 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
             orbital.transform.LookAt(2 * position - new Vector3(ownerPos.x, position.y, ownerPos.z));
         }
 
-        private void Rotate(GameObject owner, GameObject orbital)
+        private void Rotate(Orbital orbital)
         {
-            float orbitSpeed = 1f / currentOrbitalStats.rotationSpeed;
-            orbitalProgress += Time.deltaTime * orbitSpeed;
-            orbitalProgress %= 1f;
-            SetOrbitalPos(owner, orbital);
+            float orbitSpeed = 1f / orbital.rotationSpeed;
+            orbital.orbitalProgress += Time.deltaTime * orbitSpeed;
+            orbital.orbitalProgress %= 1f;
+            SetOrbitalPos(orbital);
         }
 
-        public void TickUpdate(GameObject owner, GameObject orbital)
+        public void TickUpdate(Orbital orbital)
         {
-            if (Mathf.Abs(currentOrbitalStats.rotationSpeed) < 0.1)
+            if (Mathf.Abs(orbital.rotationSpeed) < 0.1)
             {
-                currentOrbitalStats.rotationSpeed = 0.1f;
+                orbital.rotationSpeed = 0.1f;
             }
-            Rotate(owner, orbital);
-            SetLook(owner, orbital);
+            Rotate(orbital);
+            SetLook(orbital.ownerObject, orbital.orbitalObject);
         }
     }
 }

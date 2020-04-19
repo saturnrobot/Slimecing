@@ -11,19 +11,19 @@ namespace Slimecing.Triggers
         
         public InputActionReference currentActionReference { get => inputActionReference; set => inputActionReference = value; }
 
-        public PlayerInput currentPlayerInput { get; set; }
+        public PlayerInput currentPlayerInput { get; private set; }
 
-        public void ConfigureInput(GameObject player)
+        public override void EnableTrigger(GameObject target)
         {
-            currentPlayerInput = player.GetComponent<PlayerInput>();
+            currentPlayerInput = target.GetComponent<PlayerInput>();
             if (currentPlayerInput == null) return;
 
             foreach (var action in currentPlayerInput.actions)
             {
                 if (!currentActionReference.action.name.Equals(action.name)) continue;
-                action.started += ctx => TriggerStarted(player, ctx);
-                action.performed += ctx => TriggerPerformed(player, ctx);
-                action.canceled += ctx => TriggerCanceled(player, ctx);
+                action.started += ctx => TriggerStarted(target, ctx);
+                action.performed += ctx => TriggerPerformed(target, ctx);
+                action.canceled += ctx => TriggerCanceled(target, ctx);
                 action.Enable();
             }
         }
@@ -40,5 +40,6 @@ namespace Slimecing.Triggers
         protected abstract void TriggerStarted(GameObject player, InputAction.CallbackContext ctx);
         protected abstract void TriggerPerformed(GameObject player, InputAction.CallbackContext ctx);
         protected abstract void TriggerCanceled(GameObject player,InputAction.CallbackContext ctx);
+        
     }
 }

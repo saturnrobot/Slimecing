@@ -21,12 +21,6 @@ namespace Slimecing.Abilities
             AbilityTrigger.currentTriggerState = TriggerState.Canceled;
             StartAbility(aUser);
         }
-
-        private TriggerInput GetInputAbilityActionType()
-        {
-            if (abilityTrigger == null) return null;
-            return abilityTrigger as TriggerInput;
-        }
         
         public Trigger AbilityTrigger { get => abilityTrigger; set => abilityTrigger = value; }
 
@@ -34,7 +28,7 @@ namespace Slimecing.Abilities
 
         public virtual void Initialize(AbilityUser aUser)
         {
-            GetInputAbilityActionType()?.ConfigureInput(aUser.gameObject);
+            abilityTrigger.EnableTrigger(aUser.gameObject);
             if (abilitySound == null) abilitySound = AudioClip.Create("void", 1, 1, 1000, false);
             
             abilityTrigger.TriggerStateChange += ctx => CheckActivation(aUser, ctx);

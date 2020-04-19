@@ -1136,13 +1136,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7780a3c04e17841825f68a82642af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultOrbitalLogic: {fileID: 11400000, guid: f604a09f73d9b3e4a8d515810e94c6d9,
-    type: 2}
   orbitals:
-  - orbital: {fileID: 2311679785310360297, guid: 4e346bd7fa8310847b295522d78bb540,
+  - owner: {fileID: 1531394410883810673}
+    orbital: {fileID: 2311679785310360297, guid: 4e346bd7fa8310847b295522d78bb540,
       type: 3}
     orbitalLogic: {fileID: 11400000, guid: e77fb33472e993c4fbd1004f42fc4ed2, type: 2}
+    orbitalSpeed: 20
+    yOffset: 1
+    xAxis: 2.5
+    yAxis: 2.5
     sticky: 0
+    dropLayer:
+      serializedVersion: 2
+      m_Bits: 1
 --- !u!114 &1450437300
 MonoBehaviour:
   m_ObjectHideFlags: 0

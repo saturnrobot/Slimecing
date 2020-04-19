@@ -1,37 +1,28 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using Slimecing.Swords.DropBehaviour;
-using Slimecing.Swords.Orbitals.OrbitalLogicScripts;
-using Slimecing.Triggers;
+using System.Linq;
 using UnityEngine;
 
 namespace Slimecing.Swords.Orbitals
 {
     public class TakesOrbitals : MonoBehaviour
     {
-        [SerializeField] private OrbitalLogic defaultOrbitalLogic;
-        [SerializeField] private List<OrbitalPackage> orbitals;
-
-        private Collider _collider;
-        
-        private List<GameObject> _spawnedOrbitalObjects = new List<GameObject>();
-        private List<OrbitalLogic> _spawnedOrbitalLogic = new List<OrbitalLogic>();
+        [SerializeField] private List<Orbital> orbitals;
 
         private void OnEnable()
         {
-            _collider = GetComponent<Collider>();
             SpawnAllOrbitals();
         }
 
         private void SpawnAllOrbitals()
         {
             var thisTransform = transform;
-            for (int i = 0; i < orbitals.Count; i++)
+            foreach (var orbital in orbitals)
             {
-                GameObject spawnedOrbital = Instantiate(orbitals[i].orbitalObject, thisTransform.position,
+                orbital.orbitalObject = Instantiate(orbital.orbitalObject, thisTransform.position,
                     Quaternion.identity);
-                orbitals[i] = new OrbitalPackage(spawnedOrbital, orbitals[i].currentOrbitalLogic);
-                InitializeOrbital(orbitals[i]);
+                InitializeCurrentOrbital(orbital);
             }
         }
 
@@ -48,59 +39,30 @@ namespace Slimecing.Swords.Orbitals
             }
         }
 
-        private void InitializeOrbital(OrbitalPackage orbital)
+        private void InitializeCurrentOrbital(Orbital orbital)
         {
-            AddCollisions(orbital.orbitalObject);
-            orbital.currentOrbitalLogic = Instantiate(orbital.currentOrbitalLogic);
-            orbital.currentOrbitalLogic.Initialize(gameObject, orbital.orbitalObject);
-            ResetSpawnedOrbitalObjects();
+            orbital.Initialize();
+            SetCollisions(orbital);
         }
 
-        private void ResetSpawnedOrbitalObjects()
+        private void ActuallyAddOrbital(Orbital orbital)
         {
-            _spawnedOrbitalObjects = new List<GameObject>();
-            _spawnedOrbitalLogic = new List<OrbitalLogic>();
-            foreach (var t in orbitals)
+            InitializeCurrentOrbital(orbital);
+            orbitals.Add(orbital);
+        }
+
+        private void SetCollisions(Orbital orbital)
+        {
+            foreach (var orbitalCollider in orbitals.Select(o => 
+                o.orbitalObject.GetComponent<Collider>()).Where(orbitalCollider => orbitalCollider != null))
             {
-                _spawnedOrbitalObjects.Add(t.orbitalObject);
-                _spawnedOrbitalLogic.Add(t.currentOrbitalLogic);
+                orbital.SetIgnoreCollisions(orbitalCollider);
             }
         }
 
-        public void AddOrbital(GameObject orbital, OrbitalLogic orbitalLogic, bool stick)
+        private void RemoveOrbital(Orbital orbital)
         {
-            ActuallyAddOrbital(new OrbitalPackage(orbital, orbitalLogic, stick));
-        }
-
-        public void AddOrbital(GameObject orbital, bool stick)
-        {
-            ActuallyAddOrbital(new OrbitalPackage(orbital, defaultOrbitalLogic, stick));
-        }
-
-        private void ActuallyAddOrbital(OrbitalPackage orbitalPackage)
-        {
-            InitializeOrbital(orbitalPackage);
-            orbitals.Add(orbitalPackage);
-        }
-
-        private void AddCollisions(GameObject orbital)
-        {
-            Collider orbitalCollider = orbital.GetComponent<Collider>();
-            if (_collider != null && orbitalCollider != null)
-            {
-                Physics.IgnoreCollision(_collider, orbitalCollider);
-                foreach (var spawnedOrbital in orbitals)
-                {
-                    Collider spawnedOrbitalCollider = spawnedOrbital.orbitalObject.GetComponent<Collider>();
-                    if (spawnedOrbitalCollider == null) continue;
-                    Physics.IgnoreCollision(orbitalCollider, spawnedOrbitalCollider);
-                }
-            }
-        }
-
-        private void RemoveOrbital(OrbitalPackage orbital)
-        {
-            DropOrbital(orbital.orbitalObject);
+            orbital.DisableOrbital();
             orbitals.Remove(orbital);
         }
 
@@ -108,64 +70,21 @@ namespace Slimecing.Swords.Orbitals
         {
             foreach (var orbital in orbitals)
             {
-                if (orbital.currentOrbitalLogic is IOrbitalTickEveryFrame inputOrbitalLogic)
-                {
-                    inputOrbitalLogic.TickUpdate(gameObject, orbital.orbitalObject);
-                }
+                orbital.UpdateTick();
             }
         }
 
         public void FixedUpdate()
         {
-            ValidateOrbitals();
-            
             foreach (var orbital in orbitals)
             {
-                orbital.currentOrbitalLogic.Tick(gameObject, orbital.orbitalObject);
-            }
-        }
-
-        private void ValidateOrbitals()
-        {
-            float loopCount = _spawnedOrbitalObjects.Count;
-            bool resetLoop = false;
-            
-            if (orbitals.Count != _spawnedOrbitalObjects.Count)
-            {
-                resetLoop = true;
-                if (orbitals.Count < _spawnedOrbitalObjects.Count)
-                {
-                    loopCount = orbitals.Count;
-                }
+                orbital.Tick();
             }
             
-            for (int i = 0; i < loopCount; i++)
+            foreach (var orbital in orbitals.Where(orbital => !orbital.Validate()))
             {
-                if (orbitals[i] == null)
-                {
-                    orbitals.Remove(orbitals[i]);
-                }
-                if (orbitals[i].orbitalObject == _spawnedOrbitalObjects[i] && orbitals[i].currentOrbitalLogic == _spawnedOrbitalLogic[i]) continue;
-                //DropOrbital(_spawnedOrbitalObjects[i]);
-                InitializeOrbital(orbitals[i]);
+                SetCollisions(orbital);
             }
-
-            if (resetLoop)
-            {
-                ResetSpawnedOrbitalObjects();
-            }
-        }
-
-        private void DropOrbital(GameObject orbital)
-        {
-            DropLogic dropLogic = orbital.GetComponent<DropLogic>();
-            if (dropLogic == null)
-            {
-                orbital.SetActive(false);
-                return;
-            }
-            
-            dropLogic.Drop();
         }
     }
 }
