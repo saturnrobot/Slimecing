@@ -9,29 +9,29 @@ namespace Slimecing.Abilities
     public abstract class Ability : ScriptableObject
     {
         [SerializeField] protected string abilityName = "REPLACE ABILITY NAME";
-        [SerializeField] private string abilityDescription = "REPLACE ABILITY DESCRIPTION";
         [SerializeField] protected float abilityCooldown = 1f;
         [SerializeField] protected AudioClip abilitySound;
-        [SerializeField] private Trigger abilityTrigger = null;
-        public virtual void CheckActivation(AbilityUser aUser, TriggerPackage abilityTriggerPackage)
+        [SerializeField] private Trigger abilityTrigger;
+
+        public Trigger currentAbilityTrigger { get; set; }
+
+        public virtual void CheckActivation(AbilityUser aUser, TriggerState state)
         {
-            if (!abilityTriggerPackage.user.Equals(aUser.gameObject)) return;
-            if (AbilityTrigger == null) return;
-            if (abilityTriggerPackage.triggerState != TriggerState.Performed) return;
-            AbilityTrigger.currentTriggerState = TriggerState.Canceled;
+            if (currentAbilityTrigger == null) return;
+            if (state != TriggerState.Performed) return;
+            currentAbilityTrigger.currentTriggerState = TriggerState.Canceled;
             StartAbility(aUser);
         }
         
-        public Trigger AbilityTrigger { get => abilityTrigger; set => abilityTrigger = value; }
-
         public abstract void Use(AbilityUser aUser);
 
         public virtual void Initialize(AbilityUser aUser)
         {
-            abilityTrigger.EnableTrigger(aUser.gameObject);
+            currentAbilityTrigger = Instantiate(abilityTrigger);
+            currentAbilityTrigger.EnableTrigger(aUser.gameObject);
             if (abilitySound == null) abilitySound = AudioClip.Create("void", 1, 1, 1000, false);
             
-            abilityTrigger.TriggerStateChange += ctx => CheckActivation(aUser, ctx);
+            currentAbilityTrigger.TriggerStateChange += ctx => CheckActivation(aUser, ctx);
         }
 
         public void StartAbility(AbilityUser aUser)
@@ -74,7 +74,7 @@ namespace Slimecing.Abilities
 
         private void EndAbility()
         {
-            AbilityTrigger.currentTriggerState = TriggerState.Canceled;
+            currentAbilityTrigger.currentTriggerState = TriggerState.Canceled;
         }
     }
 }

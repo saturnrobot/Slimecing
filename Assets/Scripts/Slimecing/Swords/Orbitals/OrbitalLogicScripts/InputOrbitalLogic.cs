@@ -1,6 +1,4 @@
-﻿using System;
-using Slimecing.Dependency;
-using Slimecing.Triggers;
+﻿using Slimecing.Triggers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,7 +9,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
     {
         [SerializeField] private Trigger orbitalInputTrigger;
         
-        private Trigger _operatingOrbitalInputTrigger;
+        private Trigger operatingOrbitalInputTrigger { get; set; }
         
         public override OrbitalLogic GetOrbital()
         {
@@ -20,9 +18,9 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         
         public override void Initialize(Orbital orbital)
         {
-            _operatingOrbitalInputTrigger = Instantiate(orbitalInputTrigger);
+            operatingOrbitalInputTrigger = Instantiate(orbitalInputTrigger);
             GetInput(orbital, Vector2.up);
-            _operatingOrbitalInputTrigger.EnableTrigger(orbital.ownerObject);
+            operatingOrbitalInputTrigger.EnableTrigger(orbital.ownerObject);
         }
 
         public override void Tick(Orbital orbital)
@@ -62,10 +60,10 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 
         public void TickUpdate(Orbital orbital)
         {
-            InputAction action = _operatingOrbitalInputTrigger.ReadCurrentValue<InputAction>();
+            InputAction action = operatingOrbitalInputTrigger.ReadCurrentValue<InputAction>();
             if (action == null) return;
             if (!action.triggered) return;
-            if (action.activeControl.device.name.Equals("Mouse"))
+            if (action.activeControl != null && action.activeControl?.device.name == "Mouse")
             {
                 if (UnityEngine.Camera.main != null)
                 {

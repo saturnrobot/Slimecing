@@ -49,11 +49,10 @@ namespace Slimecing.Abilities.UseAbilities
             }
         }
 
-        public override void CheckActivation(AbilityUser aUser, TriggerPackage abilityTriggerPackage)
+        public override void CheckActivation(AbilityUser aUser, TriggerState state)
         {
-            if (AbilityTrigger == null) return;
-            if (!abilityTriggerPackage.user.Equals(aUser.gameObject)) return;
-            switch (abilityTriggerPackage.triggerState)
+            if (currentAbilityTrigger == null) return;
+            switch (state)
             {
                 case TriggerState.Started:
                     StartAbility(aUser);

@@ -1,3 +1,4 @@
+using UnityEngine;
 using Slimecing.Characters;
 
 namespace Slimecing.Abilities {
@@ -5,7 +6,7 @@ namespace Slimecing.Abilities {
     public class AbilityPackage
     {
         public Ability ability;
-        [UnityEngine.HideInInspector] public bool initialized = false;
+        [HideInInspector] public bool initialized;
 
         public AbilityPackage(Ability ability)
         {

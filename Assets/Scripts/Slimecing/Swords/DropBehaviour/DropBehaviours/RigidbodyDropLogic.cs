@@ -4,23 +4,23 @@ namespace Slimecing.Swords.DropBehaviour.DropBehaviours
 {
     public class RigidbodyDropLogic : DropLogic
     {
-        [SerializeField] private Rigidbody rigidbody;
+        [SerializeField] private Rigidbody rb;
         
         public override void Drop()
         {
-            if (rigidbody.isKinematic)
+            if (rb.isKinematic)
             {
-                rigidbody.isKinematic = false;
+                rb.isKinematic = false;
             }
 
-            if (!rigidbody.useGravity)
+            if (!rb.useGravity)
             {
-                rigidbody.useGravity = true;
+                rb.useGravity = true;
             }
 
-            rigidbody.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.None;
 
-            rigidbody.velocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
         }
     }
 }

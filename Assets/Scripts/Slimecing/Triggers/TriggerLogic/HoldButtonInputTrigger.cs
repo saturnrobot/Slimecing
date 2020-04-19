@@ -1,30 +1,23 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Slimecing.Triggers.TriggerLogic
 {
     [CreateAssetMenu(fileName = "HoldButtonInputTrigger", menuName = "Triggers/InputTriggers/HoldButtonInputTrigger")]
     public class HoldButtonInputTrigger : TriggerInput
     {
-        protected override void TriggerStarted(GameObject player, InputAction.CallbackContext ctx)
+        protected override void TriggerStarted()
         {
-            currentTriggerState = TriggerState.Started;
-            inputContext = ctx;
-            OnTriggerStateChange(new TriggerPackage(TriggerState.Started, player, ctx));
+            OnTriggerStateChange(TriggerState.Started);
         }
 
-        protected override void TriggerPerformed(GameObject player, InputAction.CallbackContext ctx)
+        protected override void TriggerPerformed()
         {
-            currentTriggerState = TriggerState.Performed;
-            inputContext = ctx;
-            OnTriggerStateChange(new TriggerPackage(TriggerState.Performed, player, ctx));
+            OnTriggerStateChange(TriggerState.Performed);
         }
 
-        protected override void TriggerCanceled(GameObject player, InputAction.CallbackContext ctx)
+        protected override void TriggerCanceled()
         {
-             currentTriggerState = TriggerState.Canceled;
-             inputContext = ctx;
-             OnTriggerStateChange(new TriggerPackage(TriggerState.Canceled, player, ctx));
+            OnTriggerStateChange(TriggerState.Canceled);
         }
     }
 }

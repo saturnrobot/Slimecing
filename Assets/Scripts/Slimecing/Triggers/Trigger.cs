@@ -7,7 +7,7 @@ namespace Slimecing.Triggers
     {
         public TriggerState currentTriggerState { get; set; }
         
-        public event Action<TriggerPackage> TriggerStateChange;
+        public event Action<TriggerState> TriggerStateChange;
         public abstract void EnableTrigger(GameObject target);
 
         protected static T CheckRequestedValue<T>(object obj)
@@ -20,9 +20,9 @@ namespace Slimecing.Triggers
             return result;
         }
         public virtual T ReadCurrentValue<T>() => CheckRequestedValue<T>(currentTriggerState);
-        protected virtual void OnTriggerStateChange(TriggerPackage itp)
+        protected virtual void OnTriggerStateChange(TriggerState state)
         {
-            TriggerStateChange?.Invoke(itp);
+            TriggerStateChange?.Invoke(state);
         }
     }
 }

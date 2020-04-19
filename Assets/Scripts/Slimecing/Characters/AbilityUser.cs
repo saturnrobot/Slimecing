@@ -41,6 +41,11 @@ namespace Slimecing.Characters
                     }
                 }
             }
+
+            foreach (var ability in useableAbilities)
+            {
+                
+            }
         }
         private void Update()
         {

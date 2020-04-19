@@ -38,8 +38,7 @@ namespace Slimecing.Triggers.TriggerLogic
 
         private void TriggerPerformed(GameObject target)
         {
-            currentTriggerState = TriggerState.Performed;
-            OnTriggerStateChange(new TriggerPackage(TriggerState.Performed, target));
+            OnTriggerStateChange(TriggerState.Performed);
         }
     }
 }
