@@ -51,7 +51,7 @@ namespace Slimecing.Abilities.UseAbilities
 
         public override void CheckActivation(AbilityUser aUser, TriggerState state)
         {
-            if (currentAbilityTrigger == null) return;
+            if (runtimeAbilityTrigger == null) return;
             switch (state)
             {
                 case TriggerState.Started:

@@ -299,12 +299,7 @@ namespace Slimecing.Characters
 
         private bool CheckIfValidCollider(Collider col)
         {
-            if (col != playerCollider && col != null)
-            {
-                return true;
-            }
-
-            return false;
+            return col != playerCollider && col != null;
         }
 
     }

@@ -9,7 +9,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
     {
         [SerializeField] private Trigger orbitalInputTrigger;
         
-        private Trigger operatingOrbitalInputTrigger { get; set; }
+        private Trigger runtimeOrbitalInputTrigger { get; set; }
         
         public override OrbitalLogic GetOrbital()
         {
@@ -18,9 +18,9 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         
         public override void Initialize(Orbital orbital)
         {
-            operatingOrbitalInputTrigger = Instantiate(orbitalInputTrigger);
+            runtimeOrbitalInputTrigger = orbitalInputTrigger.GetTrigger();
             GetInput(orbital, Vector2.up);
-            operatingOrbitalInputTrigger.EnableTrigger(orbital.ownerObject);
+            runtimeOrbitalInputTrigger.EnableTrigger(orbital.ownerObject);
         }
 
         public override void Tick(Orbital orbital)
@@ -60,7 +60,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 
         public void TickUpdate(Orbital orbital)
         {
-            InputAction action = operatingOrbitalInputTrigger.ReadCurrentValue<InputAction>();
+            var action = runtimeOrbitalInputTrigger.ReadCurrentValue<InputAction>();
             if (action == null) return;
             if (!action.triggered) return;
             if (action.activeControl != null && action.activeControl?.device.name == "Mouse")

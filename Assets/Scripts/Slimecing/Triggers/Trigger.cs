@@ -8,19 +8,11 @@ namespace Slimecing.Triggers
         public TriggerState currentTriggerState { get; set; }
         
         public event Action<TriggerState> TriggerStateChange;
-        public abstract void EnableTrigger(GameObject target);
 
-        protected static T CheckRequestedValue<T>(object obj)
-        {
-            var result = default(T);
-            if (obj is T)
-            {
-                result = (T) Convert.ChangeType(obj, typeof(T));
-            }
-            return result;
-        }
-        public virtual T ReadCurrentValue<T>() => CheckRequestedValue<T>(currentTriggerState);
-        protected virtual void OnTriggerStateChange(TriggerState state)
+        public Trigger GetTrigger() => Instantiate(this);
+        public abstract void EnableTrigger(GameObject target);
+        public virtual T ReadCurrentValue<T>() => (T) Convert.ChangeType(currentTriggerState, typeof(T));
+        protected void OnTriggerStateChange(TriggerState state)
         {
             TriggerStateChange?.Invoke(state);
         }

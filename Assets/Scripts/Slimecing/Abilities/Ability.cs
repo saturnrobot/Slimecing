@@ -13,13 +13,13 @@ namespace Slimecing.Abilities
         [SerializeField] protected AudioClip abilitySound;
         [SerializeField] private Trigger abilityTrigger;
 
-        public Trigger currentAbilityTrigger { get; set; }
+        public Trigger runtimeAbilityTrigger { get; set; }
 
         public virtual void CheckActivation(AbilityUser aUser, TriggerState state)
         {
-            if (currentAbilityTrigger == null) return;
+            if (runtimeAbilityTrigger == null) return;
             if (state != TriggerState.Performed) return;
-            currentAbilityTrigger.currentTriggerState = TriggerState.Canceled;
+            runtimeAbilityTrigger.currentTriggerState = TriggerState.Canceled;
             StartAbility(aUser);
         }
         
@@ -27,11 +27,11 @@ namespace Slimecing.Abilities
 
         public virtual void Initialize(AbilityUser aUser)
         {
-            currentAbilityTrigger = Instantiate(abilityTrigger);
-            currentAbilityTrigger.EnableTrigger(aUser.gameObject);
+            runtimeAbilityTrigger = abilityTrigger.GetTrigger();
+            runtimeAbilityTrigger.EnableTrigger(aUser.gameObject);
             if (abilitySound == null) abilitySound = AudioClip.Create("void", 1, 1, 1000, false);
             
-            currentAbilityTrigger.TriggerStateChange += ctx => CheckActivation(aUser, ctx);
+            runtimeAbilityTrigger.TriggerStateChange += ctx => CheckActivation(aUser, ctx);
         }
 
         public void StartAbility(AbilityUser aUser)
@@ -74,7 +74,7 @@ namespace Slimecing.Abilities
 
         private void EndAbility()
         {
-            currentAbilityTrigger.currentTriggerState = TriggerState.Canceled;
+            runtimeAbilityTrigger.currentTriggerState = TriggerState.Canceled;
         }
     }
 }

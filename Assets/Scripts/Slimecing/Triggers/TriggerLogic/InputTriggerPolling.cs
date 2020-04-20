@@ -31,10 +31,7 @@ namespace Slimecing.Triggers.TriggerLogic
             
         }
 
-        public override T ReadCurrentValue<T>()
-        {
-            return (T) Convert.ChangeType(action, typeof(T));
-        } 
+        public override T ReadCurrentValue<T>() => (T) Convert.ChangeType(action, typeof(T));
 
     }
 }
