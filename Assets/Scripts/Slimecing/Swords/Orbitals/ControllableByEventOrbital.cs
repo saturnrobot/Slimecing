@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Slimecing.Swords.Orbitals
 {
@@ -9,6 +10,14 @@ namespace Slimecing.Swords.Orbitals
 
         private GameObject _oldOwner;
         private OrbitalLogic _oldOrbitalLogic;
+
+        private void OnEnable()
+        {
+            var orbital = ownerOfThisOrbital.GetOrbital(gameObject);
+            if (orbital == null) return;
+            _oldOwner = orbital.ownerControlObject;
+            _oldOrbitalLogic = orbital.currentOrbitalLogic;
+        }
 
         public void SetOwnerOfThisOrbital(GameObject owner)
         {
@@ -23,6 +32,7 @@ namespace Slimecing.Swords.Orbitals
 
         public void UnSetOwnerOfThisOrbital()
         {
+            if (_oldOwner == null || _oldOrbitalLogic == null) return;
             var orbital = ownerOfThisOrbital.GetOrbital(gameObject);
             if (orbital == null) return;
             orbital.ownerControlObject = _oldOwner;
