@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
 {
     [CreateAssetMenu(fileName = "InputOrbitalLogic", menuName = "Swords/Orbitals/OrbitalLogic/InputOrbitalLogic")]
-    public class InputOrbitalLogic : OrbitalLogic, IOrbitalTickEveryFrame
+    public class InputOrbitalLogic : OrbitalLogic, IOrbitalTickEveryFrame, IControllableOrbital
     {
         [SerializeField] private Trigger orbitalInputTrigger;
         
@@ -20,7 +20,7 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
         {
             runtimeOrbitalInputTrigger = orbitalInputTrigger.GetTrigger();
             GetInput(orbital, Vector2.up);
-            runtimeOrbitalInputTrigger.EnableTrigger(orbital.ownerObject);
+            runtimeOrbitalInputTrigger.EnableTrigger(orbital.ownerControlObject);
         }
 
         public override void Tick(Orbital orbital)
@@ -77,6 +77,12 @@ namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts
                 }
             }
             GetInput(orbital, action.ReadValue<Vector2>());
+        }
+
+        public void ChangeController(GameObject controller)
+        {
+            if (runtimeOrbitalInputTrigger == null) return;
+            runtimeOrbitalInputTrigger.EnableTrigger(controller);
         }
     }
 }

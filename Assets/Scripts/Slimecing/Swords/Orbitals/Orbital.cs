@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Slimecing.Dependency;
 using Slimecing.Swords.DropBehaviour;
-using UnityEditor;
 using UnityEngine;
 
 namespace Slimecing.Swords.Orbitals
@@ -11,7 +10,7 @@ namespace Slimecing.Swords.Orbitals
     public class Orbital
     {
         
-        [SerializeField] private GameObject owner;
+        [SerializeField] private GameObject controlOwner;
         [SerializeField] private GameObject orbital;
         [SerializeField] private OrbitalLogic orbitalLogic;
         [SerializeField] private float orbitalSpeed;
@@ -19,18 +18,31 @@ namespace Slimecing.Swords.Orbitals
         [SerializeField] private float xAxis;
         [SerializeField] private float yAxis;
         [SerializeField] private bool sticky;
-        [SerializeField] private LayerMask dropLayer;
+        [SerializeField] private bool instantiateOnSpawn = true;
 
         private List<Collider> _ignoredCollisions;
-        private bool _hasDropBehaviour;
 
-        private GameObject _cachedOwner;
+        private GameObject _cachedControlOwner;
         private GameObject _cachedOrbital;
         private OrbitalLogic _cachedOrbitalLogic;
         public Collider orbitalCollider { get; private set; }
         public Collider ownerCollider { get; private set; }
         public float orbitalProgress { get; set; }
         public Ellipse orbitPath { get; set; }
+        public GameObject ownerObject { get; set; }
+        
+        public GameObject orbitalObject
+        {
+            get => orbital;
+            set => orbital = value;
+        }
+
+        public OrbitalLogic currentOrbitalLogic
+        {
+            get => orbitalLogic;
+            set => orbitalLogic = value;
+        }
+        
         public float rotationSpeed
         {
             get => orbitalSpeed;
@@ -54,29 +66,23 @@ namespace Slimecing.Swords.Orbitals
             get => yAxis;
             set => yAxis = value;
         }
+
+        public GameObject ownerControlObject
+        {
+            get => controlOwner;
+            set => controlOwner = value;
+        }
         
         public bool orbitalSticky
         {
             get => sticky;
             set => sticky = value;
         }
-
-        public GameObject ownerObject
+        
+        public bool instantiateOrbital
         {
-            get => owner;
-            set => owner = value;
-        }
-
-        public GameObject orbitalObject
-        {
-            get => orbital;
-            set => orbital = value;
-        }
-
-        public OrbitalLogic currentOrbitalLogic
-        {
-            get => orbitalLogic;
-            set => orbitalLogic = value;
+            get => instantiateOnSpawn;
+            set => instantiateOnSpawn = value;
         }
 
         public Orbital()
@@ -84,10 +90,11 @@ namespace Slimecing.Swords.Orbitals
             orbitPath = new Ellipse(radiusX, radiusY);
         }
 
-        public Orbital(GameObject owner, GameObject orbital, OrbitalLogic orbitalLogic, float orbitalSpeed, 
-            float yOffset, float xAxis, float yAxis, bool sticky)
+        public Orbital(GameObject ownerObject, GameObject controlOwner, GameObject orbital, OrbitalLogic orbitalLogic, 
+            float orbitalSpeed, float yOffset, float xAxis, float yAxis, bool sticky)
         {
-            this.owner = owner;
+            this.ownerObject = ownerObject;
+            this.controlOwner = controlOwner;
             this.orbital = orbital;
             this.orbitalLogic = orbitalLogic;
             this.orbitalSpeed = orbitalSpeed;
@@ -98,19 +105,20 @@ namespace Slimecing.Swords.Orbitals
             orbitPath = new Ellipse(radiusX, radiusY);
         }
 
-        public void Initialize()
+        public void Initialize(GameObject realOwner)
         {
             orbitPath = new Ellipse(radiusX, radiusY);
+            ownerObject = realOwner;
             InitializeOrbitalObject();
             InitializeOrbitalLogic();
         }
 
         private void InitializeOrbitalObject()
         {
-            SetCollider();
-            if (orbitalObject.GetComponent<DropLogic>() != null) _hasDropBehaviour = true;
             _cachedOrbital = orbitalObject;
-            _cachedOwner = ownerObject;
+            _cachedControlOwner = ownerControlObject;
+            if (currentOrbitalLogic is IControllableOrbital logic) logic.ChangeController(_cachedControlOwner);
+            SetCollider();
         }
 
         private void InitializeOrbitalLogic()
@@ -123,8 +131,8 @@ namespace Slimecing.Swords.Orbitals
         private void SetCollider()
         {
             orbitalCollider = orbital.gameObject.GetComponent<Collider>();
-            ownerCollider = owner.gameObject.GetComponent<Collider>();
-            if (ownerCollider == null || orbitalCollider == null) return;
+            ownerCollider = ownerObject.gameObject.GetComponent<Collider>();
+            if (orbitalCollider  == null || ownerCollider == null) return;
             SetIgnoreCollisions(ownerCollider);
         }
 
@@ -153,7 +161,7 @@ namespace Slimecing.Swords.Orbitals
         public bool Validate()
         {
             bool isValid = true;
-            if (_cachedOrbital != orbitalObject || _cachedOwner != ownerObject)
+            if (_cachedOrbital != orbitalObject || _cachedControlOwner != ownerObject)
             {
                 DisableOrbital();
                 InitializeOrbitalObject();
@@ -172,16 +180,20 @@ namespace Slimecing.Swords.Orbitals
         public void DisableOrbital()
         {
             if (_cachedOrbital == null) return;
-            _cachedOrbital.layer = dropLayer;
             foreach (var col in _ignoredCollisions)
             {
                 Physics.IgnoreCollision(orbitalCollider, col,false);
             }
-
-            if (_hasDropBehaviour)
+            
+            if (HasComponent<DropLogic>(_cachedOrbital))
             {
                 _cachedOrbital.GetComponent<DropLogic>().Drop();
             }
+        }
+        
+        public static bool HasComponent<T>(GameObject obj) where T:Component
+        {
+            return obj.GetComponent<T>() != null;
         }
     }
 }

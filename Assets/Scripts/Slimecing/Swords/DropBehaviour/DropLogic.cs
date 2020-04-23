@@ -4,6 +4,11 @@ namespace Slimecing.Swords.DropBehaviour
 {
     public abstract class DropLogic : MonoBehaviour
     {
-        public abstract void Drop();
+        [SerializeField] private LayerMask dropLayer;
+
+        public virtual void Drop()
+        {
+            gameObject.layer = dropLayer;
+        }
     }
 }

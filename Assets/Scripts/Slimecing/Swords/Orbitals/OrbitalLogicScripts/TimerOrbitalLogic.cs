@@ -1,8 +1,4 @@
-﻿using System;
-using Slimecing.Dependency;
-using Slimecing.Triggers;
-using Slimecing.Triggers.TriggerLogic;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Slimecing.Swords.Orbitals.OrbitalLogicScripts

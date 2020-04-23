@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -20,8 +18,12 @@ namespace Slimecing.Swords.Orbitals
             var thisTransform = transform;
             foreach (var orbital in orbitals)
             {
-                orbital.orbitalObject = Instantiate(orbital.orbitalObject, thisTransform.position,
-                    Quaternion.identity);
+                if (orbital.instantiateOrbital)
+                {
+                    orbital.orbitalObject = Instantiate(orbital.orbitalObject, thisTransform.position,
+                        Quaternion.identity);
+                }
+
                 InitializeCurrentOrbital(orbital);
             }
         }
@@ -41,7 +43,7 @@ namespace Slimecing.Swords.Orbitals
 
         private void InitializeCurrentOrbital(Orbital orbital)
         {
-            orbital.Initialize();
+            orbital.Initialize(gameObject);
             SetCollisions(orbital);
         }
 
@@ -64,6 +66,20 @@ namespace Slimecing.Swords.Orbitals
         {
             orbital.DisableOrbital();
             orbitals.Remove(orbital);
+        }
+
+        public Orbital GetOrbital(GameObject orbital)
+        {
+            Orbital orbitalToReturn = null;
+            foreach (var o in orbitals)
+            {
+                if (o.orbitalObject.Equals(orbital))
+                {
+                    orbitalToReturn = o;
+                }
+            }
+
+            return orbitalToReturn;
         }
 
         public void Update()

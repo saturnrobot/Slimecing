@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Slimecing.Swords.Orbitals;
+using UnityEngine;
 
 namespace Slimecing.Swords.DropBehaviour.DropBehaviours
 {
@@ -8,6 +9,7 @@ namespace Slimecing.Swords.DropBehaviour.DropBehaviours
         
         public override void Drop()
         {
+            base.Drop();
             if (rb.isKinematic)
             {
                 rb.isKinematic = false;
