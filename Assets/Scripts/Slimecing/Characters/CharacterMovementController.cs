@@ -1,6 +1,6 @@
-using System;
+using Slimecing.Environment;
+using Slimecing.Environment.Moving;
 using Slimecing.SimpleComponents.Movement;
-using Slimecing.TestScripts;
 using UnityEngine;
 
 namespace Slimecing.Characters
@@ -12,7 +12,7 @@ namespace Slimecing.Characters
     {
         [Header("Components")]
         [SerializeField] protected Rigidbody rb;
-        public Rigidbody PlayerRigidbody => rb;
+        public Rigidbody playerRigidbody => rb;
         [SerializeField] protected Rotatable rotatable;
         [SerializeField] private Collider playerCollider;
 
@@ -52,7 +52,8 @@ namespace Slimecing.Characters
         [SerializeField] private LayerMask hitLayerMask;
 
         [Header("Other Settings")]
-        [SerializeField] const int MaxHitsBuffer = 3;
+        [SerializeField] private bool preserveInteractableRigidbodyVelocity;
+        const int MaxHitsBuffer = 3;
 
         protected Vector2 move;
         protected Vector3 calculatedGravity;
@@ -61,7 +62,21 @@ namespace Slimecing.Characters
         public bool IsGrounded() => _isGrounded;
         private bool _canBeGrounded;
 
+        private Vector3 _bodyVelocity;
+        private Vector3 _attachedRigidbodyVelocity;
+        private Rigidbody _lastAttachedRigidbody;
+        private bool _isMovingFromAttachedRigidbody;
+
+        private Vector3 _calculatedTargetVelocity;
+        public Vector3 calculatedTargetVelocity
+        {
+            get => _calculatedTargetVelocity;
+            set => _calculatedTargetVelocity = value;
+        }
+
+        public Rigidbody attachedRigidbody { get; private set; }
         
+        public Vector3 internalTransformPosition { get; set; }
 
         private RaycastHit _internalGroundHit;
         private RaycastHit _internalSlopeHit;
@@ -72,7 +87,19 @@ namespace Slimecing.Characters
 
         protected void Awake()
         {
+            internalTransformPosition = Vector3.zero;
             calculatedGravity = gravityDirection * gravityForce;
+        }
+        
+        private void OnEnable()
+        {
+            MoverSimulationManager.CheckAlive();
+            MoverSimulationManager.RegisterCharMover(this);
+        }
+
+        private void OnDisable()
+        {
+            MoverSimulationManager.UnregisterCharMover(this);
         }
 
         public abstract void GetMoveInputH(float h);
@@ -100,15 +127,15 @@ namespace Slimecing.Characters
             Debug.DrawLine(transform.position, transform.position + Forward() * 2, Color.yellow);
         }
 
-        protected virtual void FixedUpdate()
+        public virtual void TickCharacter(float deltaTime)
         {
             GroundCheck(groundProbingDistance, groundingSphereCastRadius);
-            
-            float deltaTime = Time.deltaTime;
-            
+
+            InteractableRigidbodyCheck(deltaTime);
+
             Rotate(deltaTime);
             Move(deltaTime);
-
+            
             if (!_isGrounded && useGravity) rb.AddForce(simulatedFallingMass * calculatedGravity);
 
             if (rb.velocity.magnitude < minVelocityMagnitude)
@@ -117,6 +144,91 @@ namespace Slimecing.Characters
             }
 
             _isGrounded = false;
+        }
+
+        private void InteractableRigidbodyCheck(float deltaTime)
+        {
+            if (!IsGrounded()) return;
+            _lastAttachedRigidbody = attachedRigidbody;
+            if (_lastGoodNormalHit.collider.attachedRigidbody)
+            {
+                Rigidbody validRigidbody = GetInteractableRigidbody(_lastGoodNormalHit.collider);
+                if (validRigidbody)
+                {
+                    attachedRigidbody = validRigidbody;
+                }
+            }
+            else
+            {
+                attachedRigidbody = null;
+            }
+
+            Vector3 tmpVelocityFromInteractableRigidbody = Vector3.zero;
+            if (attachedRigidbody)
+            {
+                tmpVelocityFromInteractableRigidbody =
+                    GetVelocityFromRigidbodyMovement(attachedRigidbody, transform.position, deltaTime);
+            }
+
+            if (preserveInteractableRigidbodyVelocity && _lastAttachedRigidbody != null &&
+                attachedRigidbody != _lastAttachedRigidbody)
+            {
+                _bodyVelocity += _attachedRigidbodyVelocity;
+                _bodyVelocity -= tmpVelocityFromInteractableRigidbody;
+            }
+
+            _attachedRigidbodyVelocity = Vector3.zero;
+            if (attachedRigidbody)
+            {
+                _attachedRigidbodyVelocity = tmpVelocityFromInteractableRigidbody;
+                Vector3 newForward = Vector3
+                    .ProjectOnPlane(
+                        Quaternion.Euler(attachedRigidbody.angularVelocity * (Mathf.Rad2Deg * deltaTime)) * Forward(),
+                        PlayerGroundedUpVector()).normalized;
+                rb.rotation = Quaternion.LookRotation(newForward, PlayerGroundedUpVector());
+            }
+
+            rb.position += _attachedRigidbodyVelocity * deltaTime;
+            internalTransformPosition = _attachedRigidbodyVelocity * deltaTime;
+        }
+
+        private Vector3 PlayerGroundedUpVector()
+        {
+            return transform.rotation * Vector3.up;
+        }
+
+        private Vector3 GetVelocityFromRigidbodyMovement(Rigidbody interactiveRb, Vector3 transformPosition, float deltaTime)
+        {
+            if (!(deltaTime > 0f)) return Vector3.zero;
+            Vector3 moverVelocity = interactiveRb.velocity;
+
+            if (interactiveRb.angularVelocity == Vector3.zero) return moverVelocity;
+            
+            Vector3 centerOfRot = interactiveRb.position + interactiveRb.centerOfMass;
+            Vector3 centerOfRotOffset = transformPosition - centerOfRot;
+            Quaternion rotationFromMoverRigidbody = Quaternion.Euler(interactiveRb.angularVelocity * (Mathf.Rad2Deg * deltaTime));
+            Vector3 finalPointPos = centerOfRot + (rotationFromMoverRigidbody * centerOfRotOffset);
+            moverVelocity += (finalPointPos - transformPosition) / deltaTime;
+
+            return moverVelocity;
+
+        }
+
+        private Rigidbody GetInteractableRigidbody(Collider col)
+        {
+            if (!col.attachedRigidbody) return null;
+            
+            if (col.attachedRigidbody.gameObject.GetComponent<RigidbodyMover>())
+            {
+                return col.attachedRigidbody;
+            }
+
+            if (!col.attachedRigidbody.isKinematic)
+            {
+                return col.attachedRigidbody;
+            }
+
+            return null;
         }
 
         protected abstract void Move(float deltaTime);

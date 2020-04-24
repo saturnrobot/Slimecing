@@ -4001,7 +4001,7 @@ GameObject:
   - component: {fileID: 1589352743}
   - component: {fileID: 1589352742}
   m_Layer: 0
-  m_Name: Cube (37)
+  m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4088,7 +4088,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d0bb19cad963bad4095d65f8bb48c07e, type: 2}
+  - {fileID: 2100000, guid: 798ec0822060d814cb5a3864cbe8c49f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

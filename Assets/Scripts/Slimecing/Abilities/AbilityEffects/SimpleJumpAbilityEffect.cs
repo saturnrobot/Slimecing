@@ -35,7 +35,7 @@ namespace Slimecing.Abilities.AbilityEffects
             _jumpDir = -_controller.GravityDirection;
             _lastJumpMass = _controller.SimulatedFallingMass;
             _controller.SimulatedFallingMass = _simulatedJumpUpMass;
-            _controller.AddForceTo(-_jumpDir, _controller.PlayerRigidbody.velocity.y);
+            _controller.AddForceTo(-_jumpDir, _controller.playerRigidbody.velocity.y);
             BeginJump();
         }
 

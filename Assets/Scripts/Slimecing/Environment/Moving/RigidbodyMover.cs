@@ -59,7 +59,7 @@ namespace Slimecing.Environment.Moving
             objectRigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
             objectRigidbody.isKinematic = true;
             objectRigidbody.constraints = RigidbodyConstraints.None;
-            objectRigidbody.interpolation = RigidbodyInterpolation.Interpolate;
+            objectRigidbody.interpolation = MoverSimulationManager.interpolationMethod == SimulationInterpolationMethod.Unity ? RigidbodyInterpolation.Interpolate : RigidbodyInterpolation.None;
         }
 
         private void Awake()

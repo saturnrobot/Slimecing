@@ -1037,6 +1037,7 @@ MonoBehaviour:
   hitLayerMask:
     serializedVersion: 2
     m_Bits: 8705
+  preserveInteractableRigidbodyVelocity: 1
   speedOfMovementSmoothing: 20
   airControl: 0.8
   groundControl: 1
@@ -1146,6 +1147,7 @@ MonoBehaviour:
     xAxis: 2.5
     yAxis: 2.5
     sticky: 0
+    instantiateOnSpawn: 1
 --- !u!114 &1450437300
 MonoBehaviour:
   m_ObjectHideFlags: 0

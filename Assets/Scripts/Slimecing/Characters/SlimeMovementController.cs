@@ -27,8 +27,9 @@ namespace Slimecing.Characters
 
             velocityChange = Vector3.ClampMagnitude(velocityChange, grounded ? groundControl : airControl);
 		    velocityChange = transform.TransformDirection(velocityChange);
-		    rb.AddForce(velocityChange, ForceMode.VelocityChange);
-            
+            rb.AddForce(velocityChange, ForceMode.VelocityChange);
+            internalTransformPosition += velocityChange * deltaTime;
+
         }
 
         protected override void Rotate(float deltaTime)
