@@ -173,8 +173,10 @@ namespace Slimecing.Characters
             if (preserveInteractableRigidbodyVelocity && _lastAttachedRigidbody != null &&
                 attachedRigidbody != _lastAttachedRigidbody)
             {
-                _bodyVelocity += _attachedRigidbodyVelocity;
-                _bodyVelocity -= tmpVelocityFromInteractableRigidbody;
+                var velocity = rb.velocity;
+                velocity += _attachedRigidbodyVelocity;
+                velocity -= tmpVelocityFromInteractableRigidbody;
+                rb.AddForce(velocity, ForceMode.VelocityChange);
             }
 
             _attachedRigidbodyVelocity = Vector3.zero;

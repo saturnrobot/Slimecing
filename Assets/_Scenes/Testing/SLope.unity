@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 771799242}
   - component: {fileID: 771799241}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: OffOrbital
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3447,6 +3447,7 @@ GameObject:
   - component: {fileID: 1469247991}
   - component: {fileID: 1469247992}
   - component: {fileID: 1469247993}
+  - component: {fileID: 1469247995}
   m_Layer: 0
   m_Name: Cube (36)
   m_TagString: Untagged
@@ -3613,6 +3614,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1469247995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469247986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd9db92a5fc38e40914f599ef159242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationAxis: {x: 1, y: 0, z: 0}
+  translationPeriod: 10
+  translationSpeed: 1
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotSpeed: 10
+  oscillationAxis: {x: 0, y: 0, z: 0}
+  oscillationPeriod: 10
+  oscillationSpeed: 10
 --- !u!1 &1487538292
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,7 +4813,7 @@ GameObject:
   - component: {fileID: 1881280639}
   - component: {fileID: 1881280638}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OnOrbital
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
